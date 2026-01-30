@@ -1,5 +1,20 @@
 # 🚨 BAIC 架构铁律 (STRICT MVVM - NON-NEGOTIABLE)
 
+> **版本**: v2.1.0  
+> **最后更新**: 2026-01-30  
+> **维护者**: AI + 架构组
+
+## 📋 变更日志
+
+| 版本 | 日期 | 变更内容 |
+|------|------|---------|
+| v2.1.0 | 2026-01-30 | 添加版本控制、补充缺失规则文件引用、完善工作流 |
+| v2.0.0 | 2026-01-15 | 重构圆角规范，区分 double 和 BorderRadius 类型 |
+| v1.1.0 | 2026-01-01 | 新增铁律 #9 疑问即停顿、铁律 #10 代码文档规范 |
+| v1.0.0 | 2025-12-01 | 初始版本，包含铁律 #1-#8 |
+
+---
+
 > **⚠️ AI 执行强制令**: 本文件中的所有规则均为**编译器级别的硬性约束**，违反任何一条视为**严重执行错误**。
 
 ---
@@ -16,11 +31,39 @@
 
 ## 🔴 铁律 2: UI 视觉规范 - 零容忍硬编码
 
+### 颜色规范
 * **[绝对禁止]** 使用 `Color(0xFF...)` 硬编码颜色，**唯一合法来源**是 `AppColors.xxx`。
-* **[绝对禁止]** 在业务 View 中使用 `BorderRadius.circular(n)` 硬编码数值。**唯一合法来源**是 `AppDimensions.xxx` (如 `borderRadiusFull`)。
-* **[强制]** 数字展示**必须使用** `AppStyles.mechanicalData` (机械字体)。
-* **[强制]** 所有可点击按钮**必须使用** `BaicBounceButton` 包裹。
-* **[铁律自检]** 编写 UI 代码后，如果发现代码中含有任何裸数字 (除 0, 1, 0.5 等基础比例外)，必须立即重构为 `AppDimensions` 引用。
+* **[检查点]** 代码中不应出现任何 `0xFF` 或 `Color.fromRGBO()` 等颜色构造。
+
+### 圆角规范 ⭐ 强化约束
+* **[绝对禁止]** 在业务 View 中使用 `BorderRadius.circular(数字)` 硬编码数值。
+* **[唯一合法来源]** `AppDimensions.radiusXS/S/M/L/Full` (double 类型) 或 `AppDimensions.borderRadiusXS/S/M/L/Full` (BorderRadius 类型)。
+* **[标准圆角值]**:
+  - `radiusXS = 4px` - 极小标签、内嵌图
+  - `radiusS = 8px` - 标签、辅助输入框、小图标背景
+  - `radiusM = 12px` - 功能卡片、列表项、模态窗口（硬朗风格）
+  - `radiusL = 16px` - 页面级大图卡片、Hero Card、沉浸式顶部区域
+  - `radiusFull = 999px` - 胶囊按钮、圆形功能按键
+* **[类型区分]**:
+  - 使用 `BorderRadius.circular()` 时 → 传入 `AppDimensions.radiusXXX` (double)
+  - 使用 `borderRadius:` 属性时 → 可直接用 `AppDimensions.borderRadiusXXX` (BorderRadius)
+* **[检查点]** 搜索代码中的 `circular(`，如果括号内是裸数字（如 `circular(24)`），立即违规。
+
+### 间距规范
+* **[强制]** 使用 `AppDimensions.spaceXS/S/M/ML/L/XL/XXL` 而非硬编码数值。
+* **[检查点]** `EdgeInsets.all()` 和 `SizedBox()` 中不应出现裸数字（除 0 外）。
+
+### 字体规范
+* **[强制]** 数字展示**必须使用** `AppStyles.mechanicalData` 或 `AppTypography.dataDisplayXXX` (机械字体)。
+* **[强制]** 价格展示**必须使用** `AppTypography.priceMain` 或 `AppStyles.price()`。
+
+### 交互规范
+* **[强制]** 所有可点击按钮**必须使用** `BaicBounceButton` 包裹（提供触觉反馈）。
+
+### 铁律自检
+* **[自检问题]** 编写 UI 代码后，如果发现代码中含有任何裸数字（除 0, 1, 0.5 等基础比例外），必须立即重构为 `AppDimensions` 或 `AppColors` 引用。
+* **[违规示例]**: `BorderRadius.circular(24)`, `EdgeInsets.all(16)`, `Color(0xFFFF6B00)`
+* **[正确示例]**: `BorderRadius.circular(AppDimensions.radiusL)`, `EdgeInsets.all(AppDimensions.spaceM)`, `AppColors.brandOrange`
 
 ---
 

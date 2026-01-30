@@ -17,15 +17,18 @@ const String _kApiModel = 'gpt-4o'; // Or 'gemini-pro', 'deepseek-chat'
 const String _kApiUrl = 'https://api.openai.com/v1/chat/completions'; // Adjust based on provider
 
 void main() async {
-  // 1. Get Security Key
+  // 1. Get Security Key & Config
   final String? apiKey = Platform.environment['AI_API_KEY'];
+  final String apiUrl = Platform.environment['AI_API_URL'] ?? 'https://api.openai.com/v1/chat/completions';
+  final String apiModel = Platform.environment['AI_MODEL'] ?? 'gpt-4o';
+
   if (apiKey == null || apiKey.isEmpty) {
     print('⚠️  Error: AI_API_KEY environment variable not set.');
     print('Please set it via: export AI_API_KEY="sk-..."');
     exit(1);
   }
 
-  print('🔍 Starting AI Code Review...');
+  print('🔍 Starting AI Code Review (Model: $apiModel)...');
 
   // 2. Get Git Diff
   // Checks staged changes by default, or HEAD~1 if nothing staged
@@ -54,9 +57,8 @@ void main() async {
   // 3. Prepare AI Prompt
   final prompt = _buildPrompt(diffContent);
 
-  // 4. Call AI API
-  try {
-    final suggestions = await _callAiApi(apiKey, prompt);
+    // 4. Call AI API
+    final suggestions = await _callAiApi(apiKey, apiUrl, apiModel, prompt);
     
     print('\n================ LOGIC & STYLE REVIEW ================');
     print(suggestions);
@@ -95,16 +97,16 @@ $diff
 ''';
 }
 
-Future<String> _callAiApi(String token, String content) async {
+Future<String> _callAiApi(String token, String url, String model, String content) async {
   final client = HttpClient();
-  final request = await client.postUrl(Uri.parse(_kApiUrl));
+  final request = await client.postUrl(Uri.parse(url));
   
   request.headers.set(HttpHeaders.contentTypeHeader, "application/json");
   request.headers.set(HttpHeaders.authorizationHeader, "Bearer $token");
   
   // Note: Adjust body structure for non-OpenAI APIs (e.g. Gemini, Anthropic)
   final body = jsonEncode({
-    "model": _kApiModel,
+    "model": model,
     "messages": [
       {"role": "system", "content": "You are a helpful code reviewer."},
       {"role": "user", "content": content}
