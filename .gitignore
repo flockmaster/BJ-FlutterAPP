@@ -83,18 +83,11 @@ Baic-Flutter-APP.zip
 Baic-Flutter-APP/
 
 # 大型资源文件(使用 Git LFS 或外部存储)
-# 3D 模型文件太大,不适合直接提交到 Git
-*.glb
-*.gltf
-
-# AI/ML 模型文件
-*.tflite
-*.mlmodel
-*.onnx
-
-# 大型字体文件(超过 5MB 的)
-# 如果需要,可以使用 CDN 或字体子集化
-# pingfang-sc-bold.ttf
+# 注意: 项目核心资源文件(BJ40-V1.glb, best_float16.tflite)已保留
+# 如果添加其他大型模型文件,建议使用 Git LFS
+# *.glb
+# *.gltf
+# *.tflite
 
 # 分析输出
 analyze_output.txt
