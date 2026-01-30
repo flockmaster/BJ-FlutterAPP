@@ -1,5 +1,5 @@
 import '../../models/car_model.dart';
-import '../../base/base_state.dart' as base; // If needed for Result wrappers, but here we return raw list
+// If needed for Result wrappers, but here we return raw list
 
 class MockCarData {
   static final List<Map<String, dynamic>> carModelsJson = [

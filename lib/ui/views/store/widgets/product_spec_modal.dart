@@ -10,7 +10,7 @@ import '../../../../core/theme/app_typography.dart';
 /// 商品规格选择模态框 - 简化版（按照最新原型）
 /// 只包含：规格选择 + 数量调整
 class ProductSpecModal extends ViewModelWidget<ProductDetailViewModel> {
-  const ProductSpecModal({Key? key}) : super(key: key);
+  const ProductSpecModal({super.key});
 
   @override
   Widget build(BuildContext context, ProductDetailViewModel viewModel) {
@@ -101,7 +101,7 @@ class ProductSpecModal extends ViewModelWidget<ProductDetailViewModel> {
                       crossAxisAlignment: CrossAxisAlignment.baseline,
                       textBaseline: TextBaseline.alphabetic,
                       children: [
-                        Text('¥', style: AppTypography.priceCurrency),
+                        const Text('¥', style: AppTypography.priceCurrency),
                         const SizedBox(width: 2),
                         Text(
                           viewModel.specPrice.toStringAsFixed(0),

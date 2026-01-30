@@ -3,15 +3,13 @@ import 'package:stacked/stacked.dart';
 import 'package:lucide_icons/lucide_icons.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'store_cart_viewmodel.dart';
-import '../../../../core/extensions/context_extensions.dart';
 import '../../../../core/theme/app_dimensions.dart';
 import '../../../../core/components/baic_ui_kit.dart';
 import '../../../../core/theme/app_typography.dart';
-import '../../../../app/app.router.dart' as stacked_routes;
 
 /// 购物车页面 - 像素级还原原型
 class StoreCartView extends StackedView<StoreCartViewModel> {
-  const StoreCartView({Key? key}) : super(key: key);
+  const StoreCartView({super.key});
 
   @override
   StoreCartViewModel viewModelBuilder(BuildContext context) => StoreCartViewModel();
@@ -25,11 +23,11 @@ class StoreCartView extends StackedView<StoreCartViewModel> {
   Widget builder(BuildContext context, StoreCartViewModel viewModel, Widget? child) {
     // 加载中状态
     if (viewModel.isBusy) {
-      return Scaffold(
-        backgroundColor: const Color(0xFFF5F7FA),
+      return const Scaffold(
+        backgroundColor: Color(0xFFF5F7FA),
         body: Center(
           child: CircularProgressIndicator(
-            color: const Color(0xFF111111),
+            color: Color(0xFF111111),
           ),
         ),
       );

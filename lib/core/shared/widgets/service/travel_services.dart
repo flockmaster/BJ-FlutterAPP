@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lucide_icons/lucide_icons.dart';
 import 'package:car_owner_app/core/theme/app_colors.dart';
-import 'package:car_owner_app/core/theme/app_dimensions.dart';
 
 /// 出行服务组件
 class TravelServices extends StatelessWidget {

@@ -12,12 +12,12 @@ class FaultReportingSkeleton extends StatelessWidget {
       color: AppColors.bgCanvas,
       child: Stack(
         children: [
-          Positioned.fill(
+          const Positioned.fill(
             child: Column(
               children: [
-                const Spacer(flex: 1),
+                Spacer(flex: 1),
                 // 顶部插图区域
-                const SkeletonLoader(
+                SkeletonLoader(
                   child: SkeletonBox(
                     width: 300,
                     height: 200,
@@ -26,7 +26,7 @@ class FaultReportingSkeleton extends StatelessWidget {
                 ),
                 SizedBox(height: AppDimensions.spaceXL),
                 // 标题
-                const SkeletonLoader(
+                SkeletonLoader(
                   child: SkeletonBox(
                     width: 200,
                     height: 28,
@@ -34,7 +34,7 @@ class FaultReportingSkeleton extends StatelessWidget {
                 ),
                 SizedBox(height: AppDimensions.spaceS),
                 // 版本号
-                const SkeletonLoader(
+                SkeletonLoader(
                   child: SkeletonBox(
                     width: 100,
                     height: 16,
@@ -43,10 +43,10 @@ class FaultReportingSkeleton extends StatelessWidget {
                 SizedBox(height: AppDimensions.spaceXL),
                 // 功能项
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: AppDimensions.spaceXL),
+                  padding: EdgeInsets.symmetric(horizontal: AppDimensions.spaceXL),
                   child: Row(
                     children: [
-                      const Expanded(
+                      Expanded(
                         child: SkeletonLoader(
                           child: SkeletonBox(
                             height: 80,
@@ -66,7 +66,7 @@ class FaultReportingSkeleton extends StatelessWidget {
                     ],
                   ),
                 ),
-                const Spacer(flex: 2),
+                Spacer(flex: 2),
               ],
             ),
           ),
@@ -76,11 +76,11 @@ class FaultReportingSkeleton extends StatelessWidget {
             left: 0,
             right: 0,
             child: Container(
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Colors.white,
                 border: Border(top: BorderSide(color: AppColors.borderPrimary, width: 0.5)),
               ),
-              child: SafeArea(
+              child: const SafeArea(
                 child: SkeletonLoader(
                   child: SkeletonBox(
                     width: double.infinity,

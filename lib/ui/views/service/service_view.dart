@@ -4,7 +4,6 @@ import 'package:lucide_icons/lucide_icons.dart';
 import 'package:stacked/stacked.dart';
 import 'dart:ui';
 import 'service_viewmodel.dart';
-import 'maintenance_booking_view.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/theme/app_typography.dart';
 import '../../../core/theme/app_dimensions.dart';
@@ -82,7 +81,7 @@ class _ServiceViewContentState extends State<_ServiceViewContent> {
         children: [
           // 内容区域
           widget.viewModel.isBusy
-              ? ServiceSkeleton()
+              ? const ServiceSkeleton()
               : EasyRefresh(
                   onRefresh: widget.viewModel.refresh,
                   header: const ClassicHeader(
@@ -179,7 +178,7 @@ class _ServiceViewContentState extends State<_ServiceViewContent> {
           ),
           child: Container(
             height: 100,
-            padding: EdgeInsets.fromLTRB(
+            padding: const EdgeInsets.fromLTRB(
               AppDimensions.spaceML,
               54,
               AppDimensions.spaceML,

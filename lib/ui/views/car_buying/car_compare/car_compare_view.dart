@@ -75,7 +75,7 @@ class CarCompareView extends StackedView<CarCompareViewModel> {
         right: AppDimensions.spaceML,
         bottom: 12,
       ),
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: AppColors.bgSurface,
         border: Border(
           bottom: BorderSide(
@@ -185,7 +185,7 @@ class CarCompareView extends StackedView<CarCompareViewModel> {
     return Container(
       decoration: BoxDecoration(
         color: AppColors.bgSurface.withValues(alpha: 0.95),
-        border: Border(
+        border: const Border(
           bottom: BorderSide(
             color: AppColors.borderPrimary,
             width: AppDimensions.borderWidthThin,
@@ -199,7 +199,7 @@ class CarCompareView extends StackedView<CarCompareViewModel> {
           Container(
             width: 100,
             padding: const EdgeInsets.all(16),
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               border: Border(
                 right: BorderSide(
                   color: AppColors.bgFill,
@@ -252,7 +252,7 @@ class CarCompareView extends StackedView<CarCompareViewModel> {
       decoration: BoxDecoration(
         border: Border(
           right: index == 0
-              ? BorderSide(
+              ? const BorderSide(
                   color: Colors.transparent,
                   width: AppDimensions.borderWidthThin,
                 )
@@ -375,38 +375,38 @@ class CarCompareView extends StackedView<CarCompareViewModel> {
         _buildCategory(
           '基本参数',
           [
-            _CompareItem(label: '参考价格', specKey: 'price'),
-            _CompareItem(label: '车身结构', specKey: 'structure'),
-            _CompareItem(label: '发动机', specKey: 'engine'),
-            _CompareItem(label: '变速箱', specKey: 'transmission'),
+            const _CompareItem(label: '参考价格', specKey: 'price'),
+            const _CompareItem(label: '车身结构', specKey: 'structure'),
+            const _CompareItem(label: '发动机', specKey: 'engine'),
+            const _CompareItem(label: '变速箱', specKey: 'transmission'),
           ],
           viewModel,
         ),
         _buildCategory(
           '车身尺寸',
           [
-            _CompareItem(label: '长*宽*高(mm)', specKey: 'size'),
-            _CompareItem(label: '轴距(mm)', specKey: 'wheelbase'),
-            _CompareItem(label: '最小离地间隙', specKey: 'ground_clearance'),
+            const _CompareItem(label: '长*宽*高(mm)', specKey: 'size'),
+            const _CompareItem(label: '轴距(mm)', specKey: 'wheelbase'),
+            const _CompareItem(label: '最小离地间隙', specKey: 'ground_clearance'),
           ],
           viewModel,
         ),
         _buildCategory(
           '越野性能',
           [
-            _CompareItem(label: '驱动方式', specKey: 'drive_mode'),
-            _CompareItem(label: '接近/离去角', specKey: 'angles'),
-            _CompareItem(label: '差速锁', specKey: 'diff_lock'),
+            const _CompareItem(label: '驱动方式', specKey: 'drive_mode'),
+            const _CompareItem(label: '接近/离去角', specKey: 'angles'),
+            const _CompareItem(label: '差速锁', specKey: 'diff_lock'),
           ],
           viewModel,
         ),
         _buildCategory(
           '智能配置',
           [
-            _CompareItem(label: '屏幕尺寸', specKey: 'screen'),
-            _CompareItem(label: '辅助驾驶', specKey: 'adas'),
-            _CompareItem(label: '扬声器系统', specKey: 'speaker'),
-            _CompareItem(label: '座椅材质', specKey: 'seat'),
+            const _CompareItem(label: '屏幕尺寸', specKey: 'screen'),
+            const _CompareItem(label: '辅助驾驶', specKey: 'adas'),
+            const _CompareItem(label: '扬声器系统', specKey: 'speaker'),
+            const _CompareItem(label: '座椅材质', specKey: 'seat'),
           ],
           viewModel,
         ),
@@ -461,7 +461,7 @@ class CarCompareView extends StackedView<CarCompareViewModel> {
     CarCompareViewModel viewModel,
   ) {
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         border: Border(
           bottom: BorderSide(
             color: AppColors.bgFill,
@@ -475,7 +475,7 @@ class CarCompareView extends StackedView<CarCompareViewModel> {
           Container(
             width: 100,
             padding: const EdgeInsets.all(16),
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: AppColors.bgSurface,
               border: Border(
                 right: BorderSide(
@@ -555,9 +555,9 @@ class CarCompareView extends StackedView<CarCompareViewModel> {
               GestureDetector(
                 onTap: () {}, // 阻止点击穿透
                 child: Container(
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: AppColors.bgSurface,
-                    borderRadius: const BorderRadius.only(
+                    borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(AppDimensions.radiusL),
                       topRight: Radius.circular(AppDimensions.radiusL),
                     ),
@@ -571,7 +571,7 @@ class CarCompareView extends StackedView<CarCompareViewModel> {
                       // 弹窗头部
                       Container(
                         padding: const EdgeInsets.all(16),
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           border: Border(
                             bottom: BorderSide(
                               color: AppColors.borderPrimary,

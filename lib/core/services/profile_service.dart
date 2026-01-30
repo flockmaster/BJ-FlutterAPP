@@ -138,7 +138,7 @@ class ProfileService with ListenableServiceMixin implements IProfileService {
     // 模拟根据当前用户状态返回绑定的车辆列表
     if (_currentUser.value?.hasVehicle == true) {
       return Result.success([
-        UserVehicle(
+        const UserVehicle(
           id: 'v1',
           name: '北京 BJ40 环塔冠军版',
           imageUrl: 'https://www.helloimg.com/i/2025/12/23/694a28886a3df.jpg',

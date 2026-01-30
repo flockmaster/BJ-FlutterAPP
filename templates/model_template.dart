@@ -10,6 +10,7 @@
 /// 2. 重命名文件和类名
 /// 3. 运行 flutter pub run build_runner build --delete-conflicting-outputs
 /// ============================================================================
+library;
 
 import 'package:json_annotation/json_annotation.dart';
 import 'package:equatable/equatable.dart';

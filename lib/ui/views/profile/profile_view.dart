@@ -74,7 +74,7 @@ class _ProfilePageViewState extends State<ProfilePageView> {
   @override
   Widget build(BuildContext context) {
     if (widget.viewModel.isBusy) {
-      return Scaffold(
+      return const Scaffold(
         backgroundColor: AppColors.bgCanvas,
         body: ProfileSkeleton(),
       );
@@ -559,10 +559,10 @@ class _ProfilePageViewState extends State<ProfilePageView> {
                 padding: const EdgeInsets.all(24),
                 child: Column(
                   children: [
-                    Row(
+                    const Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        const Text(
+                        Text(
                           '我的车库',
                           style: TextStyle(
                             color: Color(0xFF111111),
@@ -575,12 +575,12 @@ class _ProfilePageViewState extends State<ProfilePageView> {
                             Text(
                               '查看全部',
                               style: TextStyle(
-                                color: const Color(0xFF6B7280),
+                                color: Color(0xFF6B7280),
                                 fontSize: 12,
                                 fontWeight: FontWeight.w500,
                               ),
                             ),
-                            const Icon(LucideIcons.chevronRight, size: 14, color: Color(0xFFD1D5DB)),
+                            Icon(LucideIcons.chevronRight, size: 14, color: Color(0xFFD1D5DB)),
                           ],
                         ),
                       ],
@@ -596,7 +596,7 @@ class _ProfilePageViewState extends State<ProfilePageView> {
                               borderRadius: BorderRadius.circular(12),
                               color: const Color(0xFFF5F7FA),
                             ),
-                            child: Center(
+                            child: const Center(
                               child: OptimizedImage(
                                 imageUrl: 'https://p.sda1.dev/29/0c0cc4449ea2a1074412f6052330e4c4/63999cc7e598e7dc1e84445be0ba70eb-Photoroom.png',
                                 width: 100,
@@ -643,12 +643,12 @@ class _ProfilePageViewState extends State<ProfilePageView> {
                                         color: const Color(0xFFF0FDF4),
                                         borderRadius: BorderRadius.circular(6),
                                       ),
-                                      child: Row(
+                                      child: const Row(
                                         mainAxisSize: MainAxisSize.min,
                                         children: [
-                                          const Icon(LucideIcons.shieldCheck, size: 12, color: Color(0xFF22C55E)),
-                                          const SizedBox(width: 4),
-                                          const Text(
+                                          Icon(LucideIcons.shieldCheck, size: 12, color: Color(0xFF22C55E)),
+                                          SizedBox(width: 4),
+                                          Text(
                                             '在线',
                                             style: TextStyle(
                                               color: Color(0xFF22C55E),
@@ -786,7 +786,7 @@ class _ProfilePageViewState extends State<ProfilePageView> {
           child: Stack(
             fit: StackFit.expand,
             children: [
-              OptimizedImage(
+              const OptimizedImage(
                 imageUrl: 'https://youke3.picui.cn/s1/2026/01/07/695dfffc2e905.jpg',
                 fit: BoxFit.cover,
               ),
@@ -827,10 +827,10 @@ class _ProfilePageViewState extends State<ProfilePageView> {
                           )
                         ]
                       ),
-                      child: Row(
+                      child: const Row(
                         mainAxisSize: MainAxisSize.min,
                         children: [
-                          const Text(
+                          Text(
                             '速速邀请兄弟入伙！',
                             style: TextStyle(
                               color: AppColors.brandOrange,
@@ -838,8 +838,8 @@ class _ProfilePageViewState extends State<ProfilePageView> {
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                          const SizedBox(width: 2),
-                          const Icon(LucideIcons.chevronRight, size: 14, color: AppColors.brandOrange),
+                          SizedBox(width: 2),
+                          Icon(LucideIcons.chevronRight, size: 14, color: AppColors.brandOrange),
                         ],
                       ),
                     ),

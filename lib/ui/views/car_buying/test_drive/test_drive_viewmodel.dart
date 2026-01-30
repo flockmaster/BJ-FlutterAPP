@@ -54,10 +54,6 @@ class TestDriveViewModel extends BaicBaseViewModel {
     notifyListeners();
   }
 
-  @override
-  void goBack({dynamic result}) {
-    super.goBack(result: result);
-  }
 
   void viewMyOrders() {
     // 导航到我的预约页面

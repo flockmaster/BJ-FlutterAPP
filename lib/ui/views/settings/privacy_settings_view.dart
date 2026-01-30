@@ -217,7 +217,7 @@ class PrivacySettingsView extends StackedView<PrivacySettingsViewModel> {
           _buildHeaderWithTitle('黑名单管理', () => viewModel.hideBlockListPage()),
           Expanded(
             child: viewModel.blockedUsers.isEmpty
-                ? Center(child: Text('暂无拉黑用户', style: AppTypography.bodySecondary))
+                ? const Center(child: Text('暂无拉黑用户', style: AppTypography.bodySecondary))
                 : ListView.builder(
                     padding: const EdgeInsets.all(20),
                     itemCount: viewModel.blockedUsers.length,

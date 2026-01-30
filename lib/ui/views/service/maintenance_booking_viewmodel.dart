@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart'; // Keeping temporarily for dialog building logic
+// Keeping temporarily for dialog building logic
 import 'package:car_owner_app/core/base/baic_base_view_model.dart';
 import '../../../app/app.dialogs.dart'; // Import DialogType
 
@@ -82,7 +82,7 @@ class MaintenanceBookingViewModel extends BaicBaseViewModel {
     final package = selectedPackage;
     final packageName = package['name'] as String;
     final packagePrice = package['price'] as int;
-    final storeName = '北京汽车越野4S店（朝阳）';
+    const storeName = '北京汽车越野4S店（朝阳）';
     final date = selectedDate;
     final time = selectedTime;
 

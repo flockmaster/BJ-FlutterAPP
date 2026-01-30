@@ -255,11 +255,11 @@ class _SkeletonView extends StatelessWidget {
               color: AppColors.bgSurface,
               borderRadius: BorderRadius.circular(16),
             ),
-            child: Column(
+            child: const Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 Row(
-                  children: const [
+                  children: [
                     SkeletonBox(width: 60, height: 20),
                     SizedBox(width: 12),
                     SkeletonBox(width: 100, height: 16),
@@ -267,10 +267,10 @@ class _SkeletonView extends StatelessWidget {
                     SkeletonBox(width: 40, height: 16),
                   ],
                 ),
-                const SizedBox(height: 12),
-                const SkeletonBox(width: double.infinity, height: 16),
-                const SizedBox(height: 8),
-                const SkeletonBox(width: 200, height: 16),
+                SizedBox(height: 12),
+                SkeletonBox(width: double.infinity, height: 16),
+                SizedBox(height: 8),
+                SkeletonBox(width: 200, height: 16),
               ],
             ),
           );

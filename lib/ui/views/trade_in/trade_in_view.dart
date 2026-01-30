@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
-import '../../../core/themes/app_theme.dart';
 import '../../common/ui_converters.dart';
 import 'trade_in_viewmodel.dart';
 import '../../../core/theme/app_colors.dart';
@@ -111,7 +110,7 @@ class TradeInView extends StackedView<TradeInViewModel> {
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 32),
       child: Column(
         children: [
-          Text(
+          const Text(
             '非本品置换流程',
             style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: AppColors.textPrimary),
           ),
@@ -168,7 +167,7 @@ class TradeInView extends StackedView<TradeInViewModel> {
              child: Container(
                width: 14,
                height: 14,
-               decoration: BoxDecoration(
+               decoration: const BoxDecoration(
                  color: AppColors.borderPrimary,
                  shape: BoxShape.circle,
                ),
@@ -177,12 +176,12 @@ class TradeInView extends StackedView<TradeInViewModel> {
            Column(
              crossAxisAlignment: CrossAxisAlignment.start,
              children: [
-               Text(title, style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold, color: AppColors.textPrimary)),
+               Text(title, style: const TextStyle(fontSize: 17, fontWeight: FontWeight.bold, color: AppColors.textPrimary)),
                const SizedBox(height: 8),
                Text(
                  content,
                  textAlign: TextAlign.justify,
-                 style: TextStyle(fontSize: 13, color: AppColors.textSecondary, height: 1.6),
+                 style: const TextStyle(fontSize: 13, color: AppColors.textSecondary, height: 1.6),
                ),
                hasButton.visible(
                  Column(
@@ -196,7 +195,7 @@ class TradeInView extends StackedView<TradeInViewModel> {
                            borderRadius: BorderRadius.circular(16),
                          ),
                          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
-                         child: Text('免费在线评估 >', style: TextStyle(fontSize: 13, color: AppColors.error)),
+                         child: const Text('免费在线评估 >', style: TextStyle(fontSize: 13, color: AppColors.error)),
                        ),
                      ),
                    ],
@@ -215,7 +214,7 @@ class TradeInView extends StackedView<TradeInViewModel> {
       padding: const EdgeInsets.symmetric(horizontal: 24),
       child: Column(
         children: [
-          Text(
+          const Text(
             '填写申请信息',
             style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: AppColors.textPrimary),
           ),
@@ -223,7 +222,7 @@ class TradeInView extends StackedView<TradeInViewModel> {
           _buildFormRow('所在城市', viewModel.city, hasArrow: true),
           _buildFormRow('联系电话', viewModel.phone),
           const SizedBox(height: 8),
-          Align(
+          const Align(
             alignment: Alignment.centerLeft,
             child: Text(
               '提交申请后，工作人员会尽快与您取得联系',
@@ -238,20 +237,20 @@ class TradeInView extends StackedView<TradeInViewModel> {
   Widget _buildFormRow(String label, String value, {bool hasArrow = false}) {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 16),
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         border: Border(bottom: BorderSide(color: AppColors.bgCanvas)),
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text(label, style: TextStyle(fontSize: 15, color: AppColors.textPrimary)),
+          Text(label, style: const TextStyle(fontSize: 15, color: AppColors.textPrimary)),
           Row(
             children: [
-              Text(value, style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500, color: AppColors.textPrimary)),
+              Text(value, style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w500, color: AppColors.textPrimary)),
               hasArrow.visible(
-                Row(
+                const Row(
                   children: [
-                    const SizedBox(width: 8),
+                    SizedBox(width: 8),
                     Icon(Icons.chevron_right, size: 16, color: AppColors.textDisabled),
                   ],
                 ),
@@ -266,7 +265,7 @@ class TradeInView extends StackedView<TradeInViewModel> {
   Widget _buildBottomAction(BuildContext context, TradeInViewModel viewModel) {
     return Container(
       padding: EdgeInsets.fromLTRB(20, 16, 20, MediaQuery.of(context).padding.bottom + 16),
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: AppColors.bgSurface,
         border: Border(top: BorderSide(color: AppColors.bgCanvas)),
       ),

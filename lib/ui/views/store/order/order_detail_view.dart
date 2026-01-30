@@ -37,7 +37,7 @@ class OrderDetailView extends StackedView<OrderDetailViewModel> {
   final DateTime? paymentTime;
 
   const OrderDetailView({
-    Key? key,
+    super.key,
     required this.orderId,
     required this.orderType,
     required this.items,
@@ -57,7 +57,7 @@ class OrderDetailView extends StackedView<OrderDetailViewModel> {
     this.remark,
     this.orderTime,
     this.paymentTime,
-  }) : super(key: key);
+  });
 
   @override
   OrderDetailViewModel viewModelBuilder(BuildContext context) => 
@@ -110,10 +110,10 @@ class OrderDetailView extends StackedView<OrderDetailViewModel> {
                 children: [
                   GestureDetector(
                     onTap: () => viewModel.handleGoBack(),
-                    child: Container(
+                    child: const SizedBox(
                       width: 36,
                       height: 36,
-                      child: const Icon(LucideIcons.arrowLeft, size: 24),
+                      child: Icon(LucideIcons.arrowLeft, size: 24),
                     ),
                   ),
                   const Text(
@@ -126,10 +126,10 @@ class OrderDetailView extends StackedView<OrderDetailViewModel> {
                   ),
                   GestureDetector(
                     onTap: () {},
-                    child: Container(
+                    child: const SizedBox(
                       width: 36,
                       height: 36,
-                      child: const Icon(
+                      child: Icon(
                         LucideIcons.moreHorizontal,
                         size: 20,
                         color: Color(0xFF111111),
@@ -271,15 +271,15 @@ class OrderDetailView extends StackedView<OrderDetailViewModel> {
       ),
       child: Column(
         children: [
-          Row(
+          const Row(
             children: [
               Icon(
                 LucideIcons.qrCode,
                 size: 18,
-                color: const Color(0xFF3B82F6),
+                color: Color(0xFF3B82F6),
               ),
-              const SizedBox(width: 8),
-              const Text(
+              SizedBox(width: 8),
+              Text(
                 '服务核销码',
                 style: TextStyle(
                   fontSize: 15,
@@ -350,15 +350,15 @@ class OrderDetailView extends StackedView<OrderDetailViewModel> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Row(
+              const Row(
                 children: [
                   Icon(
                     LucideIcons.ticket,
                     size: 18,
-                    color: const Color(0xFF10B981),
+                    color: Color(0xFF10B981),
                   ),
-                  const SizedBox(width: 8),
-                  const Text(
+                  SizedBox(width: 8),
+                  Text(
                     '兑换码',
                     style: TextStyle(
                       fontSize: 15,
@@ -445,11 +445,11 @@ class OrderDetailView extends StackedView<OrderDetailViewModel> {
                   ),
                 ),
                 const SizedBox(width: 16),
-                Expanded(
+                const Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Text(
+                      Text(
                         '您的快件已签收，感谢使用顺丰速运。',
                         style: TextStyle(
                           fontSize: 14,
@@ -460,12 +460,12 @@ class OrderDetailView extends StackedView<OrderDetailViewModel> {
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                       ),
-                      const SizedBox(height: 4),
+                      SizedBox(height: 4),
                       Text(
                         '2024-01-14 18:30',
                         style: TextStyle(
                           fontSize: 11,
-                          color: const Color(0xFF9CA3AF),
+                          color: Color(0xFF9CA3AF),
                         ),
                       ),
                     ],
@@ -512,12 +512,12 @@ class OrderDetailView extends StackedView<OrderDetailViewModel> {
                 ),
               ),
               const SizedBox(width: 16),
-              Expanded(
+              const Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Row(
-                      children: const [
+                      children: [
                         Text(
                           '张越野',
                           style: TextStyle(
@@ -537,8 +537,8 @@ class OrderDetailView extends StackedView<OrderDetailViewModel> {
                         ),
                       ],
                     ),
-                    const SizedBox(height: 6),
-                    const Text(
+                    SizedBox(height: 6),
+                    Text(
                       '北京市朝阳区建国路88号 SOHO现代城',
                       style: TextStyle(
                         fontSize: 13,
@@ -573,15 +573,15 @@ class OrderDetailView extends StackedView<OrderDetailViewModel> {
       ),
       child: Column(
         children: [
-          Row(
+          const Row(
             children: [
-              const Icon(
+              Icon(
                 LucideIcons.shoppingBag,
                 size: 18,
                 color: Color(0xFF111111),
               ),
-              const SizedBox(width: 10),
-              const Text(
+              SizedBox(width: 10),
+              Text(
                 '北京汽车商城自营',
                 style: TextStyle(
                   fontSize: 15,
@@ -702,7 +702,7 @@ class OrderDetailView extends StackedView<OrderDetailViewModel> {
                 ],
               ),
             );
-          }).toList(),
+          }),
         ],
       ),
     );
@@ -726,15 +726,15 @@ class OrderDetailView extends StackedView<OrderDetailViewModel> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Row(
+          const Row(
             children: [
-              const Icon(
+              Icon(
                 LucideIcons.fileText,
                 size: 18,
                 color: Color(0xFF111111),
               ),
-              const SizedBox(width: 10),
-              const Text(
+              SizedBox(width: 10),
+              Text(
                 '订单信息',
                 style: TextStyle(
                   fontSize: 15,
@@ -797,15 +797,15 @@ class OrderDetailView extends StackedView<OrderDetailViewModel> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Row(
+          const Row(
             children: [
-              const Icon(
+              Icon(
                 LucideIcons.receipt,
                 size: 18,
                 color: Color(0xFF111111),
               ),
-              const SizedBox(width: 10),
-              const Text(
+              SizedBox(width: 10),
+              Text(
                 '价格明细',
                 style: TextStyle(
                   fontSize: 15,
@@ -931,15 +931,15 @@ class OrderDetailView extends StackedView<OrderDetailViewModel> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Row(
+          const Row(
             children: [
-              const Icon(
+              Icon(
                 LucideIcons.fileText,
                 size: 18,
                 color: Color(0xFF111111),
               ),
-              const SizedBox(width: 10),
-              const Text(
+              SizedBox(width: 10),
+              Text(
                 '发票信息',
                 style: TextStyle(
                   fontSize: 15,
@@ -995,15 +995,15 @@ class OrderDetailView extends StackedView<OrderDetailViewModel> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Row(
+          const Row(
             children: [
-              const Icon(
+              Icon(
                 LucideIcons.messageSquare,
                 size: 18,
                 color: Color(0xFF111111),
               ),
-              const SizedBox(width: 10),
-              const Text(
+              SizedBox(width: 10),
+              Text(
                 '订单备注',
                 style: TextStyle(
                   fontSize: 15,
@@ -1177,9 +1177,9 @@ class OrderDetailView extends StackedView<OrderDetailViewModel> {
                   horizontal: 32,
                   vertical: 10,
                 ),
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   borderRadius: AppDimensions.borderRadiusFull,
-                  color: const Color(0xFF111111),
+                  color: Color(0xFF111111),
                 ),
                 child: const Text(
                   '再次购买',

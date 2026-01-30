@@ -7,33 +7,33 @@ class ServiceSkeleton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SkeletonLoader(
+    return const SkeletonLoader(
       child: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.fromLTRB(20, 54, 20, 12),
+            padding: EdgeInsets.fromLTRB(20, 54, 20, 12),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: const [
+              children: [
                 SkeletonBox(width: 64, height: 32),
                 SkeletonCircle(size: 32),
               ],
             ),
           ),
           Padding(
-            padding: const EdgeInsets.fromLTRB(20, 16, 20, 8),
+            padding: EdgeInsets.fromLTRB(20, 16, 20, 8),
             child: Row(
               children: [
-                const Expanded(
+                Expanded(
                   child: SkeletonBox(
                     height: 280,
                     borderRadius: BorderRadius.all(Radius.circular(16)),
                   ),
                 ),
-                const SizedBox(width: 12),
+                SizedBox(width: 12),
                 Expanded(
                   child: Column(
-                    children: const [
+                    children: [
                       SkeletonBox(
                         height: 134,
                         borderRadius: BorderRadius.all(Radius.circular(16)),
@@ -49,7 +49,7 @@ class ServiceSkeleton extends StatelessWidget {
               ],
             ),
           ),
-          const Padding(
+          Padding(
             padding: EdgeInsets.all(20),
             child: SkeletonBox(
               width: double.infinity,
@@ -57,7 +57,7 @@ class ServiceSkeleton extends StatelessWidget {
               borderRadius: BorderRadius.all(Radius.circular(16)),
             ),
           ),
-          const Padding(
+          Padding(
             padding: EdgeInsets.symmetric(horizontal: 20),
             child: SkeletonBox(
               width: double.infinity,

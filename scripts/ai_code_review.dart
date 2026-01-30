@@ -49,7 +49,7 @@ void main() async {
   // Limit diff size to avoid token limits (rudimentary check)
   if (diffContent.length > 100000) {
     print('⚠️  Diff is too large (${diffContent.length} chars). Truncating...');
-    diffContent = diffContent.substring(0, 100000) + '\n...[Truncated]';
+    diffContent = '${diffContent.substring(0, 100000)}\n...[Truncated]';
   }
 
   print('📦 Analyzing ${diffContent.length} characters of code changes...');
@@ -57,6 +57,7 @@ void main() async {
   // 3. Prepare AI Prompt
   final prompt = _buildPrompt(diffContent);
 
+  try {
     // 4. Call AI API
     final suggestions = await _callAiApi(apiKey, apiUrl, apiModel, prompt);
     

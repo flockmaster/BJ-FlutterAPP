@@ -109,7 +109,7 @@ class _DiscoveryDetailContentState extends State<_DiscoveryDetailContent> {
                               padding: const EdgeInsets.only(bottom: 16),
                               child: Text(
                                 item.title,
-                                style: TextStyle(
+                                style: const TextStyle(
                                   fontSize: 24,
                                   fontWeight: FontWeight.bold,
                                   color: AppColors.textPrimary,
@@ -129,7 +129,7 @@ class _DiscoveryDetailContentState extends State<_DiscoveryDetailContent> {
                           // Meta Info
                           Text(
                             '发布于 ${TimeUtils.formatRelativeTime(item.user?.createdAt)} · 著作权归作者所有',
-                            style: TextStyle(
+                            style: const TextStyle(
                               color: AppColors.textTertiary,
                               fontSize: 12,
                             ),
@@ -150,7 +150,7 @@ class _DiscoveryDetailContentState extends State<_DiscoveryDetailContent> {
                           // Comments Header
                           Text(
                             '全部评论 (${item.comments})',
-                            style: TextStyle(
+                            style: const TextStyle(
                               fontSize: 18,
                               fontWeight: FontWeight.bold,
                               color: AppColors.textPrimary,
@@ -181,7 +181,7 @@ class _DiscoveryDetailContentState extends State<_DiscoveryDetailContent> {
       centerTitle: false,
       leading: BaicBounceButton(
         onPressed: () => widget.viewModel.goBack(),
-        child: Icon(Icons.arrow_back_ios, color: AppColors.textPrimary, size: 20),
+        child: const Icon(Icons.arrow_back_ios, color: AppColors.textPrimary, size: 20),
       ),
       titleSpacing: 0,
       title: item.user != null ? Row(
@@ -194,7 +194,7 @@ class _DiscoveryDetailContentState extends State<_DiscoveryDetailContent> {
           const SizedBox(width: 8),
           Text(
             item.user!.name,
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 14,
               fontWeight: FontWeight.bold,
               color: AppColors.textPrimary,
@@ -210,7 +210,7 @@ class _DiscoveryDetailContentState extends State<_DiscoveryDetailContent> {
             border: Border.all(color: AppColors.error, width: 1),
             borderRadius: BorderRadius.circular(16),
           ),
-          child: Center(
+          child: const Center(
             child: Text(
               '关注',
               style: TextStyle(
@@ -224,7 +224,7 @@ class _DiscoveryDetailContentState extends State<_DiscoveryDetailContent> {
         const SizedBox(width: 12),
         BaicBounceButton(
           onPressed: () {},
-          child: Icon(Icons.share_outlined, color: AppColors.textPrimary),
+          child: const Icon(Icons.share_outlined, color: AppColors.textPrimary),
         ),
         const SizedBox(width: 8),
       ],
@@ -269,12 +269,12 @@ class _DiscoveryDetailContentState extends State<_DiscoveryDetailContent> {
           return Container(
             margin: const EdgeInsets.only(top: 24, bottom: 12),
             padding: const EdgeInsets.only(left: 12),
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               border: Border(left: BorderSide(color: AppColors.error, width: 4)),
             ),
             child: Text(
               block.text!,
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
                 color: AppColors.textPrimary,
@@ -286,7 +286,7 @@ class _DiscoveryDetailContentState extends State<_DiscoveryDetailContent> {
             padding: const EdgeInsets.symmetric(vertical: 8),
             child: Text(
               block.text!,
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 16,
                 height: 1.8,
                 color: AppColors.textSecondary,
@@ -308,7 +308,7 @@ class _DiscoveryDetailContentState extends State<_DiscoveryDetailContent> {
         if (item.content != null)
           Text(
             item.content!,
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 16,
               height: 1.6,
               color: AppColors.textSecondary,
@@ -343,7 +343,7 @@ class _DiscoveryDetailContentState extends State<_DiscoveryDetailContent> {
                        return Container(
                           height: 200,
                           color: AppColors.bgFill,
-                          child: Icon(Icons.image, color: AppColors.textTertiary),
+                          child: const Icon(Icons.image, color: AppColors.textTertiary),
                        );
                     },
                   ),
@@ -360,8 +360,8 @@ class _DiscoveryDetailContentState extends State<_DiscoveryDetailContent> {
     final comments = item.commentsList ?? [];
     
     if (comments.isEmpty) {
-      return Padding(
-        padding: const EdgeInsets.symmetric(vertical: 20),
+      return const Padding(
+        padding: EdgeInsets.symmetric(vertical: 20),
         child: Center(
           child: Text(
             '暂无评论，快来抢沙发吧',
@@ -381,7 +381,7 @@ class _DiscoveryDetailContentState extends State<_DiscoveryDetailContent> {
               radius: 16,
               backgroundColor: AppColors.bgFill,
               backgroundImage: comment.user.avatar != null ? NetworkImage(comment.user.avatar!) : null,
-              child: comment.user.avatar == null ? Icon(Icons.person, size: 20, color: AppColors.textTertiary) : null,
+              child: comment.user.avatar == null ? const Icon(Icons.person, size: 20, color: AppColors.textTertiary) : null,
             ),
             const SizedBox(width: 12),
             Expanded(
@@ -393,13 +393,13 @@ class _DiscoveryDetailContentState extends State<_DiscoveryDetailContent> {
                      children: [
                        Text(
                          comment.user.name, 
-                         style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14, color: AppColors.textPrimary)
+                         style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14, color: AppColors.textPrimary)
                        ),
                        Row(
                          children: [
-                           Icon(Icons.favorite_border, size: 14, color: AppColors.textTertiary),
+                           const Icon(Icons.favorite_border, size: 14, color: AppColors.textTertiary),
                            const SizedBox(width: 4),
-                           Text('${comment.likes}', style: TextStyle(fontSize: 12, color: AppColors.textTertiary)),
+                           Text('${comment.likes}', style: const TextStyle(fontSize: 12, color: AppColors.textTertiary)),
                          ],
                        )
                      ],
@@ -407,17 +407,17 @@ class _DiscoveryDetailContentState extends State<_DiscoveryDetailContent> {
                    const SizedBox(height: 4),
                    Text(
                      comment.content,
-                     style: TextStyle(fontSize: 15, color: AppColors.textSecondary, height: 1.4),
+                     style: const TextStyle(fontSize: 15, color: AppColors.textSecondary, height: 1.4),
                    ),
                    const SizedBox(height: 8),
                    Row(
                      children: [
                         Text(
                           TimeUtils.formatRelativeTime(comment.createdAt), 
-                          style: TextStyle(fontSize: 12, color: AppColors.textTertiary)
+                          style: const TextStyle(fontSize: 12, color: AppColors.textTertiary)
                         ),
                         const SizedBox(width: 16),
-                        Text('回复', style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500, color: AppColors.textPrimary)),
+                        const Text('回复', style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500, color: AppColors.textPrimary)),
                      ],
                    ),
                 ],
@@ -432,7 +432,7 @@ class _DiscoveryDetailContentState extends State<_DiscoveryDetailContent> {
   /// 构建底部固定的互动工具栏（评论输入、点赞、收藏）。
   Widget _buildFooter(DiscoveryItem item) {
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: AppColors.bgSurface,
         border: Border(top: BorderSide(color: AppColors.bgCanvas)),
       ),
@@ -452,7 +452,7 @@ class _DiscoveryDetailContentState extends State<_DiscoveryDetailContent> {
                   Expanded(
                     child: TextField(
                       controller: _commentController,
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         hintText: '说点什么...',
                         hintStyle: TextStyle(fontSize: 14, color: AppColors.textTertiary),
                         border: InputBorder.none,
@@ -485,7 +485,7 @@ class _DiscoveryDetailContentState extends State<_DiscoveryDetailContent> {
         const SizedBox(height: 2),
         Text(
           label,
-          style: TextStyle(fontSize: 10, color: AppColors.textSecondary),
+          style: const TextStyle(fontSize: 10, color: AppColors.textSecondary),
         ),
       ],
     );
@@ -510,15 +510,15 @@ class _DiscoveryDetailSkeleton extends StatelessWidget {
               color: Colors.white,
               border: Border(bottom: BorderSide(color: Color(0xFFF0F0F0))),
             ),
-            child: Row(
+            child: const Row(
               children: [
-                const SkeletonCircle(size: 32),
-                const SizedBox(width: 12),
-                const SkeletonBox(width: 80, height: 16),
-                const Spacer(),
-                const SkeletonBox(width: 60, height: 28, borderRadius: BorderRadius.all(Radius.circular(14))),
-                const SizedBox(width: 12),
-                const SkeletonBox(width: 24, height: 24),
+                SkeletonCircle(size: 32),
+                SizedBox(width: 12),
+                SkeletonBox(width: 80, height: 16),
+                Spacer(),
+                SkeletonBox(width: 60, height: 28, borderRadius: BorderRadius.all(Radius.circular(14))),
+                SizedBox(width: 12),
+                SkeletonBox(width: 24, height: 24),
               ],
             ),
           ),
@@ -560,22 +560,22 @@ class _DiscoveryDetailSkeleton extends StatelessWidget {
                   const SizedBox(height: 24),
                   
                   // Mock comments
-                  ...List.generate(2, (index) => Padding(
-                    padding: const EdgeInsets.only(bottom: 24),
+                  ...List.generate(2, (index) => const Padding(
+                    padding: EdgeInsets.only(bottom: 24),
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const SkeletonCircle(size: 32),
-                        const SizedBox(width: 12),
+                        SkeletonCircle(size: 32),
+                        SizedBox(width: 12),
                         Expanded(
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              const SkeletonBox(width: 60, height: 14),
-                              const SizedBox(height: 8),
-                              const SkeletonBox(width: double.infinity, height: 14),
-                              const SizedBox(height: 4),
-                              const SkeletonBox(width: 120, height: 14),
+                              SkeletonBox(width: 60, height: 14),
+                              SizedBox(height: 8),
+                              SkeletonBox(width: double.infinity, height: 14),
+                              SizedBox(height: 4),
+                              SkeletonBox(width: 120, height: 14),
                             ],
                           ),
                         ),
@@ -595,17 +595,17 @@ class _DiscoveryDetailSkeleton extends StatelessWidget {
               color: Colors.white,
               border: Border(top: BorderSide(color: Color(0xFFF0F0F0))),
             ),
-            child: Row(
+            child: const Row(
               children: [
-                const Expanded(
+                Expanded(
                   child: SkeletonBox(height: 36, borderRadius: BorderRadius.all(Radius.circular(18))),
                 ),
-                const SizedBox(width: 16),
-                const SkeletonBox(width: 32, height: 32),
-                const SizedBox(width: 16),
-                const SkeletonBox(width: 32, height: 32),
-                const SizedBox(width: 16),
-                const SkeletonBox(width: 32, height: 32),
+                SizedBox(width: 16),
+                SkeletonBox(width: 32, height: 32),
+                SizedBox(width: 16),
+                SkeletonBox(width: 32, height: 32),
+                SizedBox(width: 16),
+                SkeletonBox(width: 32, height: 32),
               ],
             ),
           ),

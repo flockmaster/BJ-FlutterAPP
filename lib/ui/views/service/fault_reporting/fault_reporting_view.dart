@@ -7,7 +7,6 @@ import 'fault_reporting_viewmodel.dart';
 import 'fault_reporting_skeleton.dart';
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/theme/app_typography.dart';
-import '../../../../core/theme/app_dimensions.dart';
 import '../../../../core/components/baic_ui_kit.dart';
 import '../../profile/widgets/tire_track_background.dart';
 import '../../../../core/services/fault_detection_service.dart';
@@ -509,7 +508,7 @@ class _CameraScreen extends StatelessWidget {
           ),
         ),
         Center(
-          child: Container(
+          child: SizedBox(
             width: 280,
             height: 280,
             child: Stack(
@@ -843,7 +842,7 @@ class _ResultScreenState extends State<_ResultScreen> {
     
     final Color statusColor = isCritical ? const Color(0xFFD93025) : 
                              (severity == FaultSeverity.warning ? const Color(0xFFF59E0B) : const Color(0xFF10B981));
-    final Color bgColor = const Color(0xFFF5F7FA);
+    const Color bgColor = Color(0xFFF5F7FA);
 
     return Scaffold(
       backgroundColor: bgColor,
@@ -1045,7 +1044,7 @@ class _ResultScreenState extends State<_ResultScreen> {
           ),
           const SizedBox(height: 16),
           Text(
-            report!.summary, // 显示具体的错误信息
+            report.summary, // 显示具体的错误信息
             style: TextStyle(fontSize: 14, color: Colors.grey[800], height: 1.5),
           ),
           const SizedBox(height: 32),
@@ -1323,8 +1322,8 @@ class _ResultScreenState extends State<_ResultScreen> {
           children: [
             Container(
               padding: const EdgeInsets.all(10),
-              decoration: BoxDecoration(
-                color: const Color(0xFFF9FAFB),
+              decoration: const BoxDecoration(
+                color: Color(0xFFF9FAFB),
                 shape: BoxShape.circle,
               ),
               child: Icon(icon, color: const Color(0xFF111111), size: 20),

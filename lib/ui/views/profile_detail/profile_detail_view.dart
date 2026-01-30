@@ -10,8 +10,6 @@ import '../../../core/theme/app_typography.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/components/baic_ui_kit.dart';
 import 'package:car_owner_app/core/shared/widgets/optimized_image.dart';
-import '../my_posts/my_posts_view.dart';
-import '../my_favorites/my_favorites_view.dart';
 
 /// 个人中心详情页 - BAIC V4.0 全新重构修复版
 class ProfileDetailView extends StackedView<ProfileDetailViewModel> {
@@ -122,7 +120,7 @@ class _ProfileDetailBodyState extends State<_ProfileDetailBody> with SingleTicke
       clipBehavior: Clip.none,
       children: [
         // 1. 封面背景 (底层)
-        Container(
+        SizedBox(
           height: 240, // 略微减小高度，更紧凑
           width: double.infinity,
           child: Stack(
@@ -219,9 +217,9 @@ class _ProfileDetailBodyState extends State<_ProfileDetailBody> with SingleTicke
 
   Widget _buildUserInfoSection() {
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: AppColors.bgCanvas,
-        borderRadius: const BorderRadius.vertical(top: Radius.circular(28)), // 略微调小圆角
+        borderRadius: BorderRadius.vertical(top: Radius.circular(28)), // 略微调小圆角
       ),
       child: Stack(
         clipBehavior: Clip.none,
@@ -263,7 +261,7 @@ class _ProfileDetailBodyState extends State<_ProfileDetailBody> with SingleTicke
                 // 地址与签名
                 Row(
                   children: [
-                    Icon(LucideIcons.mapPin, size: 12, color: AppColors.textDisabled),
+                    const Icon(LucideIcons.mapPin, size: 12, color: AppColors.textDisabled),
                     const SizedBox(width: 4),
                     Text(
                       widget.viewModel.location,
@@ -364,11 +362,11 @@ class _ProfileDetailBodyState extends State<_ProfileDetailBody> with SingleTicke
               borderRadius: BorderRadius.circular(8),
               border: Border.all(color: Colors.white.withOpacity(0.2), width: 0.5),
             ),
-            child: Row(
+            child: const Row(
               mainAxisSize: MainAxisSize.min,
               children: [
                 Icon(LucideIcons.checkCircle2, color: AppColors.brandGold, size: 8),
-                const SizedBox(width: 2),
+                SizedBox(width: 2),
                 Text(
                   'BJ40车主',
                   style: TextStyle(
@@ -582,7 +580,7 @@ class _ProfileDetailBodyState extends State<_ProfileDetailBody> with SingleTicke
                           overflow: TextOverflow.ellipsis,
                         ),
                       ),
-                      Icon(
+                      const Icon(
                         LucideIcons.heart,
                         size: 10,
                         color: AppColors.textTertiary,

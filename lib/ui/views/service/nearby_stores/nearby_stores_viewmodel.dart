@@ -11,10 +11,10 @@ class NearbyStoresViewModel extends BaicBaseViewModel {
   final MapController mapController = MapController();
   final TextEditingController searchController = TextEditingController();
 
-  LatLng _currentPosition = const LatLng(39.9042, 116.4074); // 北京中心
+  final LatLng _currentPosition = const LatLng(39.9042, 116.4074); // 北京中心
   LatLng get currentPosition => _currentPosition;
 
-  List<NearbyStore> _stores = [
+  final List<NearbyStore> _stores = [
     const NearbyStore(
       id: '1',
       name: '北京汽车越野4S店（朝阳）',

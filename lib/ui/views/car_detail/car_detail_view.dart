@@ -1,10 +1,8 @@
-import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart' hide SkeletonLoader;
 import 'package:lucide_icons/lucide_icons.dart';
 import 'package:car_owner_app/core/shared/widgets/skeleton/skeleton_loader.dart';
 import 'package:car_owner_app/core/models/car_model.dart';
-import 'package:car_owner_app/core/theme/app_colors.dart';
 import 'package:car_owner_app/core/theme/app_dimensions.dart';
 import 'package:car_owner_app/core/theme/app_typography.dart';
 import 'package:car_owner_app/core/components/baic_ui_kit.dart';
@@ -179,7 +177,7 @@ class CarDetailView extends StackedView<CarDetailViewModel> {
     // 这里精确计算：屏幕高度 - 工具栏容器 padding - 底部安全区
     final heroHeight = screenHeight - 60 - bottomPadding;
     
-    return Container(
+    return SizedBox(
       height: heroHeight,
       child: Stack(
         fit: StackFit.expand,
@@ -986,9 +984,8 @@ class CarDetailView extends StackedView<CarDetailViewModel> {
 
 class _DiscoveryScrollReveal extends StatefulWidget {
   final Widget child;
-  final String? id;
 
-  const _DiscoveryScrollReveal({required this.child, this.id});
+  const _DiscoveryScrollReveal({required this.child});
 
   @override
   State<_DiscoveryScrollReveal> createState() => _DiscoveryScrollRevealState();

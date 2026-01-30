@@ -1,9 +1,7 @@
-import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:car_owner_app/core/theme/app_colors.dart';
-import 'package:car_owner_app/core/theme/app_dimensions.dart';
 import 'package:car_owner_app/core/theme/app_typography.dart';
 import 'package:car_owner_app/core/components/baic_ui_kit.dart';
 import 'package:car_owner_app/core/models/car_model.dart';
@@ -14,10 +12,10 @@ class CarOrderView extends StackedView<CarOrderViewModel> {
   final String? initialVersionId;
 
   const CarOrderView({
-    Key? key,
+    super.key,
     required this.car,
     this.initialVersionId,
-  }) : super(key: key);
+  });
 
   @override
   Widget builder(
@@ -558,7 +556,7 @@ class _ContentSection extends StatelessWidget {
                     ),
                   ),
                 );
-              }).toList(),
+              }),
             ],
           ),
         );

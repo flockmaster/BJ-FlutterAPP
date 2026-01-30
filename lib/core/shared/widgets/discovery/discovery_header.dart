@@ -44,12 +44,12 @@ class DiscoveryHeader extends StatelessWidget {
                         fontSize: 16,
                         color: AppColors.textSecondary,
                       ),
-                      indicator: UnderlineTabIndicator(
+                      indicator: const UnderlineTabIndicator(
                         borderSide: BorderSide(
                           color: AppColors.brandOrange,
                           width: 4,
                         ),
-                        insets: const EdgeInsets.only(bottom: 0, left: 10, right: 10),
+                        insets: EdgeInsets.only(bottom: 0, left: 10, right: 10),
                       ),
                       indicatorSize: TabBarIndicatorSize.label,
                       labelPadding: const EdgeInsets.symmetric(horizontal: 12),

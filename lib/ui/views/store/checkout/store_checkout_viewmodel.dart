@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart'; // Keeping for TickerProviderStateMixin if needed, or Color, but Context is banned
-import 'package:stacked/stacked.dart';
 import 'package:stacked_services/stacked_services.dart';
 import '../../../../app/app.locator.dart';
 import '../../../../app/app.router.dart' as stacked_routes;
-import '../../../../app/routes.dart'; // Legacy routes if needed
+// Legacy routes if needed
 import '../../../../core/models/user_address.dart';
 import '../../../../core/services/address_service.dart';
 import 'package:car_owner_app/core/base/baic_base_view_model.dart'; // Core Base
@@ -388,10 +387,6 @@ class StoreCheckoutViewModel extends BaicBaseViewModel {
     navigationService.clearStackAndShow(stacked_routes.Routes.storeView);
   }
 
-  @override // Removing GoBack redundant definition if base has it. But base has optional result.
-  void goBack({dynamic result}) {
-    super.goBack(result: result);
-  }
 
   @override
   void dispose() {

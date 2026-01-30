@@ -32,7 +32,7 @@ class CustomerServiceView extends StackedView<CustomerServiceViewModel> {
   Widget _buildHeader(BuildContext context, CustomerServiceViewModel viewModel) {
     return Container(
       padding: const EdgeInsets.only(top: 54, left: 12, right: 12, bottom: 12),
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: AppColors.bgSurface,
         border: Border(
           bottom: BorderSide(
@@ -53,7 +53,7 @@ class CustomerServiceView extends StackedView<CustomerServiceViewModel> {
                 color: Colors.transparent,
                 borderRadius: BorderRadius.circular(16),
               ),
-              child: Icon(
+              child: const Icon(
                 LucideIcons.arrowLeft,
                 size: 24,
                 color: AppColors.textPrimary,
@@ -63,7 +63,7 @@ class CustomerServiceView extends StackedView<CustomerServiceViewModel> {
           Expanded(
             child: Column(
               children: [
-                Text(
+                const Text(
                   '专属客服',
                   style: TextStyle(
                     fontSize: 17,
@@ -91,7 +91,7 @@ class CustomerServiceView extends StackedView<CustomerServiceViewModel> {
                       ),
                     ),
                     const SizedBox(width: 4),
-                    Text(
+                    const Text(
                       '官方产品专家在线',
                       style: TextStyle(
                         fontSize: 10,
@@ -113,7 +113,7 @@ class CustomerServiceView extends StackedView<CustomerServiceViewModel> {
                 color: Colors.transparent,
                 borderRadius: BorderRadius.circular(16),
               ),
-              child: Icon(
+              child: const Icon(
                 LucideIcons.phone,
                 size: 20,
                 color: AppColors.textPrimary,
@@ -209,7 +209,7 @@ class CustomerServiceView extends StackedView<CustomerServiceViewModel> {
   Widget _buildInputArea(CustomerServiceViewModel viewModel) {
     return Container(
       padding: const EdgeInsets.all(20),
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: AppColors.bgSurface,
         border: Border(
           top: BorderSide(
@@ -250,7 +250,7 @@ class CustomerServiceView extends StackedView<CustomerServiceViewModel> {
                             ),
                             child: Text(
                               reply,
-                              style: TextStyle(
+                              style: const TextStyle(
                                 fontSize: 12,
                                 color: AppColors.textSecondary,
                                 fontWeight: FontWeight.bold,
@@ -282,26 +282,26 @@ class CustomerServiceView extends StackedView<CustomerServiceViewModel> {
                           child: TextField(
                             onChanged: viewModel.updateInputText,
                             onSubmitted: (_) => viewModel.sendMessage(),
-                            decoration: InputDecoration(
+                            decoration: const InputDecoration(
                               hintText: '请输入您的问题...',
                               hintStyle: TextStyle(
                                 fontSize: 15,
                                 color: AppColors.textTertiary,
                               ),
                               border: InputBorder.none,
-                              contentPadding: const EdgeInsets.symmetric(
+                              contentPadding: EdgeInsets.symmetric(
                                 horizontal: 20,
                                 vertical: 14,
                               ),
                             ),
-                            style: TextStyle(
+                            style: const TextStyle(
                               fontSize: 15,
                               color: AppColors.textPrimary,
                             ),
                           ),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.only(right: 16),
+                        const Padding(
+                          padding: EdgeInsets.only(right: 16),
                           child: Icon(
                             LucideIcons.messageCircle,
                             size: 18,

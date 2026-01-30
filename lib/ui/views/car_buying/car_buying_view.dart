@@ -2,13 +2,10 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:easy_refresh/easy_refresh.dart';
 import 'package:stacked/stacked.dart';
-import '../../../app/routes.dart';
-import '../../../core/extensions/context_extensions.dart';
-import 'package:car_owner_app/core/shared/widgets/optimized_image.dart';
 import 'package:car_owner_app/core/shared/widgets/car_buying/single_car_scroll_view.dart';
 import 'package:car_owner_app/core/shared/widgets/skeleton/car_buying_skeleton.dart';
 import 'car_buying_viewmodel.dart';
-import '../../common/ui_converters.dart'; // Import UI Converters
+// Import UI Converters
 import '../../../core/theme/app_typography.dart';
 import '../../../core/components/consultant_modal.dart';
 
@@ -66,7 +63,7 @@ class _CarBuyingContentState extends State<_CarBuyingContent> with TickerProvide
   @override
   Widget build(BuildContext context) {
     if (viewModel.isBusy && viewModel.isEmpty) {
-      return Scaffold(
+      return const Scaffold(
         backgroundColor: Color(0xFFF5F5F5),
         body: CarBuyingSkeleton(),
       );
@@ -216,7 +213,7 @@ class _CarBuyingContentState extends State<_CarBuyingContent> with TickerProvide
                             indicator: const BoxDecoration(),
                             labelPadding: const EdgeInsets.symmetric(horizontal: 6),
                             tabAlignment: TabAlignment.start,
-                            overlayColor: MaterialStateProperty.all(Colors.transparent),
+                            overlayColor: WidgetStateProperty.all(Colors.transparent),
                             tabs: viewModel.carModels.asMap().entries.map((entry) {
                               final index = entry.key;
                               final car = entry.value;
@@ -305,7 +302,7 @@ class _CarBuyingContentState extends State<_CarBuyingContent> with TickerProvide
                             crossAxisAlignment: CrossAxisAlignment.start,
                             mainAxisSize: MainAxisSize.min,
                             children: [
-                              Text(
+                              const Text(
                                 '现在定购，最高可享优惠',
                                 style: AppTypography.captionSecondary,
                                 maxLines: 1,

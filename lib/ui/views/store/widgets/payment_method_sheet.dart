@@ -11,12 +11,12 @@ class PaymentMethodSheet extends StatefulWidget {
   final VoidCallback onClose;
 
   const PaymentMethodSheet({
-    Key? key,
+    super.key,
     required this.amount,
     required this.expiryTime,
     this.selectedMethod,
     required this.onClose,
-  }) : super(key: key);
+  });
 
   @override
   State<PaymentMethodSheet> createState() => _PaymentMethodSheetState();

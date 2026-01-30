@@ -400,9 +400,9 @@ class _SkeletonView extends StatelessWidget {
                 bottom: 12,
               ),
               color: Colors.white,
-              child: Row(
+              child: const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
+                children: [
                   SkeletonCircle(size: 36),
                   SkeletonBox(width: 80, height: 24),
                   SizedBox(width: 36),
@@ -414,8 +414,8 @@ class _SkeletonView extends StatelessWidget {
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
               color: const Color(0xFFF5F7FA),
-              child: Row(
-                children: const [
+              child: const Row(
+                children: [
                   SkeletonBox(width: 50, height: 20),
                   SizedBox(width: 32),
                   SkeletonBox(width: 50, height: 20),
@@ -437,10 +437,10 @@ class _SkeletonView extends StatelessWidget {
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(12),
                     ),
-                    child: Row(
+                    child: const Row(
                       children: [
                         // Left
-                        const SkeletonBox(
+                        SkeletonBox(
                           width: 100,
                           height: 100,
                           borderRadius: BorderRadius.only(
@@ -452,20 +452,20 @@ class _SkeletonView extends StatelessWidget {
                         // Right
                         Expanded(
                           child: Padding(
-                            padding: const EdgeInsets.all(16),
+                            padding: EdgeInsets.all(16),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: const [
+                                  children: [
                                     SkeletonBox(width: 120, height: 20),
                                     SizedBox(height: 8),
                                     SkeletonBox(width: 80, height: 14),
                                   ],
                                 ),
-                                const SkeletonBox(width: 100, height: 12),
+                                SkeletonBox(width: 100, height: 12),
                               ],
                             ),
                           ),

@@ -1,11 +1,8 @@
 
 import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:car_owner_app/app/routes.dart';
-import 'package:car_owner_app/core/extensions/context_extensions.dart';
 import 'package:car_owner_app/core/models/car_model.dart';
 import 'package:lucide_icons/lucide_icons.dart';
-import 'package:car_owner_app/core/constants/app_constants.dart';
 import '../optimized_image.dart';
 import 'package:car_owner_app/ui/views/vr_experience/vr_experience_enhanced_view.dart';
 import 'package:car_owner_app/core/theme/app_dimensions.dart';
@@ -50,8 +47,8 @@ class _SingleCarScrollViewState extends State<SingleCarScrollView> {
   @override
   void initState() {
     super.initState();
-    if (widget.car.versions != null && widget.car.versions!.isNotEmpty) {
-      _selectedVersionKey = widget.car.versions!.keys.first;
+    if (widget.car.versions.isNotEmpty) {
+      _selectedVersionKey = widget.car.versions.keys.first;
     }
   }
 
@@ -129,7 +126,7 @@ class _SingleCarScrollViewState extends State<SingleCarScrollView> {
         if (!widget.car.isPreview) _buildPromoSection(),
         if (!widget.car.isPreview && widget.car.highlightImage != null) _buildHighlightsSection(),
         if (widget.car.isPreview) _buildPreviewInfo(),
-        if (!widget.car.isPreview && widget.car.versions != null) _buildVersionSelector(),
+        if (!widget.car.isPreview) _buildVersionSelector(),
         if (!widget.car.isPreview) _buildToolsSection(),
         if (!widget.car.isPreview && widget.car.vrImage != null) _buildVRSection(),
         if (!widget.car.isPreview) _buildStoreSection(),
@@ -469,7 +466,7 @@ class _SingleCarScrollViewState extends State<SingleCarScrollView> {
 
   Widget _buildVersionSelector() {
     final versions = widget.car.versions;
-    if (versions == null || versions.isEmpty) return const SizedBox.shrink();
+    if (versions.isEmpty) return const SizedBox.shrink();
 
     // Ensure selection is valid
     if (_selectedVersionKey == null || !versions.containsKey(_selectedVersionKey)) {
@@ -489,8 +486,8 @@ class _SingleCarScrollViewState extends State<SingleCarScrollView> {
               const Text('在售车型', style: TextStyle(fontSize: 22, fontWeight: FontWeight.w600, color: Color(0xFF1A1A1A))),
               GestureDetector(
                 onTap: widget.onCompare,
-                child: Row(
-                  children: const [
+                child: const Row(
+                  children: [
                     Text(
                       '车型对比',
                       style: TextStyle(
@@ -575,7 +572,7 @@ class _SingleCarScrollViewState extends State<SingleCarScrollView> {
                             Expanded(
                               child: Text(
                                 feature, 
-                                style: TextStyle(
+                                style: const TextStyle(
                                   color: AppColors.textPrimary,
                                   fontSize: 13,
                                   fontWeight: FontWeight.w600,
@@ -600,12 +597,12 @@ class _SingleCarScrollViewState extends State<SingleCarScrollView> {
                       crossAxisAlignment: CrossAxisAlignment.baseline,
                       textBaseline: TextBaseline.alphabetic,
                       children: [
-                        Text('¥ ', style: AppTypography.captionPrimary),
+                        const Text('¥ ', style: AppTypography.captionPrimary),
                         Text(
                           '${selectedVersion.price}',
                           style: AppTypography.dataDisplayM.copyWith(color: const Color(0xFF1A1A1A)),
                         ),
-                        Text('万起', style: AppTypography.captionPrimary),
+                        const Text('万起', style: AppTypography.captionPrimary),
                       ],
                     ),
                     ElevatedButton(
@@ -971,8 +968,8 @@ class _SingleCarScrollViewState extends State<SingleCarScrollView> {
               const Text('直营门店', style: TextStyle(fontSize: 22, fontWeight: FontWeight.w600, color: Color(0xFF1A1A1A))),
               GestureDetector(
                 onTap: () => widget.onAllStores?.call(),
-                child: Row(
-                  children: const [
+                child: const Row(
+                  children: [
                     Text(
                       '全部网点',
                       style: TextStyle(
@@ -1004,7 +1001,7 @@ class _SingleCarScrollViewState extends State<SingleCarScrollView> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Container(
+                SizedBox(
                   height: 180,
                   width: double.infinity,
                   child: _buildCarImage('/images/store-front.jpg'),

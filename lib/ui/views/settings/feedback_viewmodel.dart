@@ -10,7 +10,7 @@ class FeedbackViewModel extends BaicBaseViewModel {
   // 反馈类型：功能异常、产品建议、服务表扬
   String _selectedType = '功能异常';
   final List<String> _feedbackTypes = ['功能异常', '产品建议', '服务表扬'];
-  List<String> _selectedImages = [];
+  final List<String> _selectedImages = [];
 
   String get selectedType => _selectedType;
   List<String> get feedbackTypes => _feedbackTypes;

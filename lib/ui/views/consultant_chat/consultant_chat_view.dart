@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
-import '../../../core/themes/app_theme.dart';
 import 'package:car_owner_app/core/shared/widgets/optimized_image.dart';
 import 'consultant_chat_viewmodel.dart';
 import '../../../core/theme/app_typography.dart';
@@ -51,7 +50,7 @@ class ConsultantChatPage extends StatelessWidget {
               // Custom Header
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   color: AppColors.bgSurface,
                   border: Border(bottom: BorderSide(color: AppColors.borderPrimary)),
                 ),
@@ -63,7 +62,7 @@ class ConsultantChatPage extends StatelessWidget {
                         Container(
                           width: 40,
                           height: 40,
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             shape: BoxShape.circle,
                             gradient: LinearGradient(
                               colors: [AppColors.brandDark, AppColors.textSecondary],
@@ -77,16 +76,16 @@ class ConsultantChatPage extends StatelessWidget {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text('AI 产品顾问', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: AppColors.textPrimary)),
+                            const Text('AI 产品顾问', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: AppColors.textPrimary)),
                             Row(
                               children: [
                                 Container(
                                   width: 6,
                                   height: 6,
-                                  decoration: BoxDecoration(color: AppColors.success, shape: BoxShape.circle),
+                                  decoration: const BoxDecoration(color: AppColors.success, shape: BoxShape.circle),
                                 ),
                                 const SizedBox(width: 4),
-                                Text('在线', style: TextStyle(fontSize: 12, color: AppColors.success, fontWeight: FontWeight.w500)),
+                                const Text('在线', style: TextStyle(fontSize: 12, color: AppColors.success, fontWeight: FontWeight.w500)),
                               ],
                             ),
                           ],
@@ -95,7 +94,7 @@ class ConsultantChatPage extends StatelessWidget {
                     ),
                     BaicBounceButton(
                       onPressed: () => viewModel.goBack(),
-                      child: Icon(Icons.close, color: AppColors.textTertiary),
+                      child: const Icon(Icons.close, color: AppColors.textTertiary),
                     ),
                   ],
                 ),
@@ -156,7 +155,7 @@ class ConsultantChatPage extends StatelessWidget {
               // Input Area
               Container(
                 padding: EdgeInsets.fromLTRB(16, 12, 16, 16 + MediaQuery.of(context).padding.bottom),
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   color: AppColors.bgSurface,
                   border: Border(top: BorderSide(color: AppColors.borderPrimary)),
                 ),
@@ -172,11 +171,11 @@ class ConsultantChatPage extends StatelessWidget {
                         ),
                         child: TextField(
                           controller: viewModel.messageController,
-                          decoration: InputDecoration(
+                          decoration: const InputDecoration(
                             border: InputBorder.none,
                             hintText: '询问关于车型的问题...',
                             hintStyle: TextStyle(fontSize: 14, color: AppColors.textTertiary),
-                            contentPadding: const EdgeInsets.only(bottom: 10), // Fine tune alignment
+                            contentPadding: EdgeInsets.only(bottom: 10), // Fine tune alignment
                           ),
                           textInputAction: TextInputAction.send,
                           onSubmitted: (_) => viewModel.sendMessage(),
@@ -189,7 +188,7 @@ class ConsultantChatPage extends StatelessWidget {
                        child: Container(
                          width: 40,
                          height: 40,
-                         decoration: BoxDecoration(
+                         decoration: const BoxDecoration(
                            color: AppColors.brandDark,
                            shape: BoxShape.circle,
                          ),
@@ -222,7 +221,7 @@ class ConsultantChatPage extends StatelessWidget {
             child: Column(
                crossAxisAlignment: CrossAxisAlignment.start,
                children: [
-                  Text('我想咨询这款车', style: TextStyle(fontSize: 12, color: AppColors.textSecondary)),
+                  const Text('我想咨询这款车', style: TextStyle(fontSize: 12, color: AppColors.textSecondary)),
                   const SizedBox(height: 8),
                   Row(
                      children: [

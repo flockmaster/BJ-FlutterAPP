@@ -8,7 +8,6 @@
 // - 导航: 使用 viewModel.goBack() 而非 context.pop()
 // ============================================================================
 
-import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 import 'package:qr_code_scanner/qr_code_scanner.dart';
@@ -190,8 +189,8 @@ class ScannerView extends StackedView<ScannerViewModel> {
   // 自定义遮罩层 - 中间圆角矩形外的半透明黑色遮罩
   Widget _buildCustomOverlay(BuildContext context, ScannerViewModel viewModel) {
     final size = MediaQuery.of(context).size;
-    final scanAreaSize = 260.0; // 扫码区域大小
-    final borderRadius = 32.0; // 圆角半径
+    const scanAreaSize = 260.0; // 扫码区域大小
+    const borderRadius = 32.0; // 圆角半径
     
     return CustomPaint(
       size: size,
@@ -368,7 +367,7 @@ class ScannerOverlayPainter extends CustomPainter {
     );
     
     // 绘制四个角的装饰线（可选，增强视觉效果）
-    final cornerLength = 40.0;
+    const cornerLength = 40.0;
     final cornerPaint = Paint()
       ..color = borderColor
       ..style = PaintingStyle.stroke

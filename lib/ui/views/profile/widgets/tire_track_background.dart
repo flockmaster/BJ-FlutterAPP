@@ -51,7 +51,7 @@ class TireTrackPainter extends CustomPainter {
     canvas.restore();
 
     // 应用 DstIn 混合模式进行 Alpha 蒙版处理
-    final Gradient maskGradient = const LinearGradient(
+    const Gradient maskGradient = LinearGradient(
       begin: Alignment.centerLeft,
       end: Alignment.centerRight,
       colors: [

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
-import 'package:lucide_icons/lucide_icons.dart';
 import '../../../core/components/baic_ui_kit.dart';
 import '../../common/ui_converters.dart';
 import 'update_nickname_viewmodel.dart';

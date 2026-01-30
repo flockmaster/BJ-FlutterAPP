@@ -7,7 +7,7 @@ import '../../../core/theme/app_colors.dart';
 /// 预约保养页面 - 像素级还原
 /// 严格遵守无负数margin规范
 class MaintenanceBookingView extends StatelessWidget {
-  const MaintenanceBookingView({Key? key}) : super(key: key);
+  const MaintenanceBookingView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -178,19 +178,19 @@ class MaintenanceBookingView extends StatelessWidget {
                 ),
                 const SizedBox(height: 2),
                 RichText(
-                  text: TextSpan(
-                    style: const TextStyle(
+                  text: const TextSpan(
+                    style: TextStyle(
                       fontSize: 12,
                       fontFamily: 'Oswald',
                       color: AppColors.textSecondary,
                       height: 1.4,
                     ),
                     children: [
-                      const TextSpan(text: '京A·12345'),
-                      const TextSpan(text: ' · '),
+                      TextSpan(text: '京A·12345'),
+                      TextSpan(text: ' · '),
                       TextSpan(
                         text: '行驶 8,521 km',
-                        style: const TextStyle(color: AppColors.textTertiary),
+                        style: TextStyle(color: AppColors.textTertiary),
                       ),
                     ],
                   ),
@@ -208,13 +208,13 @@ class MaintenanceBookingView extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         // Section Header
-        Padding(
-          padding: const EdgeInsets.only(left: 4, bottom: 12),
+        const Padding(
+          padding: EdgeInsets.only(left: 4, bottom: 12),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Row(
-                children: const [
+                children: [
                   Text(
                     '选择保养套餐',
                     style: TextStyle(
@@ -306,7 +306,7 @@ class MaintenanceBookingView extends StatelessWidget {
                                   const SizedBox(height: 4),
                                   Text(
                                     (package['items'] as List<String>).join(' + '),
-                                    style: TextStyle(
+                                    style: const TextStyle(
                                       fontSize: 12,
                                       color: AppColors.textTertiary,
                                       height: 1.5,
@@ -398,7 +398,7 @@ class MaintenanceBookingView extends StatelessWidget {
               ),
             ),
           );
-        }).toList(),
+        }),
       ],
     );
   }
@@ -421,10 +421,10 @@ class MaintenanceBookingView extends StatelessWidget {
       child: Column(
         children: [
           // Header
-          Row(
+          const Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const Text(
+              Text(
                 '服务门店',
                 style: TextStyle(
                   fontSize: 15,
@@ -444,7 +444,7 @@ class MaintenanceBookingView extends StatelessWidget {
                       height: 1.3,
                     ),
                   ),
-                  const SizedBox(width: 2),
+                  SizedBox(width: 2),
                   Icon(
                     LucideIcons.chevronRight,
                     size: 14,
@@ -495,7 +495,7 @@ class MaintenanceBookingView extends StatelessWidget {
                       overflow: TextOverflow.ellipsis,
                     ),
                     const SizedBox(height: 6),
-                    Text(
+                    const Text(
                       '北京市朝阳区建国路88号',
                       style: TextStyle(
                         fontSize: 12,
@@ -585,8 +585,8 @@ class MaintenanceBookingView extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           // Header
-          Row(
-            children: const [
+          const Row(
+            children: [
               Icon(
                 LucideIcons.calendar,
                 size: 18,
@@ -756,7 +756,7 @@ class MaintenanceBookingView extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisSize: MainAxisSize.min,
             children: [
-                Text(
+                const Text(
                   '预计费用 (含工时)',
                   style: TextStyle(
                     fontSize: 11,

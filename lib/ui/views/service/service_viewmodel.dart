@@ -11,7 +11,6 @@ import 'maintenance_booking_view.dart';
 import '../../../core/base/baic_base_view_model.dart';
 import '../../../core/services/map_navigation_service.dart';
 import '../../../core/services/profile_service.dart';
-import 'package:flutter/material.dart';
 
 /// Service页面ViewModel
 /// 
@@ -203,7 +202,7 @@ class ServiceViewModel extends BaicBaseViewModel {
     }
     // 导航到保养预约页面
     await _navigationService.navigateToView(
-      MaintenanceBookingView(),
+      const MaintenanceBookingView(),
     );
   }
 }

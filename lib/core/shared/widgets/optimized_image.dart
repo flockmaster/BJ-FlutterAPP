@@ -176,8 +176,8 @@ class OptimizedAvatar extends StatelessWidget {
       placeholder: placeholder ?? Container(
         width: size,
         height: size,
-        decoration: BoxDecoration(
-          color: const Color(0xFFE0E0E0),
+        decoration: const BoxDecoration(
+          color: Color(0xFFE0E0E0),
           shape: BoxShape.circle,
         ),
         child: Icon(

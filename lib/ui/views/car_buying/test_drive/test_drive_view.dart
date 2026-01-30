@@ -13,9 +13,9 @@ class TestDriveView extends StackedView<TestDriveViewModel> {
   final CarModel car;
 
   const TestDriveView({
-    Key? key,
+    super.key,
     required this.car,
-  }) : super(key: key);
+  });
 
   @override
   Widget builder(
@@ -85,7 +85,7 @@ class TestDriveView extends StackedView<TestDriveViewModel> {
           Container(
             width: 120,
             height: 80,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: AppColors.bgFill,
               borderRadius: AppDimensions.borderRadiusM,
             ),
@@ -293,18 +293,18 @@ class TestDriveView extends StackedView<TestDriveViewModel> {
             child: RichText(
               text: TextSpan(
                 style: AppTypography.captionSecondary.copyWith(color: AppColors.textTertiary, height: 1.5),
-                children: [
-                  const TextSpan(text: '我已阅读并同意 '),
+                children: const [
+                  TextSpan(text: '我已阅读并同意 '),
                   TextSpan(
                     text: '《隐私政策》',
                     style: TextStyle(color: AppColors.textTitle, fontWeight: FontWeight.bold),
                   ),
-                  const TextSpan(text: ' 和 '),
+                  TextSpan(text: ' 和 '),
                   TextSpan(
                     text: '《试驾服务条款》',
                     style: TextStyle(color: AppColors.textTitle, fontWeight: FontWeight.bold),
                   ),
-                  const TextSpan(text: '。'),
+                  TextSpan(text: '。'),
                 ],
               ),
             ),
@@ -419,7 +419,7 @@ class TestDriveView extends StackedView<TestDriveViewModel> {
 }
 
 class _SkeletonView extends StatelessWidget {
-  const _SkeletonView({Key? key}) : super(key: key);
+  const _SkeletonView();
 
   @override
   Widget build(BuildContext context) {
@@ -431,18 +431,18 @@ class _SkeletonView extends StatelessWidget {
         backgroundColor: AppColors.bgSurface,
         elevation: 0,
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(20),
+      body: const Padding(
+        padding: EdgeInsets.all(20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const BaicSkeleton(width: double.infinity, height: 112, radius: 12),
-            const SizedBox(height: 24),
-            const BaicSkeleton(width: 100, height: 20),
-            const SizedBox(height: 16),
-            const BaicSkeleton(width: double.infinity, height: 260, radius: 16),
-            const SizedBox(height: 24),
-            const BaicSkeleton(width: double.infinity, height: 40),
+            BaicSkeleton(width: double.infinity, height: 112, radius: 12),
+            SizedBox(height: 24),
+            BaicSkeleton(width: 100, height: 20),
+            SizedBox(height: 16),
+            BaicSkeleton(width: double.infinity, height: 260, radius: 16),
+            SizedBox(height: 24),
+            BaicSkeleton(width: double.infinity, height: 40),
           ],
         ),
       ),

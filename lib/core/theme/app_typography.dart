@@ -212,7 +212,7 @@ class AppTypography {
 extension TextStyleExtension on TextStyle {
   /// 应用 Oswald 字体（用于数据展示）
   TextStyle get oswald => GoogleFonts.oswald(
-    textStyle: this.copyWith(fontWeight: FontWeight.w700), // 强制数字/英文使用 700 字重
+    textStyle: copyWith(fontWeight: FontWeight.w700), // 强制数字/英文使用 700 字重
     letterSpacing: -0.5,
     height: 1.0,
   ).copyWith(

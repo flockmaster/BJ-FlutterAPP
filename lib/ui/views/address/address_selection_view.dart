@@ -2,12 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 import 'package:lucide_icons/lucide_icons.dart';
 import 'address_selection_viewmodel.dart';
-import '../../../../core/models/user_address.dart';
 
 class AddressSelectionView extends StackedView<AddressSelectionViewModel> {
   final int? selectedId;
 
-  const AddressSelectionView({Key? key, this.selectedId}) : super(key: key);
+  const AddressSelectionView({super.key, this.selectedId});
 
   @override
   void onViewModelReady(AddressSelectionViewModel viewModel) {

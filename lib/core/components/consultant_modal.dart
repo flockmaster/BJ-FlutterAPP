@@ -25,10 +25,10 @@ class ConsultantModal extends StatefulWidget {
   final String carName;
 
   const ConsultantModal({
-    Key? key,
+    super.key,
     this.initialMessage,
     required this.carName,
-  }) : super(key: key);
+  });
 
   /// 静态显示方法
   static Future<void> show(BuildContext context, {String? initialMessage, required String carName}) {
@@ -330,8 +330,8 @@ class _ConsultantModalState extends State<ConsultantModal> {
                 Expanded(
                   child: Container(
                     height: 48,
-                    decoration: BoxDecoration(
-                      color: const Color(0xFFF5F5F5),
+                    decoration: const BoxDecoration(
+                      color: Color(0xFFF5F5F5),
                       borderRadius: AppDimensions.borderRadiusFull,
                     ),
                     child: TextField(

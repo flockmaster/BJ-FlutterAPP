@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import '../theme/app_colors.dart';
 import '../theme/app_theme.dart';
 import '../theme/app_dimensions.dart';
 
@@ -12,11 +11,11 @@ class BaicBounceButton extends StatefulWidget {
   final bool enableHaptic;
 
   const BaicBounceButton({
-    Key? key,
+    super.key,
     required this.child,
     required this.onPressed,
     this.enableHaptic = true,
-  }) : super(key: key);
+  });
 
   @override
   State<BaicBounceButton> createState() => _BaicBounceButtonState();
@@ -76,11 +75,11 @@ class BaicSkeleton extends StatelessWidget {
   final double radius;
 
   const BaicSkeleton({
-    Key? key, 
+    super.key, 
     required this.width, 
     required this.height, 
     this.radius = AppDimensions.radiusS
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

@@ -3,9 +3,7 @@ import 'package:stacked/stacked.dart';
 import 'package:lucide_icons/lucide_icons.dart';
 import 'roadside_assistance_viewmodel.dart';
 import '../../../../core/theme/app_colors.dart';
-import '../../../../core/theme/app_typography.dart';
 import '../../../../core/components/baic_ui_kit.dart';
-import 'package:car_owner_app/core/shared/widgets/optimized_image.dart';
 
 class RoadsideAssistanceView extends StackedView<RoadsideAssistanceViewModel> {
   const RoadsideAssistanceView({super.key});
@@ -241,18 +239,18 @@ class RoadsideAssistanceView extends StackedView<RoadsideAssistanceViewModel> {
               borderRadius: BorderRadius.circular(16),
               border: Border.all(color: Colors.grey[50]!),
             ),
-            child: Row(
+            child: const Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Padding(
+                Padding(
                   padding: EdgeInsets.only(top: 2),
                   child: Icon(LucideIcons.mapPin, size: 18, color: AppColors.textTertiary),
                 ),
-                const SizedBox(width: 12),
+                SizedBox(width: 12),
                 Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const [
+                    children: [
                       Text(
                         '当前位置',
                         style: TextStyle(
@@ -292,9 +290,9 @@ class RoadsideAssistanceView extends StackedView<RoadsideAssistanceViewModel> {
                   ),
                 ],
               ),
-              child: Row(
+              child: const Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: const [
+                children: [
                   Icon(LucideIcons.alertTriangle, size: 20, color: Colors.white),
                   SizedBox(width: 12),
                   Text(
@@ -358,7 +356,7 @@ class RoadsideAssistanceView extends StackedView<RoadsideAssistanceViewModel> {
           ),
         ],
       ),
-      child: Column(
+      child: const Column(
         mainAxisSize: MainAxisSize.min,
         children: [
           SizedBox(
@@ -367,11 +365,11 @@ class RoadsideAssistanceView extends StackedView<RoadsideAssistanceViewModel> {
             child: CircularProgressIndicator(
               color: AppColors.brandOrange,
               strokeWidth: 5,
-              backgroundColor: const Color(0xFFFFF7ED),
+              backgroundColor: Color(0xFFFFF7ED),
             ),
           ),
-          const SizedBox(height: 24),
-          const Text(
+          SizedBox(height: 24),
+          Text(
             '正在匹配救援力量...',
             style: TextStyle(
               fontSize: 19,
@@ -379,8 +377,8 @@ class RoadsideAssistanceView extends StackedView<RoadsideAssistanceViewModel> {
               color: AppColors.brandBlack,
             ),
           ),
-          const SizedBox(height: 8),
-          const Text(
+          SizedBox(height: 8),
+          Text(
             '系统正在调度距离您最近的服务网点',
             textAlign: TextAlign.center,
             style: TextStyle(
@@ -483,10 +481,10 @@ class RoadsideAssistanceView extends StackedView<RoadsideAssistanceViewModel> {
                 ),
               ),
               const SizedBox(width: 16),
-              Expanded(
+              const Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: const [
+                  children: [
                     Text(
                       '王师傅',
                       style: TextStyle(

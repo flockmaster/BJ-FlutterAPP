@@ -12,11 +12,11 @@ class ProfileSkeleton extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           // Header icons
-          Padding(
-            padding: const EdgeInsets.fromLTRB(20, 54, 20, 12),
+          const Padding(
+            padding: EdgeInsets.fromLTRB(20, 54, 20, 12),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.end,
-              children: const [
+              children: [
                 SkeletonCircle(size: 40),
                 SizedBox(width: 16),
                 SkeletonCircle(size: 40),
@@ -29,16 +29,16 @@ class ProfileSkeleton extends StatelessWidget {
             child: Column(
               children: [
                 // Avatar and name
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Row(
                       children: [
-                        const SkeletonCircle(size: 72),
-                        const SizedBox(width: 16),
+                        SkeletonCircle(size: 72),
+                        SizedBox(width: 16),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          children: const [
+                          children: [
                             SkeletonBox(width: 96, height: 24),
                             SizedBox(height: 8),
                             SkeletonBox(width: 64, height: 16),
@@ -46,7 +46,7 @@ class ProfileSkeleton extends StatelessWidget {
                         ),
                       ],
                     ),
-                    const SkeletonBox(
+                    SkeletonBox(
                       width: 96,
                       height: 32,
                       borderRadius: BorderRadius.all(Radius.circular(16)),
@@ -59,8 +59,8 @@ class ProfileSkeleton extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: List.generate(
                     4,
-                    (i) => Column(
-                      children: const [
+                    (i) => const Column(
+                      children: [
                         SkeletonBox(width: 32, height: 24),
                         SizedBox(height: 8),
                         SkeletonBox(width: 40, height: 12),

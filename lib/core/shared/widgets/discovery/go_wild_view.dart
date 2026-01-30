@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:easy_refresh/easy_refresh.dart';
-import 'package:car_owner_app/core/constants/app_constants.dart';
 import 'package:car_owner_app/core/models/discovery_models.dart';
 import 'package:car_owner_app/core/theme/app_colors.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';

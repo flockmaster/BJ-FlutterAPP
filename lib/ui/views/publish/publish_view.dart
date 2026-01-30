@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
-import 'dart:io';
 import 'publish_viewmodel.dart';
-import '../../common/ui_converters.dart';
 
 /// [PublishView] - 社区动态发布编辑器
 /// 
@@ -141,9 +139,9 @@ class PublishView extends StackedView<PublishViewModel> {
                             borderRadius: BorderRadius.circular(12),
                             border: Border.all(color: const Color(0xFFEEEEEE), style: BorderStyle.none), // Dashed border needs CustomPaint or package, simple for now
                           ),
-                          child: Column(
+                          child: const Column(
                             mainAxisAlignment: MainAxisAlignment.center,
-                            children: const [
+                            children: [
                               Icon(Icons.camera_alt, color: Colors.grey, size: 28),
                               SizedBox(height: 4),
                               Text('添加图片', style: TextStyle(color: Colors.grey, fontSize: 12)),

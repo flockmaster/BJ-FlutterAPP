@@ -1,6 +1,4 @@
 import '../base/base_state.dart';
-import '../di/service_locator.dart';
-import 'package:car_owner_app/core/shared/services/api_service.dart';
 import '../models/discovery_models.dart';
 import '../services/mock_data/mock_discovery_data.dart';
 

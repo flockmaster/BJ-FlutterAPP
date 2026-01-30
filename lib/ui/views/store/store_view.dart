@@ -877,12 +877,12 @@ class _HotSellers extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           // 标题栏
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 20),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Text(
+                Text(
                   '热卖榜单',
                   style: TextStyle(
                     fontSize: 18,
@@ -901,7 +901,7 @@ class _HotSellers extends StatelessWidget {
                         letterSpacing: 0.5,
                       ),
                     ),
-                    const SizedBox(width: 4),
+                    SizedBox(width: 4),
                     Icon(
                       LucideIcons.arrowRight,
                       size: 12,
@@ -1216,9 +1216,9 @@ class _ThemeSection extends StatelessWidget {
             // 商品图片
             Expanded(
               child: Container(
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   color: AppColors.bgFill,
-                  borderRadius: const BorderRadius.vertical(
+                  borderRadius: BorderRadius.vertical(
                     top: Radius.circular(16),
                   ),
                 ),
@@ -1399,7 +1399,7 @@ class _StoreSearchViewState extends State<_StoreSearchView>
               ),
               height: 60,
               padding: const EdgeInsets.symmetric(horizontal: 20),
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: AppColors.white,
                 border: Border(
                   bottom: BorderSide(
@@ -1414,7 +1414,7 @@ class _StoreSearchViewState extends State<_StoreSearchView>
                     child: Container(
                       height: 36,
                       padding: const EdgeInsets.symmetric(horizontal: 12),
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         color: AppColors.bgFill,
                         borderRadius: AppDimensions.borderRadiusFull,
                       ),

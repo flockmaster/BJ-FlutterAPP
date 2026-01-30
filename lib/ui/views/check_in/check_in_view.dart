@@ -49,7 +49,7 @@ class CheckInView extends StackedView<CheckInViewModel> {
   Widget _buildHeader(BuildContext context, CheckInViewModel viewModel) {
     return Container(
       height: 320,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         gradient: LinearGradient(
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
@@ -61,8 +61,8 @@ class CheckInView extends StackedView<CheckInViewModel> {
         ),
       ),
       child: Container(
-        decoration: BoxDecoration(
-          image: const DecorationImage(
+        decoration: const BoxDecoration(
+          image: DecorationImage(
             image: NetworkImage('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1200&auto=format&fit=crop'),
             fit: BoxFit.cover,
             opacity: 0.15,
@@ -235,7 +235,7 @@ class CheckInView extends StackedView<CheckInViewModel> {
                   children: [
                     Row(
                       children: [
-                        Text(
+                        const Text(
                           '已连续签到 ',
                           style: TextStyle(
                             fontSize: 16,
@@ -249,7 +249,7 @@ class CheckInView extends StackedView<CheckInViewModel> {
                             color: AppColors.brandOrange,
                           ),
                         ),
-                        Text(
+                        const Text(
                           ' 天',
                           style: TextStyle(
                             fontSize: 16,
@@ -260,7 +260,7 @@ class CheckInView extends StackedView<CheckInViewModel> {
                       ],
                     ),
                     const SizedBox(height: 4),
-                    Text(
+                    const Text(
                       '再签到 4 天可得大额积分礼包',
                       style: TextStyle(
                         fontSize: 11,
@@ -270,7 +270,7 @@ class CheckInView extends StackedView<CheckInViewModel> {
                   ],
                 ),
               ),
-              Icon(
+              const Icon(
                 LucideIcons.gift,
                 size: 32,
                 color: AppColors.brandOrange,
@@ -417,14 +417,14 @@ class CheckInView extends StackedView<CheckInViewModel> {
                   color: AppColors.infoLight,
                   borderRadius: BorderRadius.circular(4),
                 ),
-                child: Icon(
+                child: const Icon(
                   LucideIcons.calendarDays,
                   size: 12,
                   color: AppColors.info,
                 ),
               ),
               const SizedBox(width: 8),
-              Text(
+              const Text(
                 '做任务 赚积分',
                 style: TextStyle(
                   fontSize: 16,
@@ -444,7 +444,7 @@ class CheckInView extends StackedView<CheckInViewModel> {
   Widget _buildTaskItem(Task task) {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 16),
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         border: Border(
           bottom: BorderSide(
             color: AppColors.bgCanvas,
@@ -461,7 +461,7 @@ class CheckInView extends StackedView<CheckInViewModel> {
               children: [
                 Text(
                   task.title,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 14,
                     fontWeight: FontWeight.w500,
                     color: AppColors.brandDark,
@@ -477,7 +477,7 @@ class CheckInView extends StackedView<CheckInViewModel> {
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      Icon(
+                      const Icon(
                         LucideIcons.coins,
                         size: 10,
                         color: AppColors.brandOrange,
@@ -485,7 +485,7 @@ class CheckInView extends StackedView<CheckInViewModel> {
                       const SizedBox(width: 4),
                       Text(
                         '+${task.reward}',
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 11,
                           fontWeight: FontWeight.bold,
                           color: AppColors.brandOrange,
@@ -552,7 +552,7 @@ class CheckInView extends StackedView<CheckInViewModel> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text(
+                        const Text(
                           '签到规则',
                           style: TextStyle(
                             fontSize: 18,
@@ -565,11 +565,11 @@ class CheckInView extends StackedView<CheckInViewModel> {
                           child: Container(
                             width: 32,
                             height: 32,
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                               color: AppColors.bgCanvas,
                               shape: BoxShape.circle,
                             ),
-                            child: Icon(
+                            child: const Icon(
                               LucideIcons.x,
                               size: 18,
                               color: AppColors.textSecondary,
@@ -581,7 +581,7 @@ class CheckInView extends StackedView<CheckInViewModel> {
                     const SizedBox(height: 16),
                     Container(
                       constraints: const BoxConstraints(maxHeight: 300),
-                      child: SingleChildScrollView(
+                      child: const SingleChildScrollView(
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -593,7 +593,7 @@ class CheckInView extends StackedView<CheckInViewModel> {
                                 height: 1.6,
                               ),
                             ),
-                            const SizedBox(height: 12),
+                            SizedBox(height: 12),
                             Text(
                               '2. 连续签到7天为一个周期，第3天、第7天可获得额外积分宝箱。',
                               style: TextStyle(
@@ -602,7 +602,7 @@ class CheckInView extends StackedView<CheckInViewModel> {
                                 height: 1.6,
                               ),
                             ),
-                            const SizedBox(height: 12),
+                            SizedBox(height: 12),
                             Text(
                               '3. 若签到中断，连续签到天数将重新计算。',
                               style: TextStyle(
@@ -611,7 +611,7 @@ class CheckInView extends StackedView<CheckInViewModel> {
                                 height: 1.6,
                               ),
                             ),
-                            const SizedBox(height: 12),
+                            SizedBox(height: 12),
                             Text(
                               '4. 获得的积分可在积分商城兑换实物礼品、卡券或服务权益。',
                               style: TextStyle(
@@ -620,7 +620,7 @@ class CheckInView extends StackedView<CheckInViewModel> {
                                 height: 1.6,
                               ),
                             ),
-                            const SizedBox(height: 12),
+                            SizedBox(height: 12),
                             Text(
                               '5. 北京汽车保留对签到规则的最终解释权。',
                               style: TextStyle(
@@ -687,24 +687,24 @@ class _SkeletonView extends StatelessWidget {
             Container(
               height: 320,
               color: AppColors.brandDark,
-              child: Column(
+              child: const Column(
                 children: [
                   // Nav Skeleton
                   Padding(
-                    padding: const EdgeInsets.only(top: 54, left: 20, right: 20),
+                    padding: EdgeInsets.only(top: 54, left: 20, right: 20),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: const [
+                      children: [
                         SkeletonCircle(size: 40),
                         SkeletonBox(width: 80, height: 24),
                         SkeletonCircle(size: 40),
                       ],
                     ),
                   ),
-                  const SizedBox(height: 32),
+                  SizedBox(height: 32),
                   // Points Skeleton
                   Column(
-                    children: const [
+                    children: [
                        SkeletonBox(width: 60, height: 16),
                        SizedBox(height: 16),
                        SkeletonBox(width: 120, height: 48),
@@ -731,9 +731,9 @@ class _SkeletonView extends StatelessWidget {
                     ),
                     child: Column(
                       children: [
-                        Row(
+                        const Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: const [
+                          children: [
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
@@ -770,20 +770,20 @@ class _SkeletonView extends StatelessWidget {
                         const SkeletonBox(width: 100, height: 20),
                         const SizedBox(height: 20),
                         ...List.generate(3, (index) => 
-                          Padding(
-                            padding: const EdgeInsets.only(bottom: 24),
+                          const Padding(
+                            padding: EdgeInsets.only(bottom: 24),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: const [
+                                  children: [
                                     SkeletonBox(width: 120, height: 16),
                                     SizedBox(height: 8),
                                     SkeletonBox(width: 60, height: 14),
                                   ],
                                 ),
-                                const SkeletonBox(width: 70, height: 28, borderRadius: BorderRadius.all(Radius.circular(14))),
+                                SkeletonBox(width: 70, height: 28, borderRadius: BorderRadius.all(Radius.circular(14))),
                               ],
                             ),
                           )

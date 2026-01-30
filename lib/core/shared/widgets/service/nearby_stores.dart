@@ -55,9 +55,9 @@ class NearbyStores extends StatelessWidget {
                 ),
                 GestureDetector(
                   onTap: onViewAllTap,
-                  child: Row(
+                  child: const Row(
                     children: [
-                      const Text(
+                      Text(
                         '全部',
                         style: TextStyle(
                           fontSize: 12,
@@ -65,8 +65,8 @@ class NearbyStores extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      const SizedBox(width: 4),
-                      const Icon(LucideIcons.chevronRight, size: 14, color: Colors.grey),
+                      SizedBox(width: 4),
+                      Icon(LucideIcons.chevronRight, size: 14, color: Colors.grey),
                     ],
                   ),
                 ),

@@ -3,7 +3,6 @@ import 'package:stacked_services/stacked_services.dart';
 import 'package:lucide_icons/lucide_icons.dart';
 import 'package:flutter/services.dart';
 import 'package:car_owner_app/app/app.locator.dart';
-import 'package:car_owner_app/app/app.router.dart';
 import 'package:car_owner_app/ui/views/discovery/discovery_view.dart';
 import 'package:car_owner_app/ui/views/store/store_view.dart';
 import 'package:car_owner_app/ui/views/car_buying/car_buying_view.dart';

@@ -10,15 +10,16 @@
 /// 2. 重命名文件和类名
 /// 3. 确保对应的 ViewModel 已创建
 /// ============================================================================
+library;
 
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 
 // 核心导入 - 必须包含 (铁律 #1)
-import '../lib/core/theme/app_colors.dart';
-import '../lib/core/theme/app_dimensions.dart';
-import '../lib/core/theme/app_typography.dart';
-import '../lib/core/components/baic_ui_kit.dart';
+import 'package:car_owner_app/core/theme/app_colors.dart';
+import 'package:car_owner_app/core/theme/app_dimensions.dart';
+import 'package:car_owner_app/core/theme/app_typography.dart';
+import 'package:car_owner_app/core/components/baic_ui_kit.dart';
 
 // ViewModel 导入
 import 'viewmodel_template.dart';
@@ -93,11 +94,11 @@ class ExampleView extends StatelessWidget {
   Widget _buildLoadingState() {
     return Padding(
       // 使用设计系统间距，遵守铁律 #2
-      padding: EdgeInsets.all(AppDimensions.spaceM),
+      padding: const EdgeInsets.all(AppDimensions.spaceM),
       child: Column(
         children: List.generate(
           5,
-          (index) => Padding(
+          (index) => const Padding(
             padding: EdgeInsets.only(bottom: AppDimensions.spaceS),
             child: BaicSkeleton(
               width: double.infinity,
@@ -116,19 +117,19 @@ class ExampleView extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Icon(
+          const Icon(
             Icons.error_outline,
             size: 64,
             color: AppColors.error,
           ),
-          SizedBox(height: AppDimensions.spaceM),
+          const SizedBox(height: AppDimensions.spaceM),
           Text(
             '加载失败',
             style: AppTypography.titleMedium.copyWith(
               color: AppColors.textTitle,
             ),
           ),
-          SizedBox(height: AppDimensions.spaceS),
+          const SizedBox(height: AppDimensions.spaceS),
           Text(
             viewModel.modelError?.toString() ?? '未知错误',
             style: AppTypography.bodySmall.copyWith(
@@ -136,12 +137,12 @@ class ExampleView extends StatelessWidget {
             ),
             textAlign: TextAlign.center,
           ),
-          SizedBox(height: AppDimensions.spaceL),
+          const SizedBox(height: AppDimensions.spaceL),
           // 使用 BaicBounceButton，遵守铁律 #2
           BaicBounceButton(
             onPressed: viewModel.refreshData,
             child: Container(
-              padding: EdgeInsets.symmetric(
+              padding: const EdgeInsets.symmetric(
                 horizontal: AppDimensions.spaceL,
                 vertical: AppDimensions.spaceS,
               ),
@@ -164,7 +165,7 @@ class ExampleView extends StatelessWidget {
   /// 构建正常内容
   Widget _buildContent(ExampleViewModel viewModel) {
     return ListView.builder(
-      padding: EdgeInsets.all(AppDimensions.spaceM),
+      padding: const EdgeInsets.all(AppDimensions.spaceM),
       itemCount: viewModel.items.length,
       itemBuilder: (context, index) {
         final item = viewModel.items[index];
@@ -174,8 +175,8 @@ class ExampleView extends StatelessWidget {
         return BaicBounceButton(
           onPressed: () => viewModel.selectItem(index),
           child: Container(
-            margin: EdgeInsets.only(bottom: AppDimensions.spaceS),
-            padding: EdgeInsets.all(AppDimensions.spaceM),
+            margin: const EdgeInsets.only(bottom: AppDimensions.spaceS),
+            padding: const EdgeInsets.all(AppDimensions.spaceM),
             decoration: BoxDecoration(
               // 使用设计系统颜色，遵守铁律 #2
               color: isSelected ? AppColors.bgSelected : AppColors.bgSurface,
@@ -196,12 +197,12 @@ class ExampleView extends StatelessWidget {
                     color: AppColors.bgFill,
                     borderRadius: BorderRadius.circular(AppDimensions.radiusS),
                   ),
-                  child: Icon(
+                  child: const Icon(
                     Icons.article_outlined,
                     color: AppColors.textSecondary,
                   ),
                 ),
-                SizedBox(width: AppDimensions.spaceM),
+                const SizedBox(width: AppDimensions.spaceM),
                 // 文本内容
                 Expanded(
                   child: Column(
@@ -224,7 +225,7 @@ class ExampleView extends StatelessWidget {
                   ),
                 ),
                 // 箭头
-                Icon(
+                const Icon(
                   Icons.chevron_right,
                   color: AppColors.textTertiary,
                 ),

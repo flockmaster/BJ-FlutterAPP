@@ -44,7 +44,7 @@ class MyPostsView extends StackedView<MyPostsViewModel> {
   Widget _buildHeader(BuildContext context, MyPostsViewModel viewModel) {
     return Container(
       padding: const EdgeInsets.only(top: 54, left: 20, right: 20, bottom: 12),
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: AppColors.bgSurface,
       ),
       child: Row(
@@ -56,14 +56,14 @@ class MyPostsView extends StackedView<MyPostsViewModel> {
               width: 36,
               height: 36,
               alignment: Alignment.centerLeft,
-              child: Icon(
+              child: const Icon(
                 LucideIcons.arrowLeft,
                 size: 24,
                 color: AppColors.brandBlack,
               ),
             ),
           ),
-          Text(
+          const Text(
             '我的发布',
             style: TextStyle(
               fontSize: 17,
@@ -77,7 +77,7 @@ class MyPostsView extends StackedView<MyPostsViewModel> {
               width: 36,
               height: 36,
               alignment: Alignment.centerRight,
-              child: Icon(
+              child: const Icon(
                 LucideIcons.moreHorizontal,
                 size: 22,
                 color: AppColors.brandBlack,
@@ -96,7 +96,7 @@ class MyPostsView extends StackedView<MyPostsViewModel> {
 
   /// 空状态
   Widget _buildEmptyState() {
-    return Center(
+    return const Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -105,7 +105,7 @@ class MyPostsView extends StackedView<MyPostsViewModel> {
             size: 64,
             color: AppColors.textDisabled,
           ),
-          const SizedBox(height: 16),
+          SizedBox(height: 16),
           Text(
             '暂无发布',
             style: TextStyle(
@@ -161,7 +161,7 @@ class MyPostsView extends StackedView<MyPostsViewModel> {
             
             // 视频标识
             if (post.isVideo)
-              Positioned(
+              const Positioned(
                 top: 8,
                 right: 8,
                 child: Icon(
@@ -206,7 +206,7 @@ class MyPostsView extends StackedView<MyPostsViewModel> {
                       child: Row(
                         mainAxisSize: MainAxisSize.min,
                         children: [
-                          Icon(
+                          const Icon(
                             LucideIcons.heart,
                             size: 10,
                             color: AppColors.textInverse,

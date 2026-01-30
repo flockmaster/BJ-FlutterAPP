@@ -6,7 +6,6 @@ import '../../../core/services/car_service.dart';
 import '../../../core/models/car_model.dart';
 import 'car_specs/car_specs_view.dart';
 import '../service/nearby_stores/nearby_stores_view.dart';
-import 'package:flutter/material.dart';
 
 /// [CarBuyingViewModel] - 购车频道（选车/定购）核心入口业务逻辑类
 ///

@@ -26,7 +26,7 @@ class FontTestWidget extends StatelessWidget {
             ]),
             const SizedBox(height: 32),
             _buildSection('价格样式 (Oswald)', [
-              Row(
+              const Row(
                 crossAxisAlignment: CrossAxisAlignment.baseline,
                 textBaseline: TextBaseline.alphabetic,
                 children: [
@@ -35,9 +35,9 @@ class FontTestWidget extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 8),
-              Text('¥199', style: AppTypography.priceSmall),
+              const Text('¥199', style: AppTypography.priceSmall),
               const SizedBox(height: 8),
-              Text('¥299', style: AppTypography.priceOriginal),
+              const Text('¥299', style: AppTypography.priceOriginal),
             ]),
             const SizedBox(height: 32),
             _buildSection('系统默认字体', [
@@ -61,18 +61,18 @@ class FontTestWidget extends StatelessWidget {
                   children: [
                     Text('商品名称', style: AppTypography.headingM),
                     const SizedBox(height: 8),
-                    Row(
+                    const Row(
                       crossAxisAlignment: CrossAxisAlignment.baseline,
                       textBaseline: TextBaseline.alphabetic,
                       children: [
                         Text('¥', style: AppTypography.priceCurrency),
                         Text('1299', style: AppTypography.priceMain),
-                        const SizedBox(width: 8),
+                        SizedBox(width: 8),
                         Text('¥1599', style: AppTypography.priceOriginal),
                       ],
                     ),
                     const SizedBox(height: 8),
-                    Text('已售 2,300+ 件', style: AppTypography.captionSecondary),
+                    const Text('已售 2,300+ 件', style: AppTypography.captionSecondary),
                   ],
                 ),
               ),

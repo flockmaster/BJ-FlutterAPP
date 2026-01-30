@@ -1,7 +1,6 @@
 import 'package:car_owner_app/core/base/baic_base_view_model.dart';
 import 'package:car_owner_app/core/services/profile_service.dart';
 import 'package:car_owner_app/app/app.locator.dart';
-import 'package:car_owner_app/core/base/base_state.dart';
 import 'package:stacked_services/stacked_services.dart';
 import 'package:car_owner_app/core/models/profile_models.dart';
 import 'dart:async';

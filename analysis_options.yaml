@@ -9,6 +9,15 @@
 # packages, and plugins designed to encourage good coding practices.
 include: package:flutter_lints/flutter.yaml
 
+# 分析器配置
+analyzer:
+  exclude:
+    - templates/**           # 模板文件(参考用,非运行代码)
+    - scripts/**             # 脚本文件
+    - test/integration/**    # 集成测试
+    - "**/*.g.dart"          # 生成的代码
+    - "**/*.freezed.dart"    # Freezed 生成的代码
+
 linter:
   # The lint rules applied to this project can be customized in the
   # section below to disable rules from the `package:flutter_lints/flutter.yaml`

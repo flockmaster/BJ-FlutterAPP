@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:car_owner_app/ui/views/car_buying/test_drive/test_drive_view.dart';
 import 'package:car_owner_app/core/models/car_model.dart';
-import 'package:car_owner_app/core/components/baic_ui_kit.dart';
-import 'package:lucide_icons/lucide_icons.dart';
 import 'package:car_owner_app/app/app.locator.dart';
 import 'package:stacked_services/stacked_services.dart';
 
@@ -16,7 +14,7 @@ void main() {
     locator.registerLazySingleton(() => DialogService());
   });
 
-  final mockCar = CarModel(
+  const mockCar = CarModel(
     id: 'BJ40',
     modelKey: 'bj40',
     name: '北京越野 BJ40',
@@ -29,7 +27,7 @@ void main() {
 
   group('TestDriveView Widget Tests', () {
     testWidgets('应当正确渲染主界面元素', (WidgetTester tester) async {
-      await tester.pumpWidget(MaterialApp(
+      await tester.pumpWidget(const MaterialApp(
         home: TestDriveView(car: mockCar),
       ));
 
@@ -51,7 +49,7 @@ void main() {
     });
 
     testWidgets('应当能显示隐私协议', (WidgetTester tester) async {
-      await tester.pumpWidget(MaterialApp(
+      await tester.pumpWidget(const MaterialApp(
         home: TestDriveView(car: mockCar),
       ));
 

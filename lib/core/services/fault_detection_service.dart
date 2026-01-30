@@ -1,14 +1,9 @@
 import 'dart:convert';
-import 'dart:io';
 import 'dart:math';
-import 'dart:typed_data';
 import 'package:camera/camera.dart';
-import 'package:flutter/services.dart';
 import 'package:image/image.dart' as img;
 // import 'package:tflite_flutter/tflite_flutter.dart';
-import 'package:yaml/yaml.dart';
 import 'package:dio/dio.dart';
-import '../utils/yolo_decoder.dart';
 
 /// 故障等级
 enum FaultSeverity {
@@ -77,9 +72,9 @@ class FaultDetectionService {
   // YoloDecoder? _decoder;
   
   // 状态变量
-  List<String> _labels = []; // 存储本地模型的标签（目前基于在线模型，暂不使用）
-  Map<String, dynamic> _knowledgeBase = {}; // 本地知识库（由 assets/fault_knowledge.json 加载）
-  bool _isModelLoaded = true; // 在线模型默认视为已就绪
+  final List<String> _labels = []; // 存储本地模型的标签（目前基于在线模型，暂不使用）
+  final Map<String, dynamic> _knowledgeBase = {}; // 本地知识库（由 assets/fault_knowledge.json 加载）
+  final bool _isModelLoaded = true; // 在线模型默认视为已就绪
   
   // OpenRouter 相关配置：对接视觉多模态大模型
   static const String _apiKey = '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';
@@ -429,8 +424,9 @@ class FaultDetectionService {
     
     // 判定严重等级
     FaultSeverity severity = FaultSeverity.info;
-    if (info['severity'] == 'critical') severity = FaultSeverity.critical;
-    else if (info['severity'] == 'warning') severity = FaultSeverity.warning;
+    if (info['severity'] == 'critical') {
+      severity = FaultSeverity.critical;
+    } else if (info['severity'] == 'warning') severity = FaultSeverity.warning;
     else if (color == FaultColor.red) severity = FaultSeverity.critical;
     else if (color == FaultColor.yellow) severity = FaultSeverity.warning;
 

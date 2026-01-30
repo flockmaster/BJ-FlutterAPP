@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart' hide SkeletonLoader;
 import 'package:car_owner_app/core/shared/widgets/skeleton/skeleton_loader.dart';
 import 'package:lucide_icons/lucide_icons.dart';
-import '../../../core/extensions/context_extensions.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'product_detail_viewmodel.dart';
 import 'widgets/product_sku_modal.dart';
@@ -17,7 +16,7 @@ import '../../../core/theme/app_dimensions.dart';
 class ProductDetailView extends StackedView<ProductDetailViewModel> {
   final int productId;
 
-  const ProductDetailView({Key? key, required this.productId}) : super(key: key);
+  const ProductDetailView({super.key, required this.productId});
 
   @override
   ProductDetailViewModel viewModelBuilder(BuildContext context) => 
@@ -218,9 +217,9 @@ class ProductDetailView extends StackedView<ProductDetailViewModel> {
               borderRadius: BorderRadius.circular(12),
               border: Border.all(color: const Color(0xFFF3F4F6)),
             ),
-            child: Row(
+            child: const Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: const [
+              children: [
                 Expanded(
                   child: Wrap(
                     spacing: 12,
@@ -306,12 +305,12 @@ class ProductDetailView extends StackedView<ProductDetailViewModel> {
       ),
       child: Column(
         children: [
-          Row(
+          const Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Row(
                 children: [
-                  const Text(
+                  Text(
                     '用户评价',
                     style: TextStyle(
                       fontSize: 15,
@@ -319,8 +318,8 @@ class ProductDetailView extends StackedView<ProductDetailViewModel> {
                       color: Color(0xFF111111),
                     ),
                   ),
-                  const SizedBox(width: 8),
-                  const Text(
+                  SizedBox(width: 8),
+                  Text(
                     '(128+)',
                     style: TextStyle(
                       fontSize: 11,
@@ -332,7 +331,7 @@ class ProductDetailView extends StackedView<ProductDetailViewModel> {
               ),
               Row(
                 children: [
-                  const Text(
+                  Text(
                     '99% 好评率',
                     style: TextStyle(
                       fontSize: 12,
@@ -340,8 +339,8 @@ class ProductDetailView extends StackedView<ProductDetailViewModel> {
                       color: Color(0xFFFF6B00),
                     ),
                   ),
-                  const SizedBox(width: 4),
-                  const Icon(LucideIcons.chevronRight, size: 14, color: Color(0xFFFF6B00)),
+                  SizedBox(width: 4),
+                  Icon(LucideIcons.chevronRight, size: 14, color: Color(0xFFFF6B00)),
                 ],
               ),
             ],
@@ -501,7 +500,7 @@ class ProductDetailView extends StackedView<ProductDetailViewModel> {
             ),
             errorWidget: (context, url, error) => const SizedBox.shrink(),
           );
-        }).toList(),
+        }),
         const SizedBox(height: 64),
       ],
     );
@@ -852,16 +851,16 @@ class _ProductDetailSkeleton extends StatelessWidget {
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(12),
                         ),
-                        child: Column(
+                        child: const Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            const SkeletonBox(width: 120, height: 40),
-                            const SizedBox(height: 12),
-                            const SkeletonBox(width: double.infinity, height: 24),
-                            const SizedBox(height: 8),
-                            const SkeletonBox(width: 200, height: 24),
-                            const SizedBox(height: 24),
-                            const SkeletonBox(width: double.infinity, height: 50, borderRadius: BorderRadius.all(Radius.circular(16))),
+                            SkeletonBox(width: 120, height: 40),
+                            SizedBox(height: 12),
+                            SkeletonBox(width: double.infinity, height: 24),
+                            SizedBox(height: 8),
+                            SkeletonBox(width: 200, height: 24),
+                            SizedBox(height: 24),
+                            SkeletonBox(width: double.infinity, height: 50, borderRadius: BorderRadius.all(Radius.circular(16))),
                           ],
                         ),
                       ),
@@ -878,13 +877,13 @@ class _ProductDetailSkeleton extends StatelessWidget {
                 ),
                 
                 // Detail images
-                Padding(
-                  padding: const EdgeInsets.only(left: 20, bottom: 24),
+                const Padding(
+                  padding: EdgeInsets.only(left: 20, bottom: 24),
                   child: Row(
                     children: [
-                      const SkeletonBox(width: 6, height: 20, borderRadius: BorderRadius.all(Radius.circular(3))),
-                      const SizedBox(width: 12),
-                      const SkeletonBox(width: 100, height: 24),
+                      SkeletonBox(width: 6, height: 20, borderRadius: BorderRadius.all(Radius.circular(3))),
+                      SizedBox(width: 12),
+                      SkeletonBox(width: 100, height: 24),
                     ],
                   ),
                 ),
@@ -908,15 +907,15 @@ class _ProductDetailSkeleton extends StatelessWidget {
                 right: 20,
                 bottom: 12,
               ),
-              child: Row(
+              child: const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const SkeletonCircle(size: 36),
+                  SkeletonCircle(size: 36),
                   Row(
                     children: [
-                      const SkeletonCircle(size: 36),
-                      const SizedBox(width: 8),
-                      const SkeletonCircle(size: 36),
+                      SkeletonCircle(size: 36),
+                      SizedBox(width: 8),
+                      SkeletonCircle(size: 36),
                     ],
                   ),
                 ],
@@ -937,18 +936,18 @@ class _ProductDetailSkeleton extends StatelessWidget {
                 bottom: MediaQuery.of(context).padding.bottom + 12,
               ),
               color: Colors.white,
-              child: Row(
+              child: const Row(
                 children: [
-                  const SkeletonBox(width: 40, height: 40),
-                  const SizedBox(width: 24),
-                  const SkeletonBox(width: 40, height: 40),
-                  const SizedBox(width: 16),
+                  SkeletonBox(width: 40, height: 40),
+                  SizedBox(width: 24),
+                  SkeletonBox(width: 40, height: 40),
+                  SizedBox(width: 16),
                   Expanded(
                     child: Row(
                       children: [
-                        const Expanded(child: SkeletonBox(height: 48, borderRadius: BorderRadius.all(Radius.circular(16)))),
-                        const SizedBox(width: 10),
-                        const Expanded(child: SkeletonBox(height: 48, borderRadius: BorderRadius.all(Radius.circular(16)))),
+                        Expanded(child: SkeletonBox(height: 48, borderRadius: BorderRadius.all(Radius.circular(16)))),
+                        SizedBox(width: 10),
+                        Expanded(child: SkeletonBox(height: 48, borderRadius: BorderRadius.all(Radius.circular(16)))),
                       ],
                     ),
                   ),

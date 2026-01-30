@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:bj_flutterapp/core/models/car_model.dart';
-import 'package:bj_flutterapp/ui/views/car_buying/car_order/car_order_view.dart';
-import 'package:bj_flutterapp/ui/views/car_buying/car_order/car_order_viewmodel.dart';
-import '../../../helpers/test_helpers.dart';
+import 'package:car_owner_app/core/models/car_model.dart';
+import 'package:car_owner_app/ui/views/car_buying/car_order/car_order_view.dart';
+import 'package:car_owner_app/ui/views/car_buying/car_order/car_order_viewmodel.dart';
+import '../helpers/test_helpers.dart';
 
 void main() {
   group('CarOrderView Widget Test', () {

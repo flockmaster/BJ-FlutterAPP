@@ -124,15 +124,15 @@ class MockStoreData {
               title: '北京越野六角天幕',
               price: 299,
               image: 'https://p.sda1.dev/29/7c4158055d50cf66ca01b831838ad3f3/e5bb6ba8307b638fb2524835719281d1.jpg',
-              tags: const ['特惠'],
+              tags: ['特惠'],
               points: 200,
               type: 'physical',
-              gallery: const [
+              gallery: [
                 'https://youke3.picui.cn/s1/2026/01/06/695cc5ff74b2c.jpg',
                 'https://youke3.picui.cn/s1/2026/01/06/695cc617b1c85.jpg',
                 'https://youke3.picui.cn/s1/2026/01/06/695cc61be5029.jpg',
               ],
-              detailImages: const [
+              detailImages: [
                 'https://p.sda1.dev/30/11b47f20faa8716f5174a11e493d3455/3b6aeaa2194a59587e7048a378169f63.jpg',
                 'https://p.sda1.dev/30/4948f91a688feae975aa96f2de57b63c/21c7d79055fa857d8120b5d9ae5fd277.jpg',
               ],
@@ -187,23 +187,23 @@ class MockStoreData {
     ),
 
     // 改装
-    StoreCategory(
+    const StoreCategory(
       id: 'modification',
       name: '改装',
       slides: [
-        const HeroSlide(
+        HeroSlide(
           image: 'https://p.sda1.dev/29/fdea5f958f610e4b82e6d628c03eee3c/f2c5c29234a83ab5781c88605ae61d9e.jpg',
           title: '硬派改装 极致性能',
           subtitle: 'BJ40 专属专业改装套件',
         ),
-        const HeroSlide(
+        HeroSlide(
           image: 'https://p.sda1.dev/29/248910c8366e18b0f740f8175eee0b79/8b0862df3ae063ef327ccba5f6a0db8c.jpg',
           title: '征服荒野 无所畏惧',
           subtitle: '全地形越野装备升级',
         ),
       ],
       hotProducts: [
-        const StoreProduct(
+        StoreProduct(
           id: 3001,
           title: '40寸弧形LED越野射灯',
           price: 1280,
@@ -212,7 +212,7 @@ class MockStoreData {
           points: 1000,
           type: 'service',
         ),
-        const StoreProduct(
+        StoreProduct(
           id: 3002,
           title: 'BJ40前竞技杠',
           price: 2800,
@@ -220,7 +220,7 @@ class MockStoreData {
           points: 2000,
           type: 'service',
         ),
-        const StoreProduct(
+        StoreProduct(
           id: 3003,
           title: '铝合金车顶平台',
           price: 1680,
@@ -229,7 +229,7 @@ class MockStoreData {
           points: 1200,
           type: 'service',
         ),
-        const StoreProduct(
+        StoreProduct(
           id: 3004,
           title: '电动绞盘 (12000磅)',
           price: 3200,
@@ -240,7 +240,7 @@ class MockStoreData {
         ),
       ],
       sections: [
-        const StoreSection(
+        StoreSection(
           id: 'hardcore',
           title: '硬核装备 | 越野必备',
           bannerImage: 'https://p.sda1.dev/29/61376bb77d0df166302a21a01adb74fb/2022192b500f448dd8139441972faf03.jpg',
@@ -303,18 +303,18 @@ class MockStoreData {
     ),
 
     // 智能
-    StoreCategory(
+    const StoreCategory(
       id: 'smart',
       name: '智能',
       slides: [
-        const HeroSlide(
+        HeroSlide(
           image: 'https://images.unsplash.com/photo-1550009158-9ebf69173e03?q=80&w=800&auto=format&fit=crop',
           title: '虚拟服务 畅享生活',
           subtitle: '加油卡、保养券一键兑换',
         ),
       ],
       hotProducts: [
-        const StoreProduct(
+        StoreProduct(
           id: 5001,
           title: '500元电子加油卡',
           price: 485,
@@ -323,7 +323,7 @@ class MockStoreData {
           points: 500,
           type: 'virtual',
         ),
-        const StoreProduct(
+        StoreProduct(
           id: 5002,
           title: '4K高清行车记录仪',
           price: 599,
@@ -331,7 +331,7 @@ class MockStoreData {
           points: 400,
           type: 'physical',
         ),
-        const StoreProduct(
+        StoreProduct(
           id: 5003,
           title: '基础保养兑换券 (A类)',
           price: 580,
@@ -344,18 +344,18 @@ class MockStoreData {
     ),
 
     // 户外
-    StoreCategory(
+    const StoreCategory(
       id: 'outdoor',
       name: '户外',
       slides: [
-        const HeroSlide(
+        HeroSlide(
           image: 'https://images.unsplash.com/photo-1628172813155-2e650f934575?q=80&w=800&auto=format&fit=crop',
           title: '精致露营 拥抱山野',
           subtitle: '车顶帐篷与户外家具系列',
         ),
       ],
       hotProducts: [
-        const StoreProduct(
+        StoreProduct(
           id: 6001,
           title: '全自动液压车顶帐篷',
           price: 4999,
@@ -364,7 +364,7 @@ class MockStoreData {
           points: 3000,
           type: 'physical',
         ),
-        const StoreProduct(
+        StoreProduct(
           id: 6002,
           title: '便携式户外折叠椅',
           price: 129,
@@ -373,7 +373,7 @@ class MockStoreData {
           points: 80,
           type: 'physical',
         ),
-        const StoreProduct(
+        StoreProduct(
           id: 6003,
           title: '双头户外防风炉具',
           price: 399,
@@ -385,18 +385,18 @@ class MockStoreData {
     ),
 
     // 周边
-    StoreCategory(
+    const StoreCategory(
       id: 'peripherals',
       name: '周边',
       slides: [
-        const HeroSlide(
+        HeroSlide(
           image: 'https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=800&auto=format&fit=crop',
           title: '品牌生活 潮酷随行',
           subtitle: '北京汽车官方联名周边',
         ),
       ],
       hotProducts: [
-        const StoreProduct(
+        StoreProduct(
           id: 7001,
           title: 'BJ40合金车模 (1:18)',
           price: 599,
@@ -404,7 +404,7 @@ class MockStoreData {
           points: 400,
           type: 'physical',
         ),
-        const StoreProduct(
+        StoreProduct(
           id: 7002,
           title: '定制款机能冲锋衣',
           price: 899,
@@ -413,7 +413,7 @@ class MockStoreData {
           points: 700,
           type: 'physical',
         ),
-        const StoreProduct(
+        StoreProduct(
           id: 7003,
           title: '越野风格棒球帽',
           price: 99,

@@ -2,12 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:lucide_icons/lucide_icons.dart';
 import 'package:stacked/stacked.dart';
-import 'dart:ui';
 import 'nearby_stores_viewmodel.dart';
 import '../../../../core/models/service_models.dart';
-import 'package:car_owner_app/core/shared/widgets/optimized_image.dart';
-import '../../../../core/theme/app_typography.dart';
-import '../../../../core/theme/app_colors.dart';
 import '../../../../core/components/baic_ui_kit.dart';
 
 /// 附近门店地图页面

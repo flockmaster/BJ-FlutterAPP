@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:stacked_services/stacked_services.dart';
 import '../core/providers/app_providers.dart';
-import 'app.locator.dart';
 import 'app.router.dart';
 
 class CarOwnerApp extends StatelessWidget {

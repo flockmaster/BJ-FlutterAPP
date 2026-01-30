@@ -10,10 +10,10 @@ class ProductSkuModal extends StatelessWidget {
   final VoidCallback onClose;
 
   const ProductSkuModal({
-    Key? key,
+    super.key,
     required this.viewModel,
     required this.onClose,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -361,9 +361,9 @@ class ProductSkuModal extends StatelessWidget {
                 },
                 child: Container(
                   height: 48,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     borderRadius: AppDimensions.borderRadiusFull,
-                    color: const Color(0xFF111111),
+                    color: Color(0xFF111111),
                   ),
                   alignment: Alignment.center,
                   child: const Text(

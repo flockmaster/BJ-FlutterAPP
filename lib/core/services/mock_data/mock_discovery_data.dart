@@ -80,24 +80,24 @@ class MockDiscoveryData {
         ),
       ],
       contentBlocks: [
-        DiscoveryContentBlock(type: 'image', imageUrl: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=800&auto=format&fit=crop'),
-        DiscoveryContentBlock(type: 'text', text: '每当我们谈论越野，往往会联想到泥泞、颠簸和艰辛。但这一次，驾驶着BJ60行驶在川西的公路上，我体会到的是一种前所未有的从容。'),
-        DiscoveryContentBlock(type: 'header', text: '启程：成都至康定'),
-        DiscoveryContentBlock(type: 'text', text: '清晨的成都还在沉睡，我们的车队已经整装待发。后备箱里塞满了露营装备和摄影器材，得益于BJ60超大的空间，一切都井井有条。驶入高速，3.0T V6发动机的动力储备深不见底，加速超车行云流水。'),
-        DiscoveryContentBlock(type: 'image', imageUrl: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=800&auto=format&fit=crop'),
-        DiscoveryContentBlock(type: 'text', text: '翻越折多山是第一道考验。海拔爬升带来的是气温骤降和含氧量降低，但车辆的动力丝毫未减。在垭口短暂亦停留，远处的雪山在云雾中若隐若现，仿佛在召唤我们继续前行。'),
-        DiscoveryContentBlock(type: 'header', text: '深入腹地：格聂之眼'),
-        DiscoveryContentBlock(type: 'image', imageUrl: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=800&auto=format&fit=crop'),
-        DiscoveryContentBlock(type: 'text', text: '离开铺装路面，我们驶向了通往格聂神山的非铺装道路。这里遍布碎石和炮弹坑，我切换到了越野模式。空气悬架自动升高，配合ATS全地形系统，车辆如履平地。'),
-        DiscoveryContentBlock(type: 'text', text: '底盘的滤震性令人印象深刻，即便是连续的搓板路，车内的咖啡也没有洒出一滴。这种豪华与硬派的结合，正是BJ60的魅力所在。'),
-        DiscoveryContentBlock(type: 'image', imageUrl: 'https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?q=80&w=800&auto=format&fit=crop'),
-        DiscoveryContentBlock(type: 'header', text: '星空下的露营'),
-        DiscoveryContentBlock(type: 'text', text: '傍晚，我们在海子边扎营。打开后备箱门，连接上对外放电枪，煮上一壶热茶。看着远处的日照金山，这一刻，所有的疲惫都烟消云散。'),
-        DiscoveryContentBlock(type: 'image', imageUrl: 'https://images.unsplash.com/photo-1516939884455-14a5c08ac121?q=80&w=800&auto=format&fit=crop'),
-        DiscoveryContentBlock(type: 'text', text: '夜晚的气温降至零下，但躺在放平的后排座椅上，透过全景天窗看着满天繁星，车内依然温暖如春。这就是“家玩”越野的意义吧。'),
-        DiscoveryContentBlock(type: 'header', text: '归途'),
-        DiscoveryContentBlock(type: 'image', imageUrl: 'https://images.unsplash.com/photo-1470246973918-29a53221c197?q=80&w=800&auto=format&fit=crop'),
-        DiscoveryContentBlock(type: 'text', text: '为期5天的旅程结束了，但关于探索的故事还在继续。BJ60不仅是一台车，更是连接城市与荒野的桥梁。它让我们有勇气去追寻心中的山海，也能温柔地守护每一次归途。'),
+        const DiscoveryContentBlock(type: 'image', imageUrl: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=800&auto=format&fit=crop'),
+        const DiscoveryContentBlock(type: 'text', text: '每当我们谈论越野，往往会联想到泥泞、颠簸和艰辛。但这一次，驾驶着BJ60行驶在川西的公路上，我体会到的是一种前所未有的从容。'),
+        const DiscoveryContentBlock(type: 'header', text: '启程：成都至康定'),
+        const DiscoveryContentBlock(type: 'text', text: '清晨的成都还在沉睡，我们的车队已经整装待发。后备箱里塞满了露营装备和摄影器材，得益于BJ60超大的空间，一切都井井有条。驶入高速，3.0T V6发动机的动力储备深不见底，加速超车行云流水。'),
+        const DiscoveryContentBlock(type: 'image', imageUrl: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=800&auto=format&fit=crop'),
+        const DiscoveryContentBlock(type: 'text', text: '翻越折多山是第一道考验。海拔爬升带来的是气温骤降和含氧量降低，但车辆的动力丝毫未减。在垭口短暂亦停留，远处的雪山在云雾中若隐若现，仿佛在召唤我们继续前行。'),
+        const DiscoveryContentBlock(type: 'header', text: '深入腹地：格聂之眼'),
+        const DiscoveryContentBlock(type: 'image', imageUrl: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=800&auto=format&fit=crop'),
+        const DiscoveryContentBlock(type: 'text', text: '离开铺装路面，我们驶向了通往格聂神山的非铺装道路。这里遍布碎石和炮弹坑，我切换到了越野模式。空气悬架自动升高，配合ATS全地形系统，车辆如履平地。'),
+        const DiscoveryContentBlock(type: 'text', text: '底盘的滤震性令人印象深刻，即便是连续的搓板路，车内的咖啡也没有洒出一滴。这种豪华与硬派的结合，正是BJ60的魅力所在。'),
+        const DiscoveryContentBlock(type: 'image', imageUrl: 'https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?q=80&w=800&auto=format&fit=crop'),
+        const DiscoveryContentBlock(type: 'header', text: '星空下的露营'),
+        const DiscoveryContentBlock(type: 'text', text: '傍晚，我们在海子边扎营。打开后备箱门，连接上对外放电枪，煮上一壶热茶。看着远处的日照金山，这一刻，所有的疲惫都烟消云散。'),
+        const DiscoveryContentBlock(type: 'image', imageUrl: 'https://images.unsplash.com/photo-1516939884455-14a5c08ac121?q=80&w=800&auto=format&fit=crop'),
+        const DiscoveryContentBlock(type: 'text', text: '夜晚的气温降至零下，但躺在放平的后排座椅上，透过全景天窗看着满天繁星，车内依然温暖如春。这就是“家玩”越野的意义吧。'),
+        const DiscoveryContentBlock(type: 'header', text: '归途'),
+        const DiscoveryContentBlock(type: 'image', imageUrl: 'https://images.unsplash.com/photo-1470246973918-29a53221c197?q=80&w=800&auto=format&fit=crop'),
+        const DiscoveryContentBlock(type: 'text', text: '为期5天的旅程结束了，但关于探索的故事还在继续。BJ60不仅是一台车，更是连接城市与荒野的桥梁。它让我们有勇气去追寻心中的山海，也能温柔地守护每一次归途。'),
       ],
     ),
 
@@ -274,7 +274,7 @@ class MockDiscoveryData {
     ),
   ];
 
-  static final OfficialData officialData = OfficialData(
+  static const OfficialData officialData = OfficialData(
     slides: [
       OfficialItem(
         id: 'slide1',
@@ -347,7 +347,7 @@ class MockDiscoveryData {
     ],
   );
 
-  static final GoWildData goWildData = GoWildData(
+  static const GoWildData goWildData = GoWildData(
     weekendRoutes: [
       WeekendRoute(
         id: '1',

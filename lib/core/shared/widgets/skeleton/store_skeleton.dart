@@ -73,24 +73,24 @@ class StoreSkeleton extends StatelessWidget {
                   const SizedBox(height: 16),
                   
                   // 特色功能网格
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 20),
+                  const Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 20),
                     child: SizedBox(
                       height: 220,
                       child: Row(
                         children: [
                           // 左侧大卡片
-                          const Expanded(
+                          Expanded(
                             child: SkeletonBox(
                               height: 220,
                               borderRadius: BorderRadius.all(Radius.circular(16)),
                             ),
                           ),
-                          const SizedBox(width: 12),
+                          SizedBox(width: 12),
                           // 右侧小卡片
                           Expanded(
                             child: Column(
-                              children: const [
+                              children: [
                                 Expanded(
                                   child: SkeletonBox(
                                     borderRadius: BorderRadius.all(Radius.circular(16)),
@@ -113,11 +113,11 @@ class StoreSkeleton extends StatelessWidget {
                   const SizedBox(height: 32),
                   
                   // 热卖榜单标题
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 20),
+                  const Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 20),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: const [
+                      children: [
                         SkeletonBox(
                           width: 80,
                           height: 20,

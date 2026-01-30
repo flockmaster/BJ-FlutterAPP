@@ -27,7 +27,7 @@ class FollowListView extends StackedView<FollowListViewModel> {
                 ? _buildSkeletonLoader()
                 : ListView.builder(
                     physics: const BouncingScrollPhysics(),
-                    padding: EdgeInsets.symmetric(
+                    padding: const EdgeInsets.symmetric(
                       horizontal: AppDimensions.spaceL,
                       vertical: AppDimensions.spaceM,
                     ),
@@ -60,7 +60,7 @@ class FollowListView extends StackedView<FollowListViewModel> {
       child: SafeArea(
         bottom: false,
         child: Padding(
-          padding: EdgeInsets.fromLTRB(
+          padding: const EdgeInsets.fromLTRB(
             AppDimensions.spaceM,
             AppDimensions.spaceS,
             AppDimensions.spaceM,
@@ -101,9 +101,9 @@ class FollowListView extends StackedView<FollowListViewModel> {
       itemCount: 5,
       itemBuilder: (context, index) {
         return Container(
-          margin: EdgeInsets.only(bottom: AppDimensions.spaceM),
+          margin: const EdgeInsets.only(bottom: AppDimensions.spaceM),
           padding: AppDimensions.paddingM,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             color: AppColors.bgSurface,
             borderRadius: AppDimensions.borderRadiusM,
           ),
@@ -140,7 +140,7 @@ class FollowListView extends StackedView<FollowListViewModel> {
 
   Widget _buildUserItem(FollowUser user, FollowListViewModel viewModel) {
     return Container(
-      margin: EdgeInsets.only(bottom: AppDimensions.spaceM),
+      margin: const EdgeInsets.only(bottom: AppDimensions.spaceM),
       decoration: BoxDecoration(
         color: AppColors.bgSurface,
         borderRadius: AppDimensions.borderRadiusM,
@@ -236,7 +236,7 @@ class FollowListView extends StackedView<FollowListViewModel> {
 
   Widget _buildEndIndicator() {
     return Padding(
-      padding: EdgeInsets.symmetric(vertical: AppDimensions.spaceXL),
+      padding: const EdgeInsets.symmetric(vertical: AppDimensions.spaceXL),
       child: Center(
         child: Column(
           children: [

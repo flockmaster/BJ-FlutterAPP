@@ -95,7 +95,7 @@ class MyVehiclesView extends StackedView<MyVehiclesViewModel> {
           // Header Skeleton
           Container(
             padding: const EdgeInsets.fromLTRB(20, 54, 20, 16),
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: AppColors.white,
               border: Border(bottom: BorderSide(color: AppColors.borderLight)),
             ),
@@ -352,7 +352,7 @@ class MyVehiclesView extends StackedView<MyVehiclesViewModel> {
                                         mainAxisSize: MainAxisSize.min,
                                         children: [
                                           Icon(LucideIcons.star, size: 8, color: Color(0xFFE5C07B)),
-                                          const SizedBox(width: 4),
+                                          SizedBox(width: 4),
                                           Text(
                                             '主驾',
                                             style: TextStyle(
@@ -398,7 +398,7 @@ class MyVehiclesView extends StackedView<MyVehiclesViewModel> {
                                       mainAxisSize: MainAxisSize.min,
                                       children: [
                                         Icon(LucideIcons.shieldCheck, size: 12, color: Color(0xFF00B894)),
-                                        const SizedBox(width: 4),
+                                        SizedBox(width: 4),
                                         Text(
                                           '认证车主',
                                           style: TextStyle(
@@ -665,7 +665,7 @@ class MyVehiclesView extends StackedView<MyVehiclesViewModel> {
                               mainAxisSize: MainAxisSize.min,
                               children: [
                                 Icon(LucideIcons.clock, size: 12, color: Color(0xFFF59E0B)),
-                                const SizedBox(width: 4),
+                                SizedBox(width: 4),
                                 Text(
                                   '审核中',
                                   style: TextStyle(
@@ -794,11 +794,11 @@ class MyVehiclesView extends StackedView<MyVehiclesViewModel> {
             color: AppColors.black.withValues(alpha: 0.85),
             borderRadius: AppDimensions.borderRadiusFull,
           ),
-          child: Row(
+          child: const Row(
             mainAxisSize: MainAxisSize.min,
             children: [
               Icon(LucideIcons.mousePointer2, size: 16, color: AppColors.warning),
-              const SizedBox(width: 8),
+              SizedBox(width: 8),
               Text(
                 '长按按钮 1 秒以发起解绑',
                 style: TextStyle(
@@ -847,10 +847,10 @@ class MyVehiclesView extends StackedView<MyVehiclesViewModel> {
                         color: AppColors.dangerLight,
                         borderRadius: BorderRadius.circular(32),
                       ),
-                      child: Icon(LucideIcons.alertTriangle, size: 32, color: AppColors.danger),
+                      child: const Icon(LucideIcons.alertTriangle, size: 32, color: AppColors.danger),
                     ),
                     const SizedBox(height: 16),
-                    Text(
+                    const Text(
                       '确认解除绑定？',
                       style: TextStyle(
                         fontSize: 18,
@@ -859,7 +859,7 @@ class MyVehiclesView extends StackedView<MyVehiclesViewModel> {
                       ),
                     ),
                     const SizedBox(height: 8),
-                    Text(
+                    const Text(
                       '解绑后您将无法使用该车辆的手机远程控制、维保预约等数字化功能。',
                       textAlign: TextAlign.center,
                       style: TextStyle(
@@ -880,7 +880,7 @@ class MyVehiclesView extends StackedView<MyVehiclesViewModel> {
                               color: AppColors.textPrimary,
                               borderRadius: BorderRadius.circular(12),
                             ),
-                            child: Center(
+                            child: const Center(
                               child: Text(
                                 '确认解除',
                                 style: TextStyle(
@@ -902,7 +902,7 @@ class MyVehiclesView extends StackedView<MyVehiclesViewModel> {
                               color: AppColors.backgroundLight,
                               borderRadius: BorderRadius.circular(12),
                             ),
-                            child: Center(
+                            child: const Center(
                               child: Text(
                                 '暂不解除',
                                 style: TextStyle(

@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:lucide_icons/lucide_icons.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'dart:ui';
 import '../optimized_image.dart';
 import 'package:car_owner_app/core/models/service_models.dart';
 import 'package:car_owner_app/core/theme/app_colors.dart';
 import 'package:car_owner_app/core/theme/app_typography.dart';
-import 'package:car_owner_app/core/theme/app_dimensions.dart';
 import 'package:car_owner_app/ui/views/profile/widgets/tire_track_background.dart';
 
 /// 车辆信息卡片组件

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:car_owner_app/ui/views/car_detail/car_detail_view.dart';
 import 'package:car_owner_app/core/models/car_model.dart';
-import 'package:car_owner_app/app/locator.dart';
+import 'package:car_owner_app/app/app.locator.dart';
 import 'package:stacked_services/stacked_services.dart';
 
 void main() {
@@ -13,7 +13,7 @@ void main() {
     }
   });
 
-  final mockCar = CarModel(
+  const mockCar = CarModel(
     id: '1',
     modelKey: 'bj40',
     name: '全新北京BJ40',
@@ -27,7 +27,7 @@ void main() {
   group('CarDetailView Test', () {
     testWidgets('should render full car details correctly', (WidgetTester tester) async {
       await tester.pumpWidget(
-        MaterialApp(
+        const MaterialApp(
           home: CarDetailView(car: mockCar),
         ),
       );

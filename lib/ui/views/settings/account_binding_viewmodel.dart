@@ -2,12 +2,12 @@ import '../../../core/base/baic_base_view_model.dart';
 
 class AccountBindingViewModel extends BaicBaseViewModel {
 
-  String _phoneNumber = '138****8888';
-  String _email = '';
-  String _wechatName = '';
-  bool _isPhoneBound = true;
-  bool _isEmailBound = false;
-  bool _isWechatBound = false;
+  final String _phoneNumber = '138****8888';
+  final String _email = '';
+  final String _wechatName = '';
+  final bool _isPhoneBound = true;
+  final bool _isEmailBound = false;
+  final bool _isWechatBound = false;
 
   String get phoneNumber => _phoneNumber;
   String get email => _email;

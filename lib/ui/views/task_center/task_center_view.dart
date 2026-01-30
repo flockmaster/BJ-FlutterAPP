@@ -94,9 +94,9 @@ class TaskCenterView extends StackedView<TaskCenterViewModel> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
-                      Column(
+                      const Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children: const [
+                        children: [
                           Text(
                             '任务中心',
                             style: TextStyle(
@@ -249,7 +249,7 @@ class TaskCenterView extends StackedView<TaskCenterViewModel> {
                 _buildTaskItem(task, onTaskTap),
               ],
             );
-          }).toList(),
+          }),
         ],
       ),
     );
@@ -404,26 +404,26 @@ class _SkeletonView extends StatelessWidget {
               Container(
                 height: 240,
                 color: const Color(0xFF111111),
-                child: Padding(
-                  padding: const EdgeInsets.only(top: 54, left: 20, right: 20),
+                child: const Padding(
+                  padding: EdgeInsets.only(top: 54, left: 20, right: 20),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const SkeletonCircle(size: 36),
-                      const SizedBox(height: 16),
+                      SkeletonCircle(size: 36),
+                      SizedBox(height: 16),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         crossAxisAlignment: CrossAxisAlignment.end,
                         children: [
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
-                            children: const [
+                            children: [
                               SkeletonBox(width: 150, height: 32),
                               SizedBox(height: 8),
                               SkeletonBox(width: 200, height: 16),
                             ],
                           ),
-                          const SkeletonCircle(size: 64),
+                          SkeletonCircle(size: 64),
                         ],
                       ),
                     ],
@@ -454,23 +454,23 @@ class _SkeletonView extends StatelessWidget {
                           ...List.generate(2, (index) => Column(
                             children: [
                               if (index > 0) const SizedBox(height: 24),
-                              Row(
+                              const Row(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Expanded(
                                     child: Column(
                                       crossAxisAlignment: CrossAxisAlignment.start,
-                                      children: const [
+                                      children: [
                                         SkeletonBox(width: 120, height: 20),
                                         SizedBox(height: 8),
                                         SkeletonBox(width: 180, height: 14),
                                       ],
                                     ),
                                   ),
-                                  const SizedBox(width: 16),
+                                  SizedBox(width: 16),
                                   Column(
                                     crossAxisAlignment: CrossAxisAlignment.end,
-                                    children: const [
+                                    children: [
                                       SkeletonBox(width: 60, height: 16),
                                       SizedBox(height: 8),
                                       SkeletonBox(width: 70, height: 28, borderRadius: BorderRadius.all(Radius.circular(14))),
@@ -504,23 +504,23 @@ class _SkeletonView extends StatelessWidget {
                           ...List.generate(3, (index) => Column(
                             children: [
                               if (index > 0) const SizedBox(height: 24),
-                              Row(
+                              const Row(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Expanded(
                                     child: Column(
                                       crossAxisAlignment: CrossAxisAlignment.start,
-                                      children: const [
+                                      children: [
                                         SkeletonBox(width: 140, height: 20),
                                         SizedBox(height: 8),
                                         SkeletonBox(width: 200, height: 14),
                                       ],
                                     ),
                                   ),
-                                  const SizedBox(width: 16),
+                                  SizedBox(width: 16),
                                   Column(
                                     crossAxisAlignment: CrossAxisAlignment.end,
-                                    children: const [
+                                    children: [
                                       SkeletonBox(width: 60, height: 16),
                                       SizedBox(height: 8),
                                       SkeletonBox(width: 70, height: 28, borderRadius: BorderRadius.all(Radius.circular(14))),

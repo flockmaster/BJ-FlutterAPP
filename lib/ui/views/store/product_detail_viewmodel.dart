@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:stacked/stacked.dart';
-import 'package:stacked_services/stacked_services.dart';
 import '../../../app/app.locator.dart';
 
 import '../../../core/models/store_models.dart';
@@ -50,7 +48,7 @@ class ProductDetailViewModel extends BaicBaseViewModel {
   bool get buyNowMode => _buyNowMode;
 
   // SKU Selection State
-  Map<String, ProductSpecOption> _selections = {};
+  final Map<String, ProductSpecOption> _selections = {};
   Map<String, ProductSpecOption> get selections => _selections;
 
   int _quantity = 1;
@@ -186,7 +184,9 @@ class ProductDetailViewModel extends BaicBaseViewModel {
   String get selectionText {
     // E.g. "经典黑 · 标准版 · 1件"
     List<String> parts = [];
-    _selections.values.forEach((opt) => parts.add(opt.label));
+    for (var opt in _selections.values) {
+      parts.add(opt.label);
+    }
     parts.add('$_quantity件');
     return parts.join(' · ');
   }

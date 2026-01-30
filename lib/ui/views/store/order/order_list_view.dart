@@ -2,15 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart' hide SkeletonLoader;
 import 'package:lucide_icons/lucide_icons.dart';
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:intl/intl.dart';
 import 'order_list_viewmodel.dart';
-import '../../../../core/theme/app_colors.dart';
 import 'package:car_owner_app/core/shared/widgets/skeleton/skeleton_loader.dart';
 import '../../../../core/theme/app_dimensions.dart';
 
 /// 我的订单列表页面 - 像素级还原原型
 class OrderListView extends StackedView<OrderListViewModel> {
-  const OrderListView({Key? key}) : super(key: key);
+  const OrderListView({super.key});
 
   @override
   OrderListViewModel viewModelBuilder(BuildContext context) => OrderListViewModel();
@@ -48,7 +46,7 @@ class OrderListView extends StackedView<OrderListViewModel> {
                       child: Container(
                         width: 40,
                         height: 40,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           shape: BoxShape.circle,
                           color: Colors.transparent,
                         ),
@@ -72,7 +70,7 @@ class OrderListView extends StackedView<OrderListViewModel> {
                       child: Container(
                         width: 40,
                         height: 40,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           shape: BoxShape.circle,
                           color: Colors.transparent,
                         ),
@@ -205,8 +203,8 @@ class OrderListView extends StackedView<OrderListViewModel> {
                       Container(
                         width: 28,
                         height: 28,
-                        decoration: BoxDecoration(
-                          color: const Color(0xFFF9FAFB),
+                        decoration: const BoxDecoration(
+                          color: Color(0xFFF9FAFB),
                           shape: BoxShape.circle,
                         ),
                         child: Icon(
@@ -450,17 +448,17 @@ class OrderListView extends StackedView<OrderListViewModel> {
 
   /// 空状态
   Widget _buildEmptyState() {
-    return Center(
+    return const Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Icon(
             LucideIcons.shoppingBag,
             size: 64,
-            color: const Color(0xFFE5E7EB),
+            color: Color(0xFFE5E7EB),
           ),
-          const SizedBox(height: 16),
-          const Text(
+          SizedBox(height: 16),
+          Text(
             '暂无订单',
             style: TextStyle(
               fontSize: 16,
@@ -475,14 +473,14 @@ class OrderListView extends StackedView<OrderListViewModel> {
 
   /// 列表结束标识
   Widget _buildEndIndicator() {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 40),
+    return const Padding(
+      padding: EdgeInsets.symmetric(vertical: 40),
       child: Center(
         child: Text(
           'END OF LIST',
           style: TextStyle(
             fontSize: 11,
-            color: const Color(0xFFD1D5DB),
+            color: Color(0xFFD1D5DB),
             fontFamily: 'Oswald',
             letterSpacing: 3.2,
           ),
@@ -529,9 +527,9 @@ class _SkeletonView extends StatelessWidget {
               color: Colors.white,
               child: Column(
                 children: [
-                  Row(
+                  const Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: const [
+                    children: [
                       SkeletonCircle(size: 40),
                       SkeletonBox(width: 100, height: 24),
                       SkeletonCircle(size: 40),
@@ -564,33 +562,33 @@ class _SkeletonView extends StatelessWidget {
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(16),
                     ),
-                    child: Column(
+                    child: const Column(
                       children: [
                         // Card Header
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Row(
-                              children: const [
+                              children: [
                                 SkeletonCircle(size: 28),
                                 SizedBox(width: 8),
                                 SkeletonBox(width: 60, height: 16),
                               ],
                             ),
-                            const SkeletonBox(width: 40, height: 16),
+                            SkeletonBox(width: 40, height: 16),
                           ],
                         ),
-                        const SizedBox(height: 20),
+                        SizedBox(height: 20),
                         // Card Body
                         Row(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            const SkeletonBox(width: 85, height: 85, borderRadius: BorderRadius.all(Radius.circular(12))),
-                            const SizedBox(width: 16),
+                            SkeletonBox(width: 85, height: 85, borderRadius: BorderRadius.all(Radius.circular(12))),
+                            SizedBox(width: 16),
                             Expanded(
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
-                                children: const [
+                                children: [
                                   SkeletonBox(width: 150, height: 20),
                                   SizedBox(height: 12),
                                   SkeletonBox(width: 100, height: 16),
@@ -601,14 +599,14 @@ class _SkeletonView extends StatelessWidget {
                             ),
                           ],
                         ),
-                        const SizedBox(height: 20),
+                        SizedBox(height: 20),
                         // Footer
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            const SkeletonBox(width: 60, height: 24),
+                            SkeletonBox(width: 60, height: 24),
                             Row(
-                              children: const [
+                              children: [
                                 SkeletonBox(width: 80, height: 32, borderRadius: BorderRadius.all(Radius.circular(12))),
                                 SizedBox(width: 12),
                                 SkeletonBox(width: 80, height: 32, borderRadius: BorderRadius.all(Radius.circular(12))),

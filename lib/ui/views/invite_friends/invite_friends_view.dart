@@ -1,6 +1,4 @@
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:stacked/stacked.dart';
 import 'package:lucide_icons/lucide_icons.dart';
 import 'invite_friends_viewmodel.dart';
@@ -547,7 +545,7 @@ class InviteFriendsView extends StackedView<InviteFriendsViewModel> {
                     _buildInviteItem(invite),
                   ],
                 );
-              }).toList(),
+              }),
             
             const SizedBox(height: 32),
             

@@ -6,10 +6,9 @@ import 'package:stacked_services/stacked_services.dart';
 import '../../../../app/app.locator.dart';
 import '../../../../core/base/baic_base_view_model.dart';
 import '../../../../core/services/fault_detection_service.dart';
-import '../maintenance_booking_view.dart';
 import '../nearby_stores/nearby_stores_view.dart';
 import '../roadside_assistance/roadside_assistance_view.dart';
-import '../maintenance_booking_view.dart'; // Keep if still needed, or remove if unused
+// Keep if still needed, or remove if unused
 
 enum FaultReportingStep {
   start,
@@ -42,10 +41,10 @@ class FaultReportingViewModel extends BaicBaseViewModel {
   List<CameraDescription> _cameras = [];
 
   // Modal State
-  bool _showSelfCheckModal = false;
+  final bool _showSelfCheckModal = false;
   bool get showSelfCheckModal => _showSelfCheckModal;
 
-  bool _isCriticalMode = false;
+  final bool _isCriticalMode = false;
   bool get isCriticalMode => _isCriticalMode;
 
   // Initialize Service and Camera resources

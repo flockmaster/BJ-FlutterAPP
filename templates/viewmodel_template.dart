@@ -10,9 +10,9 @@
 /// 2. 重命名文件和类名
 /// 3. 根据业务需求修改状态和方法
 /// ============================================================================
+library;
 
-import '../lib/core/base/baic_base_view_model.dart';
-import '../lib/app/app.locator.dart';
+import 'package:car_owner_app/core/base/baic_base_view_model.dart';
 // import '../lib/app/app.router.dart'; // 待路由生成后启用
 
 /// [ExampleViewModel] - 示例 ViewModel
@@ -35,7 +35,7 @@ class ExampleViewModel extends BaicBaseViewModel {
   // ============================================================================
   
   /// 页面标题
-  String _title = '页面标题';
+  final String _title = '页面标题';
   String get title => _title;
   
   /// 数据列表

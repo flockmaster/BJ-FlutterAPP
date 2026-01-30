@@ -7,7 +7,7 @@ class MyQRCodeViewModel extends BaicBaseViewModel {
   final _profileService = locator<IProfileService>();
 
   String _userName = '张越野';
-  String _userInfo = 'BJ40 城市猎人版 · 北京';
+  final String _userInfo = 'BJ40 城市猎人版 · 北京';
   String _avatarUrl = 'https://randomuser.me/api/portraits/men/75.jpg';
   String _userId = 'user_12345';
 

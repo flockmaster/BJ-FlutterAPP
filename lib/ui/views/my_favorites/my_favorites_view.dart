@@ -45,7 +45,7 @@ class MyFavoritesView extends StackedView<MyFavoritesViewModel> {
   Widget _buildHeader(BuildContext context, MyFavoritesViewModel viewModel) {
     return Container(
       padding: const EdgeInsets.only(top: 54, left: 20, right: 20, bottom: 16),
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: AppColors.bgSurface,
       ),
       child: Row(
@@ -57,14 +57,14 @@ class MyFavoritesView extends StackedView<MyFavoritesViewModel> {
               width: 36,
               height: 36,
               alignment: Alignment.centerLeft,
-              child: Icon(
+              child: const Icon(
                 LucideIcons.arrowLeft,
                 size: 24,
                 color: AppColors.brandBlack,
               ),
             ),
           ),
-          Text(
+          const Text(
             '我的收藏',
             style: TextStyle(
               fontSize: 17,
@@ -78,7 +78,7 @@ class MyFavoritesView extends StackedView<MyFavoritesViewModel> {
               width: 36,
               height: 36,
               alignment: Alignment.centerRight,
-              child: Icon(
+              child: const Icon(
                 LucideIcons.search,
                 size: 22,
                 color: AppColors.brandBlack,
@@ -94,7 +94,7 @@ class MyFavoritesView extends StackedView<MyFavoritesViewModel> {
   Widget _buildTabBar(MyFavoritesViewModel viewModel) {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 20),
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: AppColors.bgSurface,
       ),
       child: Row(
@@ -207,7 +207,7 @@ class MyFavoritesView extends StackedView<MyFavoritesViewModel> {
                 children: [
                   Text(
                     content.title,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.bold,
                       color: AppColors.brandBlack,
@@ -242,7 +242,7 @@ class MyFavoritesView extends StackedView<MyFavoritesViewModel> {
                             const SizedBox(width: 6),
                             Text(
                               content.user!.name,
-                              style: TextStyle(
+                              style: const TextStyle(
                                 fontSize: 11,
                                 color: AppColors.textTertiary,
                               ),
@@ -320,7 +320,7 @@ class MyFavoritesView extends StackedView<MyFavoritesViewModel> {
                 children: [
                   Text(
                     product['title'] ?? '',
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.bold,
                       color: AppColors.brandBlack,
@@ -339,7 +339,7 @@ class MyFavoritesView extends StackedView<MyFavoritesViewModel> {
                       ),
                       child: Text(
                         '已降价 ¥${product['discount']}',
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 10,
                           color: AppColors.textTertiary,
                         ),
@@ -362,7 +362,7 @@ class MyFavoritesView extends StackedView<MyFavoritesViewModel> {
                             color: AppColors.bgFill,
                             borderRadius: BorderRadius.circular(14),
                           ),
-                          child: Icon(
+                          child: const Icon(
                             LucideIcons.shoppingCart,
                             size: 14,
                             color: AppColors.brandBlack,
@@ -386,7 +386,7 @@ class MyFavoritesView extends StackedView<MyFavoritesViewModel> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Icon(
+          const Icon(
             LucideIcons.heart,
             size: 64,
             color: AppColors.textDisabled,
@@ -394,7 +394,7 @@ class MyFavoritesView extends StackedView<MyFavoritesViewModel> {
           const SizedBox(height: 16),
           Text(
             message,
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 14,
               color: AppColors.textTertiary,
             ),
@@ -424,22 +424,22 @@ class _SkeletonView extends StatelessWidget {
                   color: AppColors.bgSurface,
                   borderRadius: BorderRadius.circular(16),
                 ),
-                child: Row(
+                child: const Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const SkeletonBox(
+                    SkeletonBox(
                       width: 100, 
                       height: 75, 
                       borderRadius: BorderRadius.all(Radius.circular(10)),
                     ),
-                    const SizedBox(width: 16),
+                    SizedBox(width: 16),
                     Expanded(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          const SkeletonLine(width: double.infinity, height: 16),
-                          const SizedBox(height: 8),
-                          const SkeletonLine(width: 150, height: 12),
+                          SkeletonLine(width: double.infinity, height: 16),
+                          SizedBox(height: 8),
+                          SkeletonLine(width: 150, height: 12),
                         ],
                       ),
                     ),

@@ -4,7 +4,6 @@ import 'dart:ui';
 import '../optimized_image.dart';
 import 'package:car_owner_app/core/theme/app_dimensions.dart';
 import 'package:car_owner_app/core/theme/app_typography.dart';
-import 'package:car_owner_app/core/theme/app_colors.dart';
 import 'package:car_owner_app/ui/views/service/maintenance_booking_view.dart';
 
 /// 核心服务网格组件

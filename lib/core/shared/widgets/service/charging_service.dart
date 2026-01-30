@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:lucide_icons/lucide_icons.dart';
 import '../optimized_image.dart';
 import 'package:car_owner_app/core/theme/app_colors.dart';
-import 'package:car_owner_app/core/theme/app_dimensions.dart';
 
 /// 充电服务组件
 class ChargingService extends StatelessWidget {

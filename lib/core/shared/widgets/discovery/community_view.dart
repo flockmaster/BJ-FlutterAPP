@@ -4,10 +4,8 @@ import 'package:easy_refresh/easy_refresh.dart';
 import 'package:car_owner_app/core/theme/app_colors.dart';
 import 'package:car_owner_app/core/theme/app_typography.dart';
 import 'package:car_owner_app/core/base/base_state.dart';
-import 'package:car_owner_app/core/extensions/context_extensions.dart';
 import 'package:car_owner_app/ui/views/discovery/discovery_viewmodel.dart';
 import 'package:car_owner_app/core/models/discovery_models.dart';
-import 'package:car_owner_app/app/routes.dart';
 import 'package:car_owner_app/app/app.router.dart';
 import 'social_post_card.dart';
 

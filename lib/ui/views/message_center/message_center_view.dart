@@ -31,7 +31,7 @@ class MessageCenterView extends StackedView<MessageCenterViewModel> {
   Widget _buildHeader(MessageCenterViewModel viewModel) {
     return Container(
       padding: const EdgeInsets.only(top: 54, left: 12, right: 20, bottom: 12),
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: AppColors.bgSurface,
       ),
       child: Row(
@@ -43,14 +43,14 @@ class MessageCenterView extends StackedView<MessageCenterViewModel> {
               width: 40,
               height: 40,
               alignment: Alignment.centerLeft,
-              child: Icon(
+              child: const Icon(
                 LucideIcons.arrowLeft,
                 size: 24,
                 color: AppColors.textPrimary,
               ),
             ),
           ),
-          Text(
+          const Text(
             '消息中心',
             style: TextStyle(
               fontSize: 17,
@@ -60,7 +60,7 @@ class MessageCenterView extends StackedView<MessageCenterViewModel> {
           ),
           BaicBounceButton(
             onPressed: viewModel.markAllAsRead,
-            child: Text(
+            child: const Text(
               '全部已读',
               style: TextStyle(
                 fontSize: 13,
@@ -112,7 +112,7 @@ class MessageCenterView extends StackedView<MessageCenterViewModel> {
 
   Widget _buildMessageList(MessageCenterViewModel viewModel) {
     if (viewModel.isBusy) {
-      return Center(
+      return const Center(
         child: CircularProgressIndicator(
           color: AppColors.brandDark,
         ),
@@ -185,7 +185,7 @@ class MessageCenterView extends StackedView<MessageCenterViewModel> {
                       Expanded(
                         child: Text(
                           message.title,
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontSize: 15,
                             fontWeight: FontWeight.bold,
                             color: AppColors.textPrimary,
@@ -207,7 +207,7 @@ class MessageCenterView extends StackedView<MessageCenterViewModel> {
                   const SizedBox(height: 4),
                   Text(
                     message.description,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 13,
                       color: AppColors.textSecondary,
                       height: 1.5,
@@ -226,7 +226,7 @@ class MessageCenterView extends StackedView<MessageCenterViewModel> {
                 width: 8,
                 height: 8,
                 margin: const EdgeInsets.only(top: 4),
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   color: AppColors.error,
                   shape: BoxShape.circle,
                 ),
@@ -246,18 +246,18 @@ class MessageCenterView extends StackedView<MessageCenterViewModel> {
           Container(
             width: 64,
             height: 64,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: AppColors.bgFill,
               shape: BoxShape.circle,
             ),
-            child: Icon(
+            child: const Icon(
               LucideIcons.bell,
               size: 24,
               color: AppColors.textTertiary,
             ),
           ),
           const SizedBox(height: 16),
-          Text(
+          const Text(
             '暂无消息',
             style: TextStyle(
               fontSize: 13,

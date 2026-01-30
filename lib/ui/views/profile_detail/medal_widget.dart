@@ -7,11 +7,11 @@ class MedalWidget extends StatelessWidget {
   final double size;
 
   const MedalWidget({
-    Key? key,
+    super.key,
     required this.id,
     this.grayscale = false,
     this.size = 64,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

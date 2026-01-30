@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart'; // Keeping for Color/TextStyle in Dialog, though VM shouldn't have widget code, we'll fix later
-import 'package:stacked/stacked.dart'; // Keeping for BaseViewModel compat if needed, but we use BaicBaseViewModel
+// Keeping for BaseViewModel compat if needed, but we use BaicBaseViewModel
 import 'package:car_owner_app/core/base/baic_base_view_model.dart';
 import '../../../../app/app.router.dart' as stacked_routes;
-import 'order_detail_view.dart'; // Removed dependency on View import logic if possible
+// Removed dependency on View import logic if possible
 
 /// 订单列表 ViewModel
 class OrderListViewModel extends BaicBaseViewModel {

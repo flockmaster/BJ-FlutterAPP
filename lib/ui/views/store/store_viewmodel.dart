@@ -1,7 +1,4 @@
-import 'package:stacked/stacked.dart';
-import 'package:stacked_services/stacked_services.dart';
 import '../../../app/app.locator.dart';
-import '../../../app/app.router.dart';
 import '../../../core/base/baic_base_view_model.dart';
 import '../../../core/services/store_service.dart';
 import '../../../core/services/mock_data/mock_store_data.dart';
@@ -28,7 +25,7 @@ class StoreViewModel extends BaicBaseViewModel {
   List<String> get trendingSearches => MockStoreData.trendingSearches;
 
   /// 购物车简易项计数（用于控制角标显隐）
-  List<dynamic> _cartItems = [];
+  final List<dynamic> _cartItems = [];
   List<dynamic> get cartItems => _cartItems;
 
   /// 首页是否处于滚动激活态（用于切换深浅色图标/文字）

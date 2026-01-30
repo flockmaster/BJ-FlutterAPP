@@ -1,6 +1,5 @@
 import 'package:injectable/injectable.dart';
 import '../models/cart_item.dart';
-import '../models/store_models.dart';
 
 /// [ICartService] - 购物车业务服务接口
 /// 

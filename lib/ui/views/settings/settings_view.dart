@@ -1,4 +1,3 @@
-import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 import 'package:lucide_icons/lucide_icons.dart';
@@ -349,7 +348,7 @@ class SettingsView extends StackedView<SettingsViewModel> {
                 children: [
                   Text('确认退出登录？', style: AppTypography.headingS),
                   const SizedBox(height: 12),
-                  Text(
+                  const Text(
                     '退出后将无法接收及时的服务提醒，建议保持登录状态。',
                     textAlign: TextAlign.center,
                     style: AppTypography.bodySecondary,

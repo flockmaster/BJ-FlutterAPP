@@ -10,10 +10,11 @@
 /// 2. 重命名文件和类名
 /// 3. 在 app.locator.dart 中注册此 Service
 /// ============================================================================
+library;
 
 import 'package:stacked/stacked.dart';
-import '../lib/core/network/api_client.dart';
-import '../lib/app/app.locator.dart';
+import 'package:car_owner_app/core/network/api_client.dart';
+import 'package:car_owner_app/app/app.locator.dart';
 
 // 导入相关的 Model
 // import '../lib/core/models/example_model.dart';

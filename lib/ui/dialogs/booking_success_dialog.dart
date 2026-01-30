@@ -6,10 +6,10 @@ class BookingSuccessDialog extends StatelessWidget {
   final Function(DialogResponse) completer;
 
   const BookingSuccessDialog({
-    Key? key,
+    super.key,
     required this.request,
     required this.completer,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

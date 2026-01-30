@@ -7,10 +7,10 @@ class MapSelectionSheet extends StatelessWidget {
   final Function(SheetResponse) completer;
 
   const MapSelectionSheet({
-    Key? key,
+    super.key,
     required this.request,
     required this.completer,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

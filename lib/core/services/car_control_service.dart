@@ -16,11 +16,11 @@ class CarControlService with ListenableServiceMixin {
   double get temperature => _temperature;
   
   // Percent
-  int _fuelLevel = 75; 
+  final int _fuelLevel = 75; 
   int get fuelLevel => _fuelLevel;
 
   // Km
-  int _range = 450;
+  final int _range = 450;
   int get range => _range;
 
   CarControlService() {

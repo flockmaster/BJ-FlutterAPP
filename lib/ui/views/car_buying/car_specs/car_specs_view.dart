@@ -67,7 +67,7 @@ class CarSpecsView extends StackedView<CarSpecsViewModel> {
         right: AppDimensions.spaceM,
         bottom: AppDimensions.spaceS,
       ),
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: AppColors.bgSurface,
         border: Border(
           bottom: BorderSide(
@@ -84,7 +84,7 @@ class CarSpecsView extends StackedView<CarSpecsViewModel> {
               width: 40,
               height: 40,
               alignment: Alignment.center,
-              child: Icon(
+              child: const Icon(
                 Icons.arrow_back_ios_new,
                 size: 20,
                 color: AppColors.textPrimary,
@@ -145,9 +145,9 @@ class CarSpecsView extends StackedView<CarSpecsViewModel> {
                         child: Container(
                           width: 4,
                           height: 20,
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             color: AppColors.textPrimary,
-                            borderRadius: const BorderRadius.only(
+                            borderRadius: BorderRadius.only(
                               topRight: Radius.circular(2),
                               bottomRight: Radius.circular(2),
                             ),
@@ -169,7 +169,7 @@ class CarSpecsView extends StackedView<CarSpecsViewModel> {
     return Container(
       color: AppColors.bgSurface,
       child: ListView(
-        padding: EdgeInsets.all(AppDimensions.spaceM),
+        padding: const EdgeInsets.all(AppDimensions.spaceM),
         children: [
           // 标题区域
           Row(
@@ -179,7 +179,7 @@ class CarSpecsView extends StackedView<CarSpecsViewModel> {
                 '${viewModel.activeGroup}核心参数',
                 style: AppTypography.headingM,
               ),
-              Text(
+              const Text(
                 'SPECIFICATIONS',
                 style: TextStyle(
                   fontSize: 10,
@@ -190,7 +190,7 @@ class CarSpecsView extends StackedView<CarSpecsViewModel> {
               ),
             ],
           ),
-          SizedBox(height: AppDimensions.spaceL),
+          const SizedBox(height: AppDimensions.spaceL),
           // 参数列表容器
           Container(
             decoration: BoxDecoration(
@@ -209,7 +209,7 @@ class CarSpecsView extends StackedView<CarSpecsViewModel> {
                   final isLast = index == viewModel.currentSpecs.length - 1;
 
                   return Container(
-                    padding: EdgeInsets.symmetric(
+                    padding: const EdgeInsets.symmetric(
                       horizontal: AppDimensions.spaceM,
                       vertical: AppDimensions.spaceM,
                     ),
@@ -228,7 +228,7 @@ class CarSpecsView extends StackedView<CarSpecsViewModel> {
                       children: [
                         Text(
                           spec.label,
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontSize: 12,
                             color: AppColors.textSecondary,
                             fontWeight: FontWeight.w500,
@@ -236,7 +236,7 @@ class CarSpecsView extends StackedView<CarSpecsViewModel> {
                         ),
                         Text(
                           spec.value,
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontSize: 13,
                             fontWeight: FontWeight.bold,
                             color: AppColors.textPrimary,
@@ -285,7 +285,7 @@ class _SkeletonView extends StatelessWidget {
         // 右侧内容骨架
         Expanded(
           child: Padding(
-            padding: EdgeInsets.all(AppDimensions.spaceM),
+            padding: const EdgeInsets.all(AppDimensions.spaceM),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -294,11 +294,11 @@ class _SkeletonView extends StatelessWidget {
                   height: 24,
                   borderRadius: BorderRadius.circular(4),
                 ),
-                SizedBox(height: AppDimensions.spaceL),
+                const SizedBox(height: AppDimensions.spaceL),
                 ...List.generate(
                   5,
                   (index) => Padding(
-                    padding: EdgeInsets.only(bottom: AppDimensions.spaceM),
+                    padding: const EdgeInsets.only(bottom: AppDimensions.spaceM),
                     child: SkeletonBox(
                       height: 50,
                       borderRadius: BorderRadius.circular(AppDimensions.radiusM),

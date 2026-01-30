@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import '../../../../core/base/baic_base_view_model.dart';
 
 enum RescueStatus { idle, requesting, enRoute }
@@ -8,7 +7,7 @@ class RoadsideAssistanceViewModel extends BaicBaseViewModel {
   RescueStatus get status => _status;
 
   // 模拟倒计时
-  int _arrivalTime = 15;
+  final int _arrivalTime = 15;
   int get arrivalTime => _arrivalTime;
 
   Future<void> requestRescue() async {

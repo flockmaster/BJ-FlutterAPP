@@ -6,10 +6,10 @@ class PaymentMethodSheet extends StatelessWidget {
   final Function(SheetResponse) completer;
 
   const PaymentMethodSheet({
-    Key? key,
+    super.key,
     required this.request,
     required this.completer,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

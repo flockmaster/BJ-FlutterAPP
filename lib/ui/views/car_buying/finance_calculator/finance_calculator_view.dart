@@ -43,16 +43,16 @@ class FinanceCalculatorView extends StackedView<FinanceCalculatorViewModel> {
                 // 主体内容
                 Expanded(
                   child: ListView(
-                    padding: EdgeInsets.only(
+                    padding: const EdgeInsets.only(
                       bottom: AppDimensions.spaceXL * 2,
                     ),
                     children: [
                       // 月供结果卡片
                       _buildResultCard(viewModel),
-                      SizedBox(height: AppDimensions.spaceM),
+                      const SizedBox(height: AppDimensions.spaceM),
                       // 首付比例设置
                       _buildDownPaymentCard(viewModel),
-                      SizedBox(height: AppDimensions.spaceM),
+                      const SizedBox(height: AppDimensions.spaceM),
                       // 分期期限设置
                       _buildTermCard(context, viewModel),
                     ],
@@ -74,7 +74,7 @@ class FinanceCalculatorView extends StackedView<FinanceCalculatorViewModel> {
         right: AppDimensions.spaceM,
         bottom: AppDimensions.spaceS,
       ),
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: AppColors.bgSurface,
         border: Border(
           bottom: BorderSide(
@@ -91,7 +91,7 @@ class FinanceCalculatorView extends StackedView<FinanceCalculatorViewModel> {
               width: 36,
               height: 36,
               alignment: Alignment.center,
-              child: Icon(
+              child: const Icon(
                 Icons.arrow_back_ios_new,
                 size: 20,
                 color: AppColors.textPrimary,
@@ -116,8 +116,8 @@ class FinanceCalculatorView extends StackedView<FinanceCalculatorViewModel> {
     final calc = viewModel.calculation;
 
     return Container(
-      margin: EdgeInsets.all(AppDimensions.spaceM),
-      padding: EdgeInsets.all(AppDimensions.spaceL),
+      margin: const EdgeInsets.all(AppDimensions.spaceM),
+      padding: const EdgeInsets.all(AppDimensions.spaceL),
       decoration: BoxDecoration(
         color: AppColors.bgSurface,
         borderRadius: BorderRadius.circular(AppDimensions.radiusL),
@@ -143,17 +143,17 @@ class FinanceCalculatorView extends StackedView<FinanceCalculatorViewModel> {
                   children: [
                     Text(
                       '预估月供 (${calc.term}期)',
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 12,
                         color: AppColors.textSecondary,
                       ),
                     ),
-                    SizedBox(height: AppDimensions.spaceS),
+                    const SizedBox(height: AppDimensions.spaceS),
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.baseline,
                       textBaseline: TextBaseline.alphabetic,
                       children: [
-                        Text(
+                        const Text(
                           '¥',
                           style: TextStyle(
                             fontSize: 16,
@@ -186,7 +186,7 @@ class FinanceCalculatorView extends StackedView<FinanceCalculatorViewModel> {
                   gradient: SweepGradient(
                     startAngle: 0,
                     endAngle: 6.28 * (1 - viewModel.downPaymentRatio),
-                    colors: [
+                    colors: const [
                       AppColors.brandOrange,
                       AppColors.brandOrange,
                       AppColors.textPrimary,
@@ -204,11 +204,11 @@ class FinanceCalculatorView extends StackedView<FinanceCalculatorViewModel> {
                   child: Container(
                     width: 32,
                     height: 32,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: AppColors.bgSurface,
                       shape: BoxShape.circle,
                     ),
-                    child: Icon(
+                    child: const Icon(
                       Icons.pie_chart_outline,
                       size: 14,
                       color: AppColors.textTertiary,
@@ -218,10 +218,10 @@ class FinanceCalculatorView extends StackedView<FinanceCalculatorViewModel> {
               ),
             ],
           ),
-          SizedBox(height: AppDimensions.spaceM),
+          const SizedBox(height: AppDimensions.spaceM),
           // 详细信息
           Container(
-            padding: EdgeInsets.all(AppDimensions.spaceM),
+            padding: const EdgeInsets.all(AppDimensions.spaceM),
             decoration: BoxDecoration(
               color: const Color(0xFFF9FAFB),
               borderRadius: BorderRadius.circular(AppDimensions.radiusM),
@@ -247,9 +247,9 @@ class FinanceCalculatorView extends StackedView<FinanceCalculatorViewModel> {
               ],
             ),
           ),
-          SizedBox(height: AppDimensions.spaceS),
+          const SizedBox(height: AppDimensions.spaceS),
           Container(
-            padding: EdgeInsets.all(AppDimensions.spaceM),
+            padding: const EdgeInsets.all(AppDimensions.spaceM),
             decoration: BoxDecoration(
               color: const Color(0xFFF9FAFB),
               borderRadius: BorderRadius.circular(AppDimensions.radiusM),
@@ -287,12 +287,12 @@ class FinanceCalculatorView extends StackedView<FinanceCalculatorViewModel> {
       children: [
         Text(
           label,
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 10,
             color: AppColors.textSecondary,
           ),
         ),
-        SizedBox(height: AppDimensions.spaceS),
+        const SizedBox(height: AppDimensions.spaceS),
         Text(
           value,
           style: AppTypography.dataDisplayS,
@@ -304,8 +304,8 @@ class FinanceCalculatorView extends StackedView<FinanceCalculatorViewModel> {
   /// 构建首付比例卡片
   Widget _buildDownPaymentCard(FinanceCalculatorViewModel viewModel) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: AppDimensions.spaceM),
-      padding: EdgeInsets.all(AppDimensions.spaceM),
+      margin: const EdgeInsets.symmetric(horizontal: AppDimensions.spaceM),
+      padding: const EdgeInsets.all(AppDimensions.spaceM),
       decoration: BoxDecoration(
         color: AppColors.bgSurface,
         borderRadius: BorderRadius.circular(AppDimensions.radiusM),
@@ -323,9 +323,9 @@ class FinanceCalculatorView extends StackedView<FinanceCalculatorViewModel> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(
+              const Text(
                 '首付比例',
-                style: const TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Color(0xFF1F2937)),
+                style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Color(0xFF1F2937)),
               ),
               Text(
                 '${(viewModel.downPaymentRatio * 100).round()}%',
@@ -335,7 +335,7 @@ class FinanceCalculatorView extends StackedView<FinanceCalculatorViewModel> {
               ),
             ],
           ),
-          SizedBox(height: AppDimensions.spaceM),
+          const SizedBox(height: AppDimensions.spaceM),
           SliderTheme(
             data: SliderThemeData(
               activeTrackColor: AppColors.textPrimary,
@@ -353,7 +353,7 @@ class FinanceCalculatorView extends StackedView<FinanceCalculatorViewModel> {
               onChanged: (value) => viewModel.setDownPaymentRatio(value),
             ),
           ),
-          Row(
+          const Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
@@ -392,8 +392,8 @@ class FinanceCalculatorView extends StackedView<FinanceCalculatorViewModel> {
     final terms = [12, 24, 36, 48, 60];
 
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: AppDimensions.spaceM),
-      padding: EdgeInsets.all(AppDimensions.spaceM),
+      margin: const EdgeInsets.symmetric(horizontal: AppDimensions.spaceM),
+      padding: const EdgeInsets.all(AppDimensions.spaceM),
       decoration: BoxDecoration(
         color: AppColors.bgSurface,
         borderRadius: BorderRadius.circular(AppDimensions.radiusM),
@@ -411,9 +411,9 @@ class FinanceCalculatorView extends StackedView<FinanceCalculatorViewModel> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(
+              const Text(
                 '分期期限',
-                style: const TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Color(0xFF1F2937)),
+                style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Color(0xFF1F2937)),
               ),
               Text(
                 '${viewModel.term}期',
@@ -423,7 +423,7 @@ class FinanceCalculatorView extends StackedView<FinanceCalculatorViewModel> {
               ),
             ],
           ),
-          SizedBox(height: AppDimensions.spaceM),
+          const SizedBox(height: AppDimensions.spaceM),
           Wrap(
             spacing: AppDimensions.spaceS,
             runSpacing: AppDimensions.spaceS,
@@ -436,7 +436,7 @@ class FinanceCalculatorView extends StackedView<FinanceCalculatorViewModel> {
                           AppDimensions.spaceM * 4 -
                           AppDimensions.spaceS * 2) /
                       3,
-                  padding: EdgeInsets.symmetric(
+                  padding: const EdgeInsets.symmetric(
                     vertical: AppDimensions.spaceS + 2,
                   ),
                   decoration: BoxDecoration(
@@ -483,7 +483,7 @@ class FinanceCalculatorView extends StackedView<FinanceCalculatorViewModel> {
         AppDimensions.spaceM,
         MediaQuery.of(context).padding.bottom + AppDimensions.spaceM,
       ),
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: AppColors.bgSurface,
         border: Border(
           top: BorderSide(
@@ -508,7 +508,7 @@ class FinanceCalculatorView extends StackedView<FinanceCalculatorViewModel> {
             ],
           ),
           alignment: Alignment.center,
-          child: Text(
+          child: const Text(
             '立即申请金融方案',
             style: TextStyle(
               fontSize: 15,
@@ -529,7 +529,7 @@ class _SkeletonView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(AppDimensions.spaceM),
+      padding: const EdgeInsets.all(AppDimensions.spaceM),
       child: Column(
         children: [
           SizedBox(height: MediaQuery.of(context).padding.top + 60),
@@ -537,12 +537,12 @@ class _SkeletonView extends StatelessWidget {
             height: 200,
             borderRadius: BorderRadius.circular(AppDimensions.radiusL),
           ),
-          SizedBox(height: AppDimensions.spaceM),
+          const SizedBox(height: AppDimensions.spaceM),
           SkeletonBox(
             height: 120,
             borderRadius: BorderRadius.circular(AppDimensions.radiusM),
           ),
-          SizedBox(height: AppDimensions.spaceM),
+          const SizedBox(height: AppDimensions.spaceM),
           SkeletonBox(
             height: 150,
             borderRadius: BorderRadius.circular(AppDimensions.radiusM),

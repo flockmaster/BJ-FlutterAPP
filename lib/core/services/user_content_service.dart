@@ -114,7 +114,7 @@ class UserContentService implements IUserContentService {
     
     // 逻辑：返回用户收藏过的他人的高质量动态或视频
     return [
-      DiscoveryItem(
+      const DiscoveryItem(
         id: 'fav1',
         type: DiscoveryItemType.post,
         title: '越野技巧分享',
@@ -122,13 +122,13 @@ class UserContentService implements IUserContentService {
         image: 'https://images.unsplash.com/photo-1533558701576-23c65e0272fb?q=80&w=400&auto=format&fit=crop',
         likes: 456,
         comments: 78,
-        user: const UserInfo(
+        user: UserInfo(
           id: 'user2',
           name: '越野教练',
           avatar: 'https://randomuser.me/api/portraits/men/32.jpg',
         ),
       ),
-      DiscoveryItem(
+      const DiscoveryItem(
         id: 'fav2',
         type: DiscoveryItemType.article,
         title: 'BJ40改装指南',
@@ -136,13 +136,13 @@ class UserContentService implements IUserContentService {
         image: 'https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?q=80&w=400&auto=format&fit=crop',
         likes: 892,
         comments: 156,
-        user: const UserInfo(
+        user: UserInfo(
           id: 'user3',
           name: '改装达人',
           avatar: 'https://randomuser.me/api/portraits/men/45.jpg',
         ),
       ),
-      DiscoveryItem(
+      const DiscoveryItem(
         id: 'fav3',
         type: DiscoveryItemType.video,
         title: '川藏线穿越记录',
@@ -151,13 +151,13 @@ class UserContentService implements IUserContentService {
         isVideo: true,
         likes: 1234,
         comments: 234,
-        user: const UserInfo(
+        user: UserInfo(
           id: 'user4',
           name: '旅行者',
           avatar: 'https://randomuser.me/api/portraits/men/67.jpg',
         ),
       ),
-      DiscoveryItem(
+      const DiscoveryItem(
         id: 'fav4',
         type: DiscoveryItemType.post,
         title: '露营装备推荐',
@@ -165,7 +165,7 @@ class UserContentService implements IUserContentService {
         image: 'https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?q=80&w=400&auto=format&fit=crop',
         likes: 567,
         comments: 89,
-        user: const UserInfo(
+        user: UserInfo(
           id: 'user5',
           name: '露营爱好者',
           avatar: 'https://randomuser.me/api/portraits/men/23.jpg',

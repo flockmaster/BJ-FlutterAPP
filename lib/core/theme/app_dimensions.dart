@@ -166,10 +166,10 @@ class AppDimensions {
   /// 用于：列表项、静态卡片
   /// rgba(0,0,0,0.04), Blur: 14px, Offset: (0, 2)
   static List<BoxShadow> get shadowL1 => [
-    BoxShadow(
-      color: const Color(0x0A000000), // rgba(0,0,0,0.04)
+    const BoxShadow(
+      color: Color(0x0A000000), // rgba(0,0,0,0.04)
       blurRadius: 14,
-      offset: const Offset(0, 2),
+      offset: Offset(0, 2),
     ),
   ];
   
@@ -177,19 +177,19 @@ class AppDimensions {
   /// 用于：模态弹窗、选中态
   /// rgba(0,0,0,0.10), Blur: 30px, Offset: (0, 10)
   static List<BoxShadow> get shadowL2 => [
-    BoxShadow(
-      color: const Color(0x1A000000), // rgba(0,0,0,0.10)
+    const BoxShadow(
+      color: Color(0x1A000000), // rgba(0,0,0,0.10)
       blurRadius: 30,
-      offset: const Offset(0, 10),
+      offset: Offset(0, 10),
     ),
   ];
   
   /// 阴影 - 按钮
   static List<BoxShadow> get shadowButton => [
-    BoxShadow(
-      color: const Color(0x33000000),
+    const BoxShadow(
+      color: Color(0x33000000),
       blurRadius: 12,
-      offset: const Offset(0, 4),
+      offset: Offset(0, 4),
     ),
   ];
 

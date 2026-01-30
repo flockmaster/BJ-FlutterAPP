@@ -35,7 +35,7 @@ class CustomSwitch extends StatefulWidget {
   final double thumbSize;
 
   const CustomSwitch({
-    Key? key,
+    super.key,
     required this.value,
     required this.onChanged,
     this.activeColor = const Color(0xFF111111),
@@ -44,7 +44,7 @@ class CustomSwitch extends StatefulWidget {
     this.width = 48.0,
     this.height = 28.0,
     this.thumbSize = 20.0,
-  }) : super(key: key);
+  });
 
   @override
   State<CustomSwitch> createState() => _CustomSwitchState();

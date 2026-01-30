@@ -53,7 +53,7 @@ class TradeInView extends StackedView<TradeInViewModel> {
         right: AppDimensions.spaceM,
         bottom: AppDimensions.spaceS,
       ),
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: AppColors.bgSurface,
         border: Border(
           bottom: BorderSide(
@@ -70,7 +70,7 @@ class TradeInView extends StackedView<TradeInViewModel> {
               width: 40,
               height: 40,
               alignment: Alignment.center,
-              child: Icon(
+              child: const Icon(
                 Icons.arrow_back_ios_new,
                 size: 20,
                 color: AppColors.textPrimary,
@@ -93,11 +93,11 @@ class TradeInView extends StackedView<TradeInViewModel> {
   /// 构建表单视图
   Widget _buildFormView(BuildContext context, TradeInViewModel viewModel) {
     return ListView(
-      padding: EdgeInsets.all(AppDimensions.spaceM),
+      padding: const EdgeInsets.all(AppDimensions.spaceM),
       children: [
         // 主卡片
         Container(
-          padding: EdgeInsets.all(AppDimensions.spaceL),
+          padding: const EdgeInsets.all(AppDimensions.spaceL),
           decoration: BoxDecoration(
             color: AppColors.bgSurface,
             borderRadius: BorderRadius.circular(AppDimensions.radiusL),
@@ -117,19 +117,19 @@ class TradeInView extends StackedView<TradeInViewModel> {
                 '您的爱车目前价值多少？',
                 style: AppTypography.headingL,
               ),
-              SizedBox(height: AppDimensions.spaceL),
+              const SizedBox(height: AppDimensions.spaceL),
               // 品牌选择
               _buildBrandSection(context, viewModel),
-              SizedBox(height: AppDimensions.spaceL),
+              const SizedBox(height: AppDimensions.spaceL),
               // 年份选择
               _buildYearSection(viewModel),
-              SizedBox(height: AppDimensions.spaceL),
+              const SizedBox(height: AppDimensions.spaceL),
               // 里程输入
               _buildMileageSection(viewModel),
             ],
           ),
         ),
-        SizedBox(height: AppDimensions.spaceL),
+        const SizedBox(height: AppDimensions.spaceL),
         // 估值按钮
         BaicBounceButton(
           onPressed: viewModel.isFormComplete && !viewModel.isEstimating
@@ -156,7 +156,7 @@ class TradeInView extends StackedView<TradeInViewModel> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 if (viewModel.isEstimating)
-                  SizedBox(
+                  const SizedBox(
                     width: 18,
                     height: 18,
                     child: CircularProgressIndicator(
@@ -167,7 +167,7 @@ class TradeInView extends StackedView<TradeInViewModel> {
                     ),
                   )
                 else
-                  Text(
+                  const Text(
                     '开始极速估值',
                     style: TextStyle(
                       fontSize: 16,
@@ -176,8 +176,8 @@ class TradeInView extends StackedView<TradeInViewModel> {
                     ),
                   ),
                 if (!viewModel.isEstimating) ...[
-                  SizedBox(width: AppDimensions.spaceS),
-                  Icon(
+                  const SizedBox(width: AppDimensions.spaceS),
+                  const Icon(
                     Icons.arrow_forward_ios,
                     size: 16,
                     color: AppColors.bgSurface,
@@ -196,7 +196,7 @@ class TradeInView extends StackedView<TradeInViewModel> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
+        const Text(
           '品牌型号',
           style: TextStyle(
             fontSize: 12,
@@ -204,7 +204,7 @@ class TradeInView extends StackedView<TradeInViewModel> {
             color: AppColors.textSecondary,
           ),
         ),
-        SizedBox(height: AppDimensions.spaceS),
+        const SizedBox(height: AppDimensions.spaceS),
         Wrap(
           spacing: AppDimensions.spaceS,
           runSpacing: AppDimensions.spaceS,
@@ -218,7 +218,7 @@ class TradeInView extends StackedView<TradeInViewModel> {
                         AppDimensions.spaceL * 2 -
                         AppDimensions.spaceS * 3) /
                     4,
-                padding: EdgeInsets.symmetric(
+                padding: const EdgeInsets.symmetric(
                   vertical: AppDimensions.spaceS,
                 ),
                 decoration: BoxDecoration(
@@ -266,7 +266,7 @@ class TradeInView extends StackedView<TradeInViewModel> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
+        const Text(
           '上牌年份',
           style: TextStyle(
             fontSize: 12,
@@ -274,18 +274,18 @@ class TradeInView extends StackedView<TradeInViewModel> {
             color: AppColors.textSecondary,
           ),
         ),
-        SizedBox(height: AppDimensions.spaceS),
+        const SizedBox(height: AppDimensions.spaceS),
         SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: Row(
             children: viewModel.years.map((year) {
               final isSelected = year == viewModel.year;
               return Padding(
-                padding: EdgeInsets.only(right: AppDimensions.spaceS),
+                padding: const EdgeInsets.only(right: AppDimensions.spaceS),
                 child: BaicBounceButton(
                   onPressed: () => viewModel.setYear(year),
                   child: Container(
-                    padding: EdgeInsets.symmetric(
+                    padding: const EdgeInsets.symmetric(
                       horizontal: AppDimensions.spaceM,
                       vertical: AppDimensions.spaceS,
                     ),
@@ -326,7 +326,7 @@ class TradeInView extends StackedView<TradeInViewModel> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
+        const Text(
           '行驶里程 (万公里)',
           style: TextStyle(
             fontSize: 12,
@@ -334,7 +334,7 @@ class TradeInView extends StackedView<TradeInViewModel> {
             color: AppColors.textSecondary,
           ),
         ),
-        SizedBox(height: AppDimensions.spaceS),
+        const SizedBox(height: AppDimensions.spaceS),
         TextField(
           keyboardType: TextInputType.number,
           onChanged: viewModel.setMileage,
@@ -358,17 +358,17 @@ class TradeInView extends StackedView<TradeInViewModel> {
             ),
             focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(AppDimensions.radiusM),
-              borderSide: BorderSide(
+              borderSide: const BorderSide(
                 color: AppColors.textPrimary,
                 width: 2,
               ),
             ),
-            contentPadding: EdgeInsets.symmetric(
+            contentPadding: const EdgeInsets.symmetric(
               horizontal: AppDimensions.spaceM,
               vertical: AppDimensions.spaceS + 4,
             ),
           ),
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 18,
             fontWeight: FontWeight.bold,
             color: AppColors.textPrimary,
@@ -384,11 +384,11 @@ class TradeInView extends StackedView<TradeInViewModel> {
     if (estimation == null) return const SizedBox.shrink();
 
     return ListView(
-      padding: EdgeInsets.all(AppDimensions.spaceM),
+      padding: const EdgeInsets.all(AppDimensions.spaceM),
       children: [
         // 估值结果卡片
         Container(
-          padding: EdgeInsets.all(AppDimensions.spaceXL),
+          padding: const EdgeInsets.all(AppDimensions.spaceXL),
           decoration: BoxDecoration(
             color: AppColors.bgSurface,
             borderRadius: BorderRadius.circular(AppDimensions.radiusL),
@@ -406,13 +406,13 @@ class TradeInView extends StackedView<TradeInViewModel> {
               // 顶部橙色条
               Container(
                 height: 8,
-                margin: EdgeInsets.only(bottom: AppDimensions.spaceM),
+                margin: const EdgeInsets.only(bottom: AppDimensions.spaceM),
                 decoration: BoxDecoration(
                   color: AppColors.brandOrange,
                   borderRadius: BorderRadius.circular(4),
                 ),
               ),
-              Text(
+              const Text(
                 '预计置换抵扣金额',
                 style: TextStyle(
                   fontSize: 13,
@@ -420,13 +420,13 @@ class TradeInView extends StackedView<TradeInViewModel> {
                   fontWeight: FontWeight.w500,
                 ),
               ),
-              SizedBox(height: AppDimensions.spaceS),
+              const SizedBox(height: AppDimensions.spaceS),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.baseline,
                 textBaseline: TextBaseline.alphabetic,
                 children: [
-                  Text(
+                  const Text(
                     '¥',
                     style: TextStyle(
                       fontSize: 20,
@@ -441,8 +441,8 @@ class TradeInView extends StackedView<TradeInViewModel> {
                       color: AppColors.brandOrange,
                     ),
                   ),
-                  SizedBox(width: AppDimensions.spaceS),
-                  Text(
+                  const SizedBox(width: AppDimensions.spaceS),
+                  const Text(
                     '万',
                     style: TextStyle(
                       fontSize: 16,
@@ -452,10 +452,10 @@ class TradeInView extends StackedView<TradeInViewModel> {
                   ),
                 ],
               ),
-              SizedBox(height: AppDimensions.spaceL),
+              const SizedBox(height: AppDimensions.spaceL),
               // 车辆信息
               Container(
-                padding: EdgeInsets.all(AppDimensions.spaceM),
+                padding: const EdgeInsets.all(AppDimensions.spaceM),
                 decoration: BoxDecoration(
                   color: const Color(0xFFF9FAFB),
                   borderRadius: BorderRadius.circular(AppDimensions.radiusM),
@@ -475,10 +475,10 @@ class TradeInView extends StackedView<TradeInViewModel> {
                             '${estimation.brand} 热门车型',
                             style: const TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Color(0xFF1F2937)),
                           ),
-                          SizedBox(height: AppDimensions.spaceS),
+                          const SizedBox(height: AppDimensions.spaceS),
                           Text(
                             '${estimation.year}年 · ${estimation.mileage}万公里',
-                            style: TextStyle(
+                            style: const TextStyle(
                               fontSize: 12,
                               color: AppColors.textSecondary,
                               fontWeight: FontWeight.w500,
@@ -490,7 +490,7 @@ class TradeInView extends StackedView<TradeInViewModel> {
                     BaicBounceButton(
                       onPressed: viewModel.resetEstimation,
                       child: Container(
-                        padding: EdgeInsets.symmetric(
+                        padding: const EdgeInsets.symmetric(
                           horizontal: AppDimensions.spaceS,
                           vertical: AppDimensions.spaceS + 2,
                         ),
@@ -499,7 +499,7 @@ class TradeInView extends StackedView<TradeInViewModel> {
                           borderRadius:
                               BorderRadius.circular(AppDimensions.radiusXS),
                         ),
-                        child: Text(
+                        child: const Text(
                           '重测',
                           style: TextStyle(
                             fontSize: 12,
@@ -515,10 +515,10 @@ class TradeInView extends StackedView<TradeInViewModel> {
             ],
           ),
         ),
-        SizedBox(height: AppDimensions.spaceL),
+        const SizedBox(height: AppDimensions.spaceL),
         // 权益卡片
         Container(
-          padding: EdgeInsets.all(AppDimensions.spaceL),
+          padding: const EdgeInsets.all(AppDimensions.spaceL),
           decoration: BoxDecoration(
             color: AppColors.textPrimary,
             borderRadius: BorderRadius.circular(AppDimensions.radiusL),
@@ -541,14 +541,14 @@ class TradeInView extends StackedView<TradeInViewModel> {
                       color: Colors.white.withOpacity(0.1),
                       shape: BoxShape.circle,
                     ),
-                    child: Icon(
+                    child: const Icon(
                       Icons.directions_car,
                       size: 20,
                       color: AppColors.brandOrange,
                     ),
                   ),
-                  SizedBox(width: AppDimensions.spaceS),
-                  Text(
+                  const SizedBox(width: AppDimensions.spaceS),
+                  const Text(
                     '本月置换权益',
                     style: TextStyle(
                       fontSize: 16,
@@ -558,18 +558,18 @@ class TradeInView extends StackedView<TradeInViewModel> {
                   ),
                 ],
               ),
-              SizedBox(height: AppDimensions.spaceM),
+              const SizedBox(height: AppDimensions.spaceM),
               _buildBenefitItem(
                 '最高享 12,000 元现金直补',
               ),
-              SizedBox(height: AppDimensions.spaceM),
+              const SizedBox(height: AppDimensions.spaceM),
               _buildBenefitItem(
                 '免费官方上门检测，10分钟出价',
               ),
             ],
           ),
         ),
-        SizedBox(height: AppDimensions.spaceXL),
+        const SizedBox(height: AppDimensions.spaceXL),
         // 预约按钮
         BaicBounceButton(
           onPressed: viewModel.scheduleAppointment,
@@ -587,7 +587,7 @@ class TradeInView extends StackedView<TradeInViewModel> {
               ],
             ),
             alignment: Alignment.center,
-            child: Text(
+            child: const Text(
               '立即预约高价卖车',
               style: TextStyle(
                 fontSize: 16,
@@ -606,16 +606,16 @@ class TradeInView extends StackedView<TradeInViewModel> {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Icon(
+        const Icon(
           Icons.check_circle,
           size: 18,
           color: AppColors.brandOrange,
         ),
-        SizedBox(width: AppDimensions.spaceS),
+        const SizedBox(width: AppDimensions.spaceS),
         Expanded(
           child: Text(
             text,
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 14,
               color: AppColors.bgSurface,
               height: 1.5,
@@ -634,7 +634,7 @@ class _SkeletonView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(AppDimensions.spaceM),
+      padding: const EdgeInsets.all(AppDimensions.spaceM),
       child: Column(
         children: [
           SizedBox(height: MediaQuery.of(context).padding.top + 60),
@@ -642,7 +642,7 @@ class _SkeletonView extends StatelessWidget {
             height: 400,
             borderRadius: BorderRadius.circular(AppDimensions.radiusL),
           ),
-          SizedBox(height: AppDimensions.spaceL),
+          const SizedBox(height: AppDimensions.spaceL),
           SkeletonBox(
             height: 56,
             borderRadius: BorderRadius.circular(28),

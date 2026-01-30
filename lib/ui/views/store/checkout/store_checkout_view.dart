@@ -9,7 +9,7 @@ import '../../../../core/theme/app_dimensions.dart';
 class StoreCheckoutView extends StackedView<StoreCheckoutViewModel> {
   final List<Map<String, dynamic>> items;
 
-  const StoreCheckoutView({Key? key, required this.items}) : super(key: key);
+  const StoreCheckoutView({super.key, required this.items});
 
   @override
   StoreCheckoutViewModel viewModelBuilder(BuildContext context) => 
@@ -201,9 +201,9 @@ class StoreCheckoutView extends StackedView<StoreCheckoutViewModel> {
                           color: const Color(0xFFE5E7EB),
                           borderRadius: BorderRadius.circular(4),
                         ),
-                        child: Text(
+                        child: const Text(
                           '默认',
-                          style: const TextStyle(
+                          style: TextStyle(
                             fontSize: 9,
                             fontWeight: FontWeight.bold,
                             color: Color(0xFF111111),
@@ -254,20 +254,20 @@ class StoreCheckoutView extends StackedView<StoreCheckoutViewModel> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Row(
+          const Row(
             children: [
-              const Icon(
+              Icon(
                 LucideIcons.shoppingBag,
                 size: 12,
                 color: Color(0xFF9CA3AF),
               ),
-              const SizedBox(width: 8),
+              SizedBox(width: 8),
               Text(
                 '北京汽车官方自营',
                 style: TextStyle(
                   fontSize: 11,
                   fontWeight: FontWeight.bold,
-                  color: const Color(0xFF9CA3AF),
+                  color: Color(0xFF9CA3AF),
                   letterSpacing: 0.5,
                 ),
               ),
@@ -362,7 +362,7 @@ class StoreCheckoutView extends StackedView<StoreCheckoutViewModel> {
                 ],
               ),
             );
-          }).toList(),
+          }),
           const SizedBox(height: 24),
           Container(
             padding: const EdgeInsets.only(top: 16),
@@ -371,10 +371,10 @@ class StoreCheckoutView extends StackedView<StoreCheckoutViewModel> {
                 top: BorderSide(color: Color(0xFFF9FAFB)),
               ),
             ),
-            child: Row(
+            child: const Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Text(
+                Text(
                   '配送方式',
                   style: TextStyle(
                     fontSize: 13,
@@ -382,7 +382,7 @@ class StoreCheckoutView extends StackedView<StoreCheckoutViewModel> {
                     fontWeight: FontWeight.w500,
                   ),
                 ),
-                const Text(
+                Text(
                   '顺丰速运 · 免运费',
                   style: TextStyle(
                     fontSize: 13,
@@ -721,7 +721,7 @@ class StoreCheckoutView extends StackedView<StoreCheckoutViewModel> {
               ),
             ],
           ),
-          child: Column(
+          child: const Column(
             mainAxisSize: MainAxisSize.min,
             children: [
               SizedBox(
@@ -729,11 +729,11 @@ class StoreCheckoutView extends StackedView<StoreCheckoutViewModel> {
                 height: 56,
                 child: CircularProgressIndicator(
                   strokeWidth: 4,
-                  valueColor: const AlwaysStoppedAnimation<Color>(Color(0xFF111111)),
+                  valueColor: AlwaysStoppedAnimation<Color>(Color(0xFF111111)),
                 ),
               ),
-              const SizedBox(height: 20),
-              const Text(
+              SizedBox(height: 20),
+              Text(
                 '正在处理支付请求...',
                 style: TextStyle(
                   fontSize: 16,
@@ -1150,16 +1150,16 @@ class StoreCheckoutView extends StackedView<StoreCheckoutViewModel> {
                       ),
                       const SizedBox(height: 2),
                       RichText(
-                        text: TextSpan(
-                          style: const TextStyle(
+                        text: const TextSpan(
+                          style: TextStyle(
                             fontSize: 11,
                             color: Color(0xFF9CA3AF),
                           ),
                           children: [
-                            const TextSpan(text: '可用 2,450 积分，最高抵扣 '),
+                            TextSpan(text: '可用 2,450 积分，最高抵扣 '),
                             TextSpan(
                               text: '¥20',
-                              style: const TextStyle(
+                              style: TextStyle(
                                 fontFamily: 'Oswald',
                                 fontWeight: FontWeight.bold,
                               ),
@@ -1245,15 +1245,15 @@ class StoreCheckoutView extends StackedView<StoreCheckoutViewModel> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Row(
+                const Row(
                   children: [
-                    const Icon(
+                    Icon(
                       LucideIcons.fileText,
                       size: 18,
                       color: Color(0xFF111111),
                     ),
-                    const SizedBox(width: 12),
-                    const Text(
+                    SizedBox(width: 12),
+                    Text(
                       '开具发票',
                       style: TextStyle(
                         fontSize: 14,
@@ -1314,12 +1314,12 @@ class StoreCheckoutView extends StackedView<StoreCheckoutViewModel> {
                   ? Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
+                        const Text(
                           '发票抬头',
                           style: TextStyle(
                             fontSize: 11,
                             fontWeight: FontWeight.bold,
-                            color: const Color(0xFF9CA3AF),
+                            color: Color(0xFF9CA3AF),
                             letterSpacing: 1.2,
                           ),
                         ),
@@ -1358,12 +1358,12 @@ class StoreCheckoutView extends StackedView<StoreCheckoutViewModel> {
                   : Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
+                        const Text(
                           '企业信息',
                           style: TextStyle(
                             fontSize: 11,
                             fontWeight: FontWeight.bold,
-                            color: const Color(0xFF9CA3AF),
+                            color: Color(0xFF9CA3AF),
                             letterSpacing: 1.2,
                           ),
                         ),

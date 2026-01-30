@@ -41,7 +41,7 @@ class BindVehicleView extends StackedView<BindVehicleViewModel> {
   Widget _buildHeader(BindVehicleViewModel viewModel) {
     return Container(
       padding: const EdgeInsets.fromLTRB(12, 54, 20, 16),
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: AppColors.bgSurface,
         border: Border(
           bottom: BorderSide(
@@ -59,14 +59,14 @@ class BindVehicleView extends StackedView<BindVehicleViewModel> {
               width: 40,
               height: 40,
               alignment: Alignment.centerLeft,
-              child: Icon(
+              child: const Icon(
                 LucideIcons.arrowLeft,
                 size: 24,
                 color: AppColors.textPrimary,
               ),
             ),
           ),
-          Text(
+          const Text(
             '绑定车辆',
             style: TextStyle(
               fontSize: 17,
@@ -81,7 +81,7 @@ class BindVehicleView extends StackedView<BindVehicleViewModel> {
   }
 
   Widget _buildTitle() {
-    return Column(
+    return const Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
@@ -93,7 +93,7 @@ class BindVehicleView extends StackedView<BindVehicleViewModel> {
             height: 1.2,
           ),
         ),
-        const SizedBox(height: 8),
+        SizedBox(height: 8),
         Text(
           '请输入车辆信息以完成绑定',
           style: TextStyle(
@@ -109,7 +109,7 @@ class BindVehicleView extends StackedView<BindVehicleViewModel> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Row(
+        const Row(
           children: [
             Text(
               '车架号 (VIN)',
@@ -119,7 +119,7 @@ class BindVehicleView extends StackedView<BindVehicleViewModel> {
                 color: AppColors.textSecondary,
               ),
             ),
-            const SizedBox(width: 4),
+            SizedBox(width: 4),
             Text(
               '*',
               style: TextStyle(
@@ -144,14 +144,14 @@ class BindVehicleView extends StackedView<BindVehicleViewModel> {
           ),
           child: TextField(
             controller: viewModel.vinController,
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 15,
               color: AppColors.textPrimary,
               fontFamily: 'Oswald',
             ),
             decoration: InputDecoration(
               hintText: '请输入17位车架号',
-              hintStyle: TextStyle(
+              hintStyle: const TextStyle(
                 fontSize: 15,
                 color: AppColors.textTertiary,
               ),
@@ -160,7 +160,7 @@ class BindVehicleView extends StackedView<BindVehicleViewModel> {
               suffixIcon: viewModel.vinController.text.isNotEmpty
                 ? BaicBounceButton(
                     onPressed: () => viewModel.clearVIN(),
-                    child: Icon(
+                    child: const Icon(
                       LucideIcons.x,
                       size: 18,
                       color: AppColors.textTertiary,
@@ -178,7 +178,7 @@ class BindVehicleView extends StackedView<BindVehicleViewModel> {
           const SizedBox(height: 8),
           Row(
             children: [
-              Icon(
+              const Icon(
                 LucideIcons.alertCircle,
                 size: 14,
                 color: AppColors.error,
@@ -186,7 +186,7 @@ class BindVehicleView extends StackedView<BindVehicleViewModel> {
               const SizedBox(width: 4),
               Text(
                 viewModel.vinError!,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 12,
                   color: AppColors.error,
                 ),
@@ -202,7 +202,7 @@ class BindVehicleView extends StackedView<BindVehicleViewModel> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
+        const Text(
           '车牌号',
           style: TextStyle(
             fontSize: 14,
@@ -222,14 +222,14 @@ class BindVehicleView extends StackedView<BindVehicleViewModel> {
           ),
           child: TextField(
             controller: viewModel.plateController,
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 15,
               color: AppColors.textPrimary,
               fontFamily: 'Oswald',
             ),
             decoration: InputDecoration(
               hintText: '选填，如：京A·12345',
-              hintStyle: TextStyle(
+              hintStyle: const TextStyle(
                 fontSize: 15,
                 color: AppColors.textTertiary,
               ),
@@ -238,7 +238,7 @@ class BindVehicleView extends StackedView<BindVehicleViewModel> {
               suffixIcon: viewModel.plateController.text.isNotEmpty
                 ? BaicBounceButton(
                     onPressed: () => viewModel.clearPlate(),
-                    child: Icon(
+                    child: const Icon(
                       LucideIcons.x,
                       size: 18,
                       color: AppColors.textTertiary,
@@ -270,14 +270,14 @@ class BindVehicleView extends StackedView<BindVehicleViewModel> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Row(
+          const Row(
             children: [
               Icon(
                 LucideIcons.lightbulb,
                 size: 16,
                 color: AppColors.warning,
               ),
-              const SizedBox(width: 8),
+              SizedBox(width: 8),
               Text(
                 '温馨提示',
                 style: TextStyle(
@@ -307,7 +307,7 @@ class BindVehicleView extends StackedView<BindVehicleViewModel> {
           width: 4,
           height: 4,
           margin: const EdgeInsets.only(top: 6),
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             color: AppColors.warning,
             shape: BoxShape.circle,
           ),
@@ -316,7 +316,7 @@ class BindVehicleView extends StackedView<BindVehicleViewModel> {
         Expanded(
           child: Text(
             text,
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 12,
               color: AppColors.textSecondary,
               height: 1.5,
@@ -349,7 +349,7 @@ class BindVehicleView extends StackedView<BindVehicleViewModel> {
         ),
         child: Center(
           child: viewModel.isBusy
-            ? SizedBox(
+            ? const SizedBox(
                 width: 20,
                 height: 20,
                 child: CircularProgressIndicator(

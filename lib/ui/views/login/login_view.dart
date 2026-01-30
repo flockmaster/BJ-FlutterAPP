@@ -15,7 +15,7 @@ import 'login_viewmodel.dart';
 /// 2. 动效切换控制：采用 [AnimatedSwitcher] 实现主视图与表单录入视图的平滑位移与淡入转换。
 /// 3. 系统 UI 适配：随背景亮暗动态调整状态栏文字颜色。
 class LoginView extends StackedView<LoginViewModel> {
-  const LoginView({Key? key}) : super(key: key);
+  const LoginView({super.key});
 
   @override
   Widget builder(
@@ -70,13 +70,13 @@ class LoginView extends StackedView<LoginViewModel> {
   Widget _buildBody(LoginViewModel viewModel) {
     switch (viewModel.viewMode) {
       case 'form':
-        return _FormView(key: const ValueKey('form'));
+        return const _FormView(key: ValueKey('form'));
       case 'wechat-bind':
-        return _WechatBindView(key: const ValueKey('wechat-bind'));
+        return const _WechatBindView(key: ValueKey('wechat-bind'));
       case 'forgot-pass':
-        return _ForgotPassView(key: const ValueKey('forgot-pass'));
+        return const _ForgotPassView(key: ValueKey('forgot-pass'));
       default:
-        return _MainView(key: const ValueKey('main'));
+        return const _MainView(key: ValueKey('main'));
     }
   }
 
@@ -133,7 +133,7 @@ class LoginView extends StackedView<LoginViewModel> {
 
 /// 首页视图：提供“本机号码一键登录”核心入口及微信快捷登录
 class _MainView extends ViewModelWidget<LoginViewModel> {
-  const _MainView({Key? key}) : super(key: key);
+  const _MainView({super.key});
 
   @override
   Widget build(BuildContext context, LoginViewModel viewModel) {
@@ -389,7 +389,7 @@ class _FullScreenContentWrapper extends StatelessWidget {
 /// 底部勾选协议组件（支持基于同步 ID 的抖动特效）
 class _AgreementWidget extends StatefulWidget {
   final LoginViewModel viewModel;
-  const _AgreementWidget({Key? key, required this.viewModel}) : super(key: key);
+  const _AgreementWidget({required this.viewModel});
 
   @override
   State<_AgreementWidget> createState() => _AgreementWidgetState();
@@ -462,7 +462,7 @@ class _AgreementWidgetState extends State<_AgreementWidget> with SingleTickerPro
           const SizedBox(width: 8),
           Expanded(
             child: Text.rich(
-              TextSpan(
+              const TextSpan(
                 text: '我已阅读并同意',
                 children: [
                   TextSpan(
@@ -492,7 +492,7 @@ class _AgreementWidgetState extends State<_AgreementWidget> with SingleTickerPro
 
 /// 细化后的表单登录视图（支持验证码/密码双模式切换）
 class _FormView extends ViewModelWidget<LoginViewModel> {
-  _FormView({Key? key}) : super(key: key);
+  const _FormView({super.key});
 
   @override
   Widget build(BuildContext context, LoginViewModel viewModel) {
@@ -598,7 +598,7 @@ class _FormView extends ViewModelWidget<LoginViewModel> {
             ),
           ),
           const SizedBox(height: 32),
-          _AgreementWidgetLight(),
+          const _AgreementWidgetLight(),
         ],
       ),
     );
@@ -641,7 +641,7 @@ class _FormView extends ViewModelWidget<LoginViewModel> {
 
 /// 亮色模式协议组件
 class _AgreementWidgetLight extends StatefulWidget {
-  const _AgreementWidgetLight({Key? key}) : super(key: key);
+  const _AgreementWidgetLight();
 
   @override
   State<_AgreementWidgetLight> createState() => _AgreementWidgetLightState();
@@ -717,7 +717,7 @@ class _AgreementWidgetLightState extends State<_AgreementWidgetLight> with Singl
               const SizedBox(width: 8),
               Expanded(
                 child: Text.rich(
-                  TextSpan(
+                  const TextSpan(
                     text: '我已阅读并同意',
                     children: [
                       TextSpan(
@@ -749,7 +749,7 @@ class _AgreementWidgetLightState extends State<_AgreementWidgetLight> with Singl
 
 /// 微信绑定视角
 class _WechatBindView extends ViewModelWidget<LoginViewModel> {
-  const _WechatBindView({Key? key}) : super(key: key);
+  const _WechatBindView({super.key});
 
   @override
   Widget build(BuildContext context, LoginViewModel viewModel) {
@@ -896,7 +896,7 @@ class _WechatBindView extends ViewModelWidget<LoginViewModel> {
 
 /// 忘记密码视图 (Skeleton 实现)
 class _ForgotPassView extends ViewModelWidget<LoginViewModel> {
-  const _ForgotPassView({Key? key}) : super(key: key);
+  const _ForgotPassView({super.key});
 
   @override
   Widget build(BuildContext context, LoginViewModel viewModel) {
