@@ -1,0 +1,337 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>iPhone 15 原型展示 - 理想汽车</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入 Oswald 字体用于数字展示 (Design System Req) -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- 引入 3D 模型渲染器组件 -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            padding: 40px 20px;
+            overflow: hidden; /* 防止body滚动 */
+        }
+
+        /* Design System Utility Classes */
+        .font-oswald {
+            font-family: 'Oswald', sans-serif;
+        }
+        
+        /* Smooth Scrolling with Heavy Damping */
+        .scroll-smooth-heavy {
+            -webkit-overflow-scrolling: touch;
+        }
+
+        /* Skeleton Shimmer Animation (Design System 8.1) */
+        @keyframes shimmer {
+            0% {
+                background-position: -468px 0;
+            }
+            100% {
+                background-position: 468px 0;
+            }
+        }
+
+        .animate-shimmer {
+            animation-duration: 1.5s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: infinite;
+            animation-name: shimmer;
+            animation-timing-function: linear;
+            background: #f6f7f8;
+            background: linear-gradient(to right, #f3f4f6 8%, #e5e7eb 18%, #f3f4f6 33%);
+            background-size: 800px 104px;
+            position: relative;
+        }
+
+        /* 原型手机外壳 - 简约精美风格 */
+        .phone-mockup {
+            width: 390px;
+            height: 844px;
+            position: relative;
+            background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
+            border-radius: 48px;
+            box-shadow: 
+                0 0 0 1px rgba(0, 0, 0, 0.08),
+                0 2px 8px rgba(0, 0, 0, 0.04),
+                0 8px 24px rgba(0, 0, 0, 0.06),
+                0 20px 60px rgba(0, 0, 0, 0.08);
+            padding: 6px;
+            box-sizing: content-box;
+            flex-shrink: 0;
+            z-index: 10; /* Ensure phone is above background but hint portal can manage its own z-index */
+        }
+
+        /* 屏幕区域 */
+        .screen-container {
+            width: 100%;
+            height: 100%;
+            background: #000;
+            border-radius: 42px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+        }
+
+        /* 屏幕内容 */
+        .screen-content {
+            width: 100%;
+            height: 100%;
+            background: #F5F7FA; /* L0 Canvas Color Update */
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* 状态栏 - 提升 Z-Index 至 9999 以覆盖全屏 React 组件 */
+        .status-bar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 54px;
+            z-index: 9999; 
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 24px;
+            pointer-events: none;
+            background: transparent;
+        }
+
+        .status-left {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .time {
+            font-size: 15px;
+            font-weight: 600;
+            color: #000;
+            letter-spacing: -0.2px;
+            margin-left: 4px;
+        }
+
+        .status-right {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* 灵动岛 - 提升 Z-Index */
+        .dynamic-island {
+            position: absolute;
+            top: 12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 126px;
+            height: 37px;
+            background: #000;
+            border-radius: 19px;
+            z-index: 9999;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* 信号图标 */
+        .signal-icon {
+            display: flex;
+            align-items: flex-end;
+            gap: 2.5px;
+            height: 14px;
+        }
+
+        .signal-bar {
+            width: 3.5px;
+            background: #000;
+            border-radius: 1px;
+        }
+
+        .signal-bar:nth-child(1) { height: 4px; }
+        .signal-bar:nth-child(2) { height: 7px; }
+        .signal-bar:nth-child(3) { height: 10px; }
+        .signal-bar:nth-child(4) { height: 13px; }
+
+        /* 5G 文字 */
+        .network-type {
+            font-size: 15px;
+            font-weight: 600;
+            color: #000;
+            letter-spacing: -0.3px;
+            margin-left: 2px;
+        }
+
+        /* 电池图标 */
+        .battery-icon {
+            width: 27px;
+            height: 13px;
+            border: 1.5px solid #000;
+            border-radius: 3px;
+            position: relative;
+            margin-left: 4px;
+        }
+
+        .battery-icon::before {
+            content: '';
+            position: absolute;
+            right: -4px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 1.5px;
+            height: 5px;
+            background: #000;
+            border-radius: 0 1.5px 1.5px 0;
+        }
+
+        .battery-icon::after {
+            content: '';
+            position: absolute;
+            left: 2px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 8px;
+            background: #000;
+            border-radius: 1px;
+        }
+
+        /* 底部Home指示器 - 提升 Z-Index */
+        .home-indicator {
+            position: absolute;
+            bottom: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 134px;
+            height: 5px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 3px;
+            z-index: 9999;
+            pointer-events: none;
+        }
+
+        /* App Root Container */
+        #root {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        /* External Hint Container */
+        #hint-root {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 50; /* Higher than background, parallel to phone */
+        }
+
+        /* Custom Animations */
+        @keyframes slideInBottom {
+            from { transform: translateY(100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        
+        @keyframes slideOutBottom {
+            from { transform: translateY(0); opacity: 1; }
+            to { transform: translateY(100%); opacity: 0; }
+        }
+
+        .animate-slide-in-bottom {
+            animation: slideInBottom 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        
+        @keyframes slideOutBottom {
+            from { transform: translateY(0); opacity: 1; }
+            to { transform: translateY(100%); opacity: 0; }
+        }
+
+        .animate-slide-in-bottom {
+            animation: slideInBottom 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        
+        .animate-slide-out-bottom {
+            animation: slideOutBottom 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        /* Hide scrollbar utility */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Custom style for 3D model viewer */
+        model-viewer {
+            width: 100%;
+            height: 100%;
+            background-color: #F5F7FA;
+            --poster-color: transparent;
+        }
+    </style>
+    <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.556.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.31.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "react-dom": "https://aistudiocdn.com/react-dom@^19.2.1"
+  }
+}
+</script>
+</head>
+<body>
+    <div class="phone-mockup">
+        <div class="screen-container">
+            <div class="screen-content">
+                <!-- 状态栏 -->
+                <div class="status-bar">
+                    <div class="status-left">
+                        <span class="time">21:48</span>
+                    </div>
+                    <div class="dynamic-island"></div>
+                    <div class="status-right">
+                        <div class="signal-icon">
+                            <div class="signal-bar"></div>
+                            <div class="signal-bar"></div>
+                            <div class="signal-bar"></div>
+                            <div class="signal-bar"></div>
+                        </div>
+                        <span class="network-type">5G</span>
+                        <div class="battery-icon"></div>
+                    </div>
+                </div>
+
+                <!-- React App Mount Point -->
+                <div id="root"></div>
+
+                <!-- 底部指示器 -->
+                <div class="home-indicator"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Portal Target for External UI Hints -->
+    <div id="hint-root"></div>
+</body>
+</html>

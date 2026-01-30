@@ -1,0 +1,379 @@
+import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:stacked_services/stacked_services.dart';
+import '../ui/views/store/store_view.dart';
+import '../ui/views/store/checkout/store_checkout_view.dart';
+import '../ui/views/store/cart/store_cart_view.dart';
+import '../ui/views/store/order/order_detail_view.dart';
+import '../ui/views/store/order/order_list_view.dart';
+import '../ui/views/address/address_selection_view.dart';
+import '../ui/views/discovery/discovery_view.dart';
+import '../ui/views/discovery/discovery_detail_view.dart';
+import '../ui/views/store/product_detail_view.dart';
+import '../ui/views/car_buying/car_buying_view.dart';
+import '../ui/views/car_detail/car_detail_view.dart';
+import '../ui/views/service/service_view.dart';
+import '../ui/views/profile/profile_view.dart';
+import '../ui/views/consultant_chat/consultant_chat_view.dart';
+import '../ui/views/trade_in/trade_in_view.dart';
+import '../ui/views/follow/follow_list_view.dart';
+import '../ui/views/profile_detail/profile_detail_view.dart';
+import '../ui/views/check_in/check_in_view.dart';
+import '../ui/views/message_center/message_center_view.dart';
+import '../ui/views/help_center/help_center_view.dart';
+import '../ui/views/scanner/scanner_view.dart';
+import '../ui/views/my_qrcode/my_qrcode_view.dart';
+import '../ui/views/my_vehicles/my_vehicles_view.dart';
+import '../ui/views/my_vehicles/bind_vehicle_view.dart';
+import '../ui/views/points/points_history_view.dart';
+import '../ui/views/coupons/my_coupons_view.dart';
+import '../ui/views/task_center/task_center_view.dart';
+import '../ui/views/invite_friends/invite_friends_view.dart';
+import '../ui/views/customer_service/customer_service_view.dart';
+import '../ui/views/settings/settings_view.dart';
+import '../ui/views/settings/address_list_view.dart';
+import '../ui/views/settings/invoice_list_view.dart';
+import '../ui/views/settings/notification_settings_view.dart';
+import '../ui/views/settings/privacy_settings_view.dart';
+import '../ui/views/settings/feedback_view.dart';
+import '../ui/views/settings/account_binding_view.dart';
+import '../shared/widgets/main_navigation.dart';
+import '../app/app.locator.dart';
+import '../app/app.router.dart' as stacked_routes;
+
+/// App route names for type-safe navigation
+class AppRoutes {
+  static const String discovery = '/discovery';
+  static const String discoveryDetail = '/discovery/:id';
+  static const String store = '/store';
+  static const String productDetail = '/store/product/:id';
+  static const String carBuying = '/car-buying';
+  static const String carDetail = '/car-buying/:id';
+  static const String service = '/service';
+  static const String profile = '/profile';
+  static const String profileDetail = '/profile/detail';
+  static const String followList = '/profile/follow';
+  static const String myPosts = '/profile/posts';
+  static const String myFavorites = '/profile/favorites';
+  static const String checkIn = '/check-in';
+  static const String pointsHistory = '/points-history';
+  static const String messageCenter = '/message-center';
+  static const String helpCenter = '/help-center';
+  static const String consultant = '/consultant';
+  static const String tradeIn = '/trade-in';
+  static const String scanner = '/scanner';
+  static const String myQRCode = '/my-qrcode';
+  static const String myVehicles = '/my-vehicles';
+  static const String bindVehicle = '/bind-vehicle';
+  static const String orderList = '/order-list';
+  static const String coupons = '/coupons';
+  static const String taskCenter = '/task-center';
+  static const String inviteFriends = '/invite-friends';
+  static const String customerService = '/customer-service';
+  static const String settings = '/settings';
+  static const String addressList = '/settings/address-list';
+  static const String invoiceList = '/settings/invoice-list';
+  static const String notificationSettings = '/settings/notifications';
+  static const String privacySettings = '/settings/privacy';
+  static const String feedback = '/settings/feedback';
+  static const String accountBinding = '/settings/account-binding';
+}
+
+class AppRouter {
+  // Use the key from NavigationService so Stacked's navigation works with GoRouter
+  static GlobalKey<NavigatorState> get _rootNavigatorKey => locator<NavigationService>().navigatorKey!;
+  static final GlobalKey<NavigatorState> _shellNavigatorKey = GlobalKey<NavigatorState>();
+
+  static final GoRouter router = GoRouter(
+    navigatorKey: _rootNavigatorKey,
+    initialLocation: AppRoutes.discovery,
+    routes: [
+      // Main navigation shell
+      ShellRoute(
+        navigatorKey: _shellNavigatorKey,
+        builder: (context, state, child) {
+          return MainNavigation(child: child);
+        },
+        routes: [
+          GoRoute(
+             path: AppRoutes.discovery,
+             pageBuilder: (context, state) => const NoTransitionPage(child: DiscoveryView()),
+           ),
+           GoRoute(
+             path: AppRoutes.store,
+             pageBuilder: (context, state) => const NoTransitionPage(child: StoreView()),
+           ),
+           GoRoute(
+             path: AppRoutes.carBuying,
+             pageBuilder: (context, state) => const NoTransitionPage(child: CarBuyingView()),
+           ),
+           GoRoute(
+             path: AppRoutes.service,
+             pageBuilder: (context, state) => const NoTransitionPage(child: ServiceView()),
+           ),
+           GoRoute(
+             path: AppRoutes.profile,
+             pageBuilder: (context, state) => const NoTransitionPage(child: ProfileView()),
+           ),
+        ],
+      ),
+      // Detail pages
+      GoRoute(
+        path: AppRoutes.profileDetail,
+        parentNavigatorKey: _rootNavigatorKey,
+        builder: (context, state) => const ProfileDetailView(),
+      ),
+      GoRoute(
+        path: AppRoutes.followList,
+        parentNavigatorKey: _rootNavigatorKey,
+        builder: (context, state) {
+          final type = state.uri.queryParameters['type'] ?? 'following';
+          return FollowListView(type: type);
+        },
+      ),
+      GoRoute(
+        path: AppRoutes.discoveryDetail,
+        parentNavigatorKey: _rootNavigatorKey,
+        builder: (context, state) {
+          final id = state.pathParameters['id'] ?? '';
+          return DiscoveryDetailView(itemId: id);
+        },
+      ),
+      GoRoute(
+        path: AppRoutes.productDetail,
+        parentNavigatorKey: _rootNavigatorKey,
+        builder: (context, state) {
+          final id = state.pathParameters['id'] ?? '';
+          return ProductDetailView(productId: int.tryParse(id) ?? 0);
+        },
+      ),
+      GoRoute(
+        path: stacked_routes.Routes.productDetailView,
+        parentNavigatorKey: _rootNavigatorKey,
+        builder: (context, state) {
+          final args = state.extra as stacked_routes.ProductDetailViewArguments;
+          return ProductDetailView(key: args.key, productId: args.productId);
+        },
+      ),
+      // Stacked Routes Integration
+      GoRoute(
+        path: stacked_routes.Routes.followListView, // /follow-list-view
+        parentNavigatorKey: _rootNavigatorKey,
+        builder: (context, state) {
+          final args = state.extra as stacked_routes.FollowListViewArguments?;
+          return FollowListView(key: args?.key, type: args?.type ?? 'following');
+        },
+      ),
+      GoRoute(
+        path: stacked_routes.Routes.storeCartView, // /store-cart-view
+        parentNavigatorKey: _rootNavigatorKey,
+        builder: (context, state) {
+          return const StoreCartView();
+        },
+      ),
+      GoRoute(
+        path: stacked_routes.Routes.storeCheckoutView, // /store-checkout-view
+        parentNavigatorKey: _rootNavigatorKey,
+        builder: (context, state) {
+          final args = state.extra as stacked_routes.StoreCheckoutViewArguments;
+          return StoreCheckoutView(key: args.key, items: args.items);
+        },
+      ),
+      GoRoute(
+        path: stacked_routes.Routes.orderDetailView, // /order-detail-view
+        parentNavigatorKey: _rootNavigatorKey,
+        builder: (context, state) {
+          final args = state.extra as stacked_routes.OrderDetailViewArguments;
+          return OrderDetailView(
+            key: args.key,
+            orderId: args.orderId,
+            orderType: args.orderType,
+            items: args.items,
+            totalAmount: args.totalAmount,
+            paymentMethod: args.paymentMethod,
+            appointmentDate: args.appointmentDate,
+            productTotal: args.productTotal,
+            shippingFee: args.shippingFee,
+            couponDiscount: args.couponDiscount,
+            pointsDiscount: args.pointsDiscount,
+            rewardPoints: args.rewardPoints,
+            selectedCoupon: args.selectedCoupon,
+            pointsUsed: args.pointsUsed,
+            invoiceMode: args.invoiceMode,
+            invoiceTitle: args.invoiceTitle,
+            taxNumber: args.taxNumber,
+            remark: args.remark,
+            orderTime: args.orderTime,
+            paymentTime: args.paymentTime,
+          );
+        },
+      ),
+      GoRoute(
+        path: stacked_routes.Routes.addressSelectionView, // /address-selection-view
+        parentNavigatorKey: _rootNavigatorKey,
+        builder: (context, state) {
+          final args = state.extra as stacked_routes.AddressSelectionViewArguments?;
+          return AddressSelectionView(key: args?.key, selectedId: args?.selectedId);
+        },
+      ),
+      GoRoute(
+        path: AppRoutes.carDetail,
+        parentNavigatorKey: _rootNavigatorKey,
+        builder: (context, state) {
+          final id = state.pathParameters['id'] ?? '';
+          return CarDetailView(carId: id);
+        },
+      ),
+      GoRoute(
+        path: AppRoutes.consultant,
+        parentNavigatorKey: _rootNavigatorKey,
+        pageBuilder: (context, state) {
+          final extra = state.extra as Map<String, dynamic>? ?? {};
+          return CustomTransitionPage(
+            key: state.pageKey,
+            opaque: false,
+            barrierColor: Colors.black54,
+            barrierDismissible: true,
+            transitionDuration: const Duration(milliseconds: 300),
+            child: ConsultantChatPage(carInfo: extra),
+            transitionsBuilder: (context, animation, secondaryAnimation, child) {
+              return SlideTransition(
+                position: Tween<Offset>(
+                  begin: const Offset(0, 1),
+                  end: Offset.zero,
+                ).animate(CurvedAnimation(
+                  parent: animation,
+                  curve: Curves.easeOutCubic,
+                )),
+                child: child,
+              );
+            },
+          );
+        },
+      ),
+      GoRoute(
+        path: AppRoutes.tradeIn,
+        parentNavigatorKey: _rootNavigatorKey,
+        builder: (context, state) => const TradeInView(),
+      ),
+      GoRoute(
+        path: AppRoutes.checkIn,
+        parentNavigatorKey: _rootNavigatorKey,
+        builder: (context, state) => const CheckInView(),
+      ),
+      GoRoute(
+        path: AppRoutes.messageCenter,
+        parentNavigatorKey: _rootNavigatorKey,
+        builder: (context, state) => const MessageCenterView(),
+      ),
+      GoRoute(
+        path: AppRoutes.helpCenter,
+        parentNavigatorKey: _rootNavigatorKey,
+        builder: (context, state) => const HelpCenterView(),
+      ),
+      GoRoute(
+        path: AppRoutes.pointsHistory,
+        parentNavigatorKey: _rootNavigatorKey,
+        builder: (context, state) => const PointsHistoryView(),
+      ),
+      GoRoute(
+        path: AppRoutes.scanner,
+        parentNavigatorKey: _rootNavigatorKey,
+        builder: (context, state) => const ScannerView(),
+      ),
+      GoRoute(
+        path: AppRoutes.myQRCode,
+        parentNavigatorKey: _rootNavigatorKey,
+        builder: (context, state) => const MyQRCodeView(),
+      ),
+      GoRoute(
+        path: AppRoutes.myVehicles,
+        parentNavigatorKey: _rootNavigatorKey,
+        builder: (context, state) => const MyVehiclesView(),
+      ),
+      GoRoute(
+        path: AppRoutes.bindVehicle,
+        parentNavigatorKey: _rootNavigatorKey,
+        builder: (context, state) => const BindVehicleView(),
+      ),
+      GoRoute(
+        path: AppRoutes.orderList,
+        parentNavigatorKey: _rootNavigatorKey,
+        builder: (context, state) => const OrderListView(),
+      ),
+      GoRoute(
+        path: AppRoutes.coupons,
+        parentNavigatorKey: _rootNavigatorKey,
+        builder: (context, state) => const MyCouponsView(),
+      ),
+      GoRoute(
+        path: AppRoutes.taskCenter,
+        parentNavigatorKey: _rootNavigatorKey,
+        builder: (context, state) => const TaskCenterView(),
+      ),
+      GoRoute(
+        path: AppRoutes.inviteFriends,
+        parentNavigatorKey: _rootNavigatorKey,
+        builder: (context, state) => const InviteFriendsView(),
+      ),
+      GoRoute(
+        path: AppRoutes.customerService,
+        parentNavigatorKey: _rootNavigatorKey,
+        builder: (context, state) => const CustomerServiceView(),
+      ),
+      GoRoute(
+        path: AppRoutes.settings,
+        parentNavigatorKey: _rootNavigatorKey,
+        builder: (context, state) => const SettingsView(),
+      ),
+      GoRoute(
+        path: AppRoutes.addressList,
+        parentNavigatorKey: _rootNavigatorKey,
+        builder: (context, state) => const AddressListView(),
+      ),
+      GoRoute(
+        path: AppRoutes.invoiceList,
+        parentNavigatorKey: _rootNavigatorKey,
+        builder: (context, state) => const InvoiceListView(),
+      ),
+      GoRoute(
+        path: AppRoutes.notificationSettings,
+        parentNavigatorKey: _rootNavigatorKey,
+        builder: (context, state) => const NotificationSettingsView(),
+      ),
+      GoRoute(
+        path: AppRoutes.privacySettings,
+        parentNavigatorKey: _rootNavigatorKey,
+        builder: (context, state) => const PrivacySettingsView(),
+      ),
+      GoRoute(
+        path: AppRoutes.feedback,
+        parentNavigatorKey: _rootNavigatorKey,
+        builder: (context, state) => const FeedbackView(),
+      ),
+      GoRoute(
+        path: AppRoutes.accountBinding,
+        parentNavigatorKey: _rootNavigatorKey,
+        builder: (context, state) => const AccountBindingView(),
+      ),
+    ],
+    errorBuilder: (context, state) => Scaffold(
+      appBar: AppBar(title: const Text('页面未找到')),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Icon(Icons.error_outline, size: 64, color: Colors.grey),
+            const SizedBox(height: 16),
+            const Text('页面不存在', style: TextStyle(fontSize: 18)),
+            const SizedBox(height: 16),
+            ElevatedButton(
+              onPressed: () => context.go(AppRoutes.discovery),
+              child: const Text('返回首页'),
+            ),
+          ],
+        ),
+      ),
+    ),
+  );
+}

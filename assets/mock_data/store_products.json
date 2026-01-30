@@ -1,0 +1,1057 @@
+{
+  "products": [
+    {
+      "id": "prod_1001",
+      "categoryId": "interior",
+      "title": "宇航员门厅自动帐篷DM-1015L",
+      "price": 804.0,
+      "originalPrice": 1580.0,
+      "image": "https://youke3.picui.cn/s1/2026/01/06/695cca5f0d0b3.jpg",
+      "gallery": [
+        "https://youke3.picui.cn/s1/2026/01/06/695ccf11e7b8b.jpg",
+        "https://youke3.picui.cn/s1/2026/01/06/695ccf15bab12.jpg",
+        "https://youke3.picui.cn/s1/2026/01/06/695cc3c9b4727.jpg"
+      ],
+      "description_images": [
+        "https://youke3.picui.cn/s1/2026/01/06/695cca9a97958.jpg",
+        "https://youke3.picui.cn/s1/2026/01/06/695cca9bd3151.jpg"
+      ],
+      "description": "专车专用，不卡油门刹车，环保无异味",
+      "type": "physical",
+      "stock": 216,
+      "sales": 1934,
+      "rating": 4.9,
+      "reviewCount": 287,
+      "specifications": [
+        {
+          "id": "spec",
+          "name": "规格",
+          "options": [
+            {
+              "value": "standard",
+              "label": "标准款",
+              "priceMod": 0
+            },
+            {
+              "value": "upgrade",
+              "label": "升级款",
+              "priceMod": 30
+            },
+            {
+              "value": "premium",
+              "label": "豪华款",
+              "priceMod": 60
+            }
+          ]
+        }
+      ],
+      "features": [
+        "京东配送",
+        "品质保障",
+        "无忧售后"
+      ],
+      "details": [
+        "商品名称: BJ40专用全包围脚垫 双层丝圈",
+        "适用车型: 通用/专用",
+        "商品编号: JD1001"
+      ]
+    },
+    {
+      "id": "prod_1002",
+      "categoryId": "interior",
+      "title": "真皮方向盘套 四季通用",
+      "price": 68.0,
+      "originalPrice": 85.49,
+      "image": "https://img14.360buyimg.com/n0/jfs/t1/159670/20/36465/223793/64e86e58F9329188e/4a6e878572111244.jpg",
+      "gallery": [
+        "https://img14.360buyimg.com/n0/jfs/t1/159670/20/36465/223793/64e86e58F9329188e/4a6e878572111244.jpg",
+        "https://img14.360buyimg.com/n0/jfs/t1/197304/18/34538/193257/64e86e58Fcd5f4879/0f7e477611591f4a.jpg",
+        "https://img14.360buyimg.com/n0/jfs/t1/182650/4/36856/158384/64e86e58F35f58356/7e5f357f005391e9.jpg"
+      ],
+      "description": "头层牛皮，吸汗透气，握感舒适",
+      "type": "physical",
+      "stock": 214,
+      "sales": 753,
+      "rating": 4.8,
+      "reviewCount": 774,
+      "specifications": [
+        {
+          "id": "spec",
+          "name": "规格",
+          "options": [
+            {
+              "value": "standard",
+              "label": "标准款",
+              "priceMod": 0
+            },
+            {
+              "value": "upgrade",
+              "label": "升级款",
+              "priceMod": 30
+            },
+            {
+              "value": "premium",
+              "label": "豪华款",
+              "priceMod": 60
+            }
+          ]
+        }
+      ],
+      "features": [
+        "京东配送",
+        "品质保障",
+        "无忧售后"
+      ],
+      "details": [
+        "商品名称: 真皮方向盘套 四季通用",
+        "适用车型: 通用/专用",
+        "商品编号: JD1002"
+      ]
+    },
+    {
+      "id": "prod_1003",
+      "categoryId": "interior",
+      "title": "车载香水 太阳能旋转摆件",
+      "price": 58.0,
+      "originalPrice": 84.12,
+      "image": "https://img14.360buyimg.com/n0/jfs/t1/200632/14/33827/129712/655b1eb1F2b85933a/5f72390a3592c39d.jpg",
+      "gallery": [
+        "https://img14.360buyimg.com/n0/jfs/t1/200632/14/33827/129712/655b1eb1F2b85933a/5f72390a3592c39d.jpg",
+        "https://img14.360buyimg.com/n0/jfs/t1/203478/33/33718/48902/655b1eb1F4744d084/75a7437812297116.jpg",
+        "https://img14.360buyimg.com/n0/jfs/t1/214479/29/31536/57997/655b1eb1F6b924765/b2a1a8c8868677c7.jpg"
+      ],
+      "description": "光能驱动，主动散香，合金材质",
+      "type": "physical",
+      "stock": 314,
+      "sales": 5839,
+      "rating": 4.9,
+      "reviewCount": 622,
+      "specifications": [
+        {
+          "id": "spec",
+          "name": "规格",
+          "options": [
+            {
+              "value": "standard",
+              "label": "标准款",
+              "priceMod": 0
+            },
+            {
+              "value": "upgrade",
+              "label": "升级款",
+              "priceMod": 30
+            },
+            {
+              "value": "premium",
+              "label": "豪华款",
+              "priceMod": 60
+            }
+          ]
+        }
+      ],
+      "features": [
+        "京东配送",
+        "品质保障",
+        "无忧售后"
+      ],
+      "details": [
+        "商品名称: 车载香水 太阳能旋转摆件",
+        "适用车型: 通用/专用",
+        "商品编号: JD1003"
+      ]
+    },
+    {
+      "id": "prod_1004",
+      "categoryId": "interior",
+      "title": "汽车座椅缝隙收纳盒",
+      "price": 29.9,
+      "originalPrice": 40.96,
+      "image": "https://img14.360buyimg.com/n0/jfs/t1/152932/34/23608/65259/601be0e6E4a581297/424367503463836d.jpg",
+      "gallery": [
+        "https://img14.360buyimg.com/n0/jfs/t1/152932/34/23608/65259/601be0e6E4a581297/424367503463836d.jpg",
+        "https://img14.360buyimg.com/n0/jfs/t1/166597/33/15474/59468/601be0e6E2c65961e/ef895d3c8004f113.jpg",
+        "https://img14.360buyimg.com/n0/jfs/t1/169966/39/15214/56385/601be0e6E87834226/6c8574765796016e.jpg"
+      ],
+      "description": "填补缝隙，增加储物空间，不影响驾驶",
+      "type": "physical",
+      "stock": 182,
+      "sales": 7068,
+      "rating": 4.8,
+      "reviewCount": 536,
+      "specifications": [
+        {
+          "id": "spec",
+          "name": "规格",
+          "options": [
+            {
+              "value": "standard",
+              "label": "标准款",
+              "priceMod": 0
+            },
+            {
+              "value": "upgrade",
+              "label": "升级款",
+              "priceMod": 30
+            },
+            {
+              "value": "premium",
+              "label": "豪华款",
+              "priceMod": 60
+            }
+          ]
+        }
+      ],
+      "features": [
+        "京东配送",
+        "品质保障",
+        "无忧售后"
+      ],
+      "details": [
+        "商品名称: 汽车座椅缝隙收纳盒",
+        "适用车型: 通用/专用",
+        "商品编号: JD1004"
+      ]
+    },
+    {
+      "id": "prod_1005",
+      "categoryId": "interior",
+      "title": "四季通用冰丝坐垫",
+      "price": 268.0,
+      "originalPrice": 334.8,
+      "image": "https://img14.360buyimg.com/n0/jfs/t1/107759/16/47548/313360/65d6c8e9F7969375e/735c05c08794825d.jpg",
+      "gallery": [
+        "https://img14.360buyimg.com/n0/jfs/t1/107759/16/47548/313360/65d6c8e9F7969375e/735c05c08794825d.jpg",
+        "https://img14.360buyimg.com/n0/jfs/t1/231268/6/15875/275323/65d6c8e9F33325619/8505562772590680.jpg",
+        "https://img14.360buyimg.com/n0/jfs/t1/236715/22/15317/300451/65d6c8e9F49615568/a1a1a7c5c0519125.jpg"
+      ],
+      "description": "5D透气，舒适防滑，全包围设计",
+      "type": "physical",
+      "stock": 318,
+      "sales": 862,
+      "rating": 4.9,
+      "reviewCount": 629,
+      "specifications": [
+        {
+          "id": "spec",
+          "name": "规格",
+          "options": [
+            {
+              "value": "standard",
+              "label": "标准款",
+              "priceMod": 0
+            },
+            {
+              "value": "upgrade",
+              "label": "升级款",
+              "priceMod": 30
+            },
+            {
+              "value": "premium",
+              "label": "豪华款",
+              "priceMod": 60
+            }
+          ]
+        }
+      ],
+      "features": [
+        "京东配送",
+        "品质保障",
+        "无忧售后"
+      ],
+      "details": [
+        "商品名称: 四季通用冰丝坐垫",
+        "适用车型: 通用/专用",
+        "商品编号: JD1005"
+      ]
+    },
+    {
+      "id": "prod_1006",
+      "categoryId": "exterior",
+      "title": "越野车顶行李架",
+      "price": 880.0,
+      "originalPrice": 1317.86,
+      "image": "https://img14.360buyimg.com/n0/jfs/t1/210255/12/36675/133596/655f053eF8e6638b9/8b24479155702813.jpg",
+      "gallery": [
+        "https://img14.360buyimg.com/n0/jfs/t1/210255/12/36675/133596/655f053eF8e6638b9/8b24479155702813.jpg",
+        "https://img14.360buyimg.com/n0/jfs/t1/210255/12/36675/133596/655f053eF8e6638b9/8b24479155702813.jpg",
+        "https://img14.360buyimg.com/n0/jfs/t1/210255/12/36675/133596/655f053eF8e6638b9/8b24479155702813.jpg"
+      ],
+      "description": "加厚铝合金，承重力强，无损安装",
+      "type": "physical",
+      "stock": 260,
+      "sales": 9166,
+      "rating": 4.9,
+      "reviewCount": 750,
+      "specifications": [
+        {
+          "id": "spec",
+          "name": "规格",
+          "options": [
+            {
+              "value": "standard",
+              "label": "标准款",
+              "priceMod": 0
+            },
+            {
+              "value": "upgrade",
+              "label": "升级款",
+              "priceMod": 30
+            },
+            {
+              "value": "premium",
+              "label": "豪华款",
+              "priceMod": 60
+            }
+          ]
+        }
+      ],
+      "features": [
+        "京东配送",
+        "品质保障",
+        "无忧售后"
+      ],
+      "details": [
+        "商品名称: 越野车顶行李架",
+        "适用车型: 通用/专用",
+        "商品编号: JD1006"
+      ]
+    },
+    {
+      "id": "prod_1007",
+      "categoryId": "exterior",
+      "title": "LED强光射灯 长条灯",
+      "price": 188.0,
+      "originalPrice": 257.72,
+      "image": "https://img14.360buyimg.com/n0/jfs/t1/140224/3/36884/205621/64019bd1Fec38670b/2e8739987820738e.jpg",
+      "gallery": [
+        "https://img14.360buyimg.com/n0/jfs/t1/140224/3/36884/205621/64019bd1Fec38670b/2e8739987820738e.jpg",
+        "https://img14.360buyimg.com/n0/jfs/t1/140224/3/36884/205621/64019bd1Fec38670b/2e8739987820738e.jpg",
+        "https://img14.360buyimg.com/n0/jfs/t1/140224/3/36884/205621/64019bd1Fec38670b/2e8739987820738e.jpg"
+      ],
+      "description": "聚光远射，防水防尘，辅助照明",
+      "type": "physical",
+      "stock": 290,
+      "sales": 7163,
+      "rating": 4.8,
+      "reviewCount": 1480,
+      "specifications": [
+        {
+          "id": "spec",
+          "name": "规格",
+          "options": [
+            {
+              "value": "standard",
+              "label": "标准款",
+              "priceMod": 0
+            },
+            {
+              "value": "upgrade",
+              "label": "升级款",
+              "priceMod": 30
+            },
+            {
+              "value": "premium",
+              "label": "豪华款",
+              "priceMod": 60
+            }
+          ]
+        }
+      ],
+      "features": [
+        "京东配送",
+        "品质保障",
+        "无忧售后"
+      ],
+      "details": [
+        "商品名称: LED强光射灯 长条灯",
+        "适用车型: 通用/专用",
+        "商品编号: JD1007"
+      ]
+    },
+    {
+      "id": "prod_1008",
+      "categoryId": "exterior",
+      "title": "BJ40备胎罩 改装",
+      "price": 128.0,
+      "originalPrice": 155.47,
+      "image": "https://img14.360buyimg.com/n0/jfs/t1/200057/38/34191/123018/6564619bFfc8d4400/961168f114671404.jpg",
+      "gallery": [
+        "https://img14.360buyimg.com/n0/jfs/t1/200057/38/34191/123018/6564619bFfc8d4400/961168f114671404.jpg",
+        "https://img14.360buyimg.com/n0/jfs/t1/200057/38/34191/123018/6564619bFfc8d4400/961168f114671404.jpg",
+        "https://img14.360buyimg.com/n0/jfs/t1/200057/38/34191/123018/6564619bFfc8d4400/961168f114671404.jpg"
+      ],
+      "description": "个性图案，防晒防水，保护备胎",
+      "type": "physical",
+      "stock": 89,
+      "sales": 7142,
+      "rating": 4.8,
+      "reviewCount": 1793,
+      "specifications": [
+        {
+          "id": "spec",
+          "name": "规格",
+          "options": [
+            {
+              "value": "standard",
+              "label": "标准款",
+              "priceMod": 0
+            },
+            {
+              "value": "upgrade",
+              "label": "升级款",
+              "priceMod": 30
+            },
+            {
+              "value": "premium",
+              "label": "豪华款",
+              "priceMod": 60
+            }
+          ]
+        }
+      ],
+      "features": [
+        "京东配送",
+        "品质保障",
+        "无忧售后"
+      ],
+      "details": [
+        "商品名称: BJ40备胎罩 改装",
+        "适用车型: 通用/专用",
+        "商品编号: JD1008"
+      ]
+    },
+    {
+      "id": "prod_1009",
+      "categoryId": "exterior",
+      "title": "隐形车衣 保护膜",
+      "price": 3980.0,
+      "originalPrice": 5868.84,
+      "image": "https://img14.360buyimg.com/n0/jfs/t1/169873/34/38054/122046/64e83789F95892556/2153574220556637.jpg",
+      "gallery": [
+        "https://img14.360buyimg.com/n0/jfs/t1/169873/34/38054/122046/64e83789F95892556/2153574220556637.jpg",
+        "https://img14.360buyimg.com/n0/jfs/t1/169873/34/38054/122046/64e83789F95892556/2153574220556637.jpg",
+        "https://img14.360buyimg.com/n0/jfs/t1/169873/34/38054/122046/64e83789F95892556/2153574220556637.jpg"
+      ],
+      "description": "TPU材质，自动修复划痕，提升漆面亮度",
+      "type": "physical",
+      "stock": 249,
+      "sales": 5092,
+      "rating": 4.8,
+      "reviewCount": 1263,
+      "specifications": [
+        {
+          "id": "spec",
+          "name": "规格",
+          "options": [
+            {
+              "value": "standard",
+              "label": "标准款",
+              "priceMod": 0
+            },
+            {
+              "value": "upgrade",
+              "label": "升级款",
+              "priceMod": 30
+            },
+            {
+              "value": "premium",
+              "label": "豪华款",
+              "priceMod": 60
+            }
+          ]
+        }
+      ],
+      "features": [
+        "京东配送",
+        "品质保障",
+        "无忧售后"
+      ],
+      "details": [
+        "商品名称: 隐形车衣 保护膜",
+        "适用车型: 通用/专用",
+        "商品编号: JD1009"
+      ]
+    },
+    {
+      "id": "prod_1010",
+      "categoryId": "exterior",
+      "title": "挡泥板 软胶材质",
+      "price": 45.0,
+      "originalPrice": 61.24,
+      "image": "https://img14.360buyimg.com/n0/jfs/t1/108573/14/46364/122177/655da3e7F38883626/1865882655513511.jpg",
+      "gallery": [
+        "https://img14.360buyimg.com/n0/jfs/t1/108573/14/46364/122177/655da3e7F38883626/1865882655513511.jpg",
+        "https://img14.360buyimg.com/n0/jfs/t1/108573/14/46364/122177/655da3e7F38883626/1865882655513511.jpg",
+        "https://img14.360buyimg.com/n0/jfs/t1/108573/14/46364/122177/655da3e7F38883626/1865882655513511.jpg"
+      ],
+      "description": "柔韧耐磨，专车孔位，阻挡泥沙",
+      "type": "physical",
+      "stock": 93,
+      "sales": 5190,
+      "rating": 5.0,
+      "reviewCount": 664,
+      "specifications": [
+        {
+          "id": "spec",
+          "name": "规格",
+          "options": [
+            {
+              "value": "standard",
+              "label": "标准款",
+              "priceMod": 0
+            },
+            {
+              "value": "upgrade",
+              "label": "升级款",
+              "priceMod": 30
+            },
+            {
+              "value": "premium",
+              "label": "豪华款",
+              "priceMod": 60
+            }
+          ]
+        }
+      ],
+      "features": [
+        "京东配送",
+        "品质保障",
+        "无忧售后"
+      ],
+      "details": [
+        "商品名称: 挡泥板 软胶材质",
+        "适用车型: 通用/专用",
+        "商品编号: JD1010"
+      ]
+    },
+    {
+      "id": "prod_1011",
+      "categoryId": "electronics",
+      "title": "360度全景行车记录仪",
+      "price": 599.0,
+      "originalPrice": 726.57,
+      "image": "https://img14.360buyimg.com/n0/jfs/t1/159491/25/38154/86683/6513c75cF3099955e/3421f18544256658.jpg",
+      "gallery": [
+        "https://img14.360buyimg.com/n0/jfs/t1/159491/25/38154/86683/6513c75cF3099955e/3421f18544256658.jpg",
+        "https://img14.360buyimg.com/n0/jfs/t1/159491/25/38154/86683/6513c75cF3099955e/3421f18544256658.jpg",
+        "https://img14.360buyimg.com/n0/jfs/t1/159491/25/38154/86683/6513c75cF3099955e/3421f18544256658.jpg"
+      ],
+      "description": "真4K画质，停车监控，语音控制",
+      "type": "physical",
+      "stock": 281,
+      "sales": 3210,
+      "rating": 4.9,
+      "reviewCount": 519,
+      "specifications": [
+        {
+          "id": "spec",
+          "name": "规格",
+          "options": [
+            {
+              "value": "standard",
+              "label": "标准款",
+              "priceMod": 0
+            },
+            {
+              "value": "upgrade",
+              "label": "升级款",
+              "priceMod": 30
+            },
+            {
+              "value": "premium",
+              "label": "豪华款",
+              "priceMod": 60
+            }
+          ]
+        }
+      ],
+      "features": [
+        "京东配送",
+        "品质保障",
+        "无忧售后"
+      ],
+      "details": [
+        "商品名称: 360度全景行车记录仪",
+        "适用车型: 通用/专用",
+        "商品编号: JD1011"
+      ]
+    },
+    {
+      "id": "prod_1012",
+      "categoryId": "electronics",
+      "title": "车载吸尘器 大吸力",
+      "price": 129.0,
+      "originalPrice": 184.16,
+      "image": "https://img14.360buyimg.com/n0/jfs/t1/214470/22/31758/98064/655d886cF77292276/7508499252516480.jpg",
+      "gallery": [
+        "https://img14.360buyimg.com/n0/jfs/t1/214470/22/31758/98064/655d886cF77292276/7508499252516480.jpg",
+        "https://img14.360buyimg.com/n0/jfs/t1/214470/22/31758/98064/655d886cF77292276/7508499252516480.jpg",
+        "https://img14.360buyimg.com/n0/jfs/t1/214470/22/31758/98064/655d886cF77292276/7508499252516480.jpg"
+      ],
+      "description": "无线手持，干湿两用，续航持久",
+      "type": "physical",
+      "stock": 55,
+      "sales": 3638,
+      "rating": 4.8,
+      "reviewCount": 351,
+      "specifications": [
+        {
+          "id": "spec",
+          "name": "规格",
+          "options": [
+            {
+              "value": "standard",
+              "label": "标准款",
+              "priceMod": 0
+            },
+            {
+              "value": "upgrade",
+              "label": "升级款",
+              "priceMod": 30
+            },
+            {
+              "value": "premium",
+              "label": "豪华款",
+              "priceMod": 60
+            }
+          ]
+        }
+      ],
+      "features": [
+        "京东配送",
+        "品质保障",
+        "无忧售后"
+      ],
+      "details": [
+        "商品名称: 车载吸尘器 大吸力",
+        "适用车型: 通用/专用",
+        "商品编号: JD1012"
+      ]
+    },
+    {
+      "id": "prod_1013",
+      "categoryId": "electronics",
+      "title": "车载充气泵 便携式",
+      "price": 149.0,
+      "originalPrice": 200.36,
+      "image": "https://img14.360buyimg.com/n0/jfs/t1/198751/18/34538/104529/655d88f6F88484859/6520338779836336.jpg",
+      "gallery": [
+        "https://img14.360buyimg.com/n0/jfs/t1/198751/18/34538/104529/655d88f6F88484859/6520338779836336.jpg",
+        "https://img14.360buyimg.com/n0/jfs/t1/198751/18/34538/104529/655d88f6F88484859/6520338779836336.jpg",
+        "https://img14.360buyimg.com/n0/jfs/t1/198751/18/34538/104529/655d88f6F88484859/6520338779836336.jpg"
+      ],
+      "description": "预设胎压，充满自停，自带照明",
+      "type": "physical",
+      "stock": 65,
+      "sales": 9759,
+      "rating": 4.8,
+      "reviewCount": 1152,
+      "specifications": [
+        {
+          "id": "spec",
+          "name": "规格",
+          "options": [
+            {
+              "value": "standard",
+              "label": "标准款",
+              "priceMod": 0
+            },
+            {
+              "value": "upgrade",
+              "label": "升级款",
+              "priceMod": 30
+            },
+            {
+              "value": "premium",
+              "label": "豪华款",
+              "priceMod": 60
+            }
+          ]
+        }
+      ],
+      "features": [
+        "京东配送",
+        "品质保障",
+        "无忧售后"
+      ],
+      "details": [
+        "商品名称: 车载充气泵 便携式",
+        "适用车型: 通用/专用",
+        "商品编号: JD1013"
+      ]
+    },
+    {
+      "id": "prod_1014",
+      "categoryId": "electronics",
+      "title": "车载手机支架 磁吸",
+      "price": 39.0,
+      "originalPrice": 58.09,
+      "image": "https://img14.360buyimg.com/n0/jfs/t1/213550/25/31536/98224/655d8985Fe5238218/1255883733664426.jpg",
+      "gallery": [
+        "https://img14.360buyimg.com/n0/jfs/t1/213550/25/31536/98224/655d8985Fe5238218/1255883733664426.jpg",
+        "https://img14.360buyimg.com/n0/jfs/t1/213550/25/31536/98224/655d8985Fe5238218/1255883733664426.jpg",
+        "https://img14.360buyimg.com/n0/jfs/t1/213550/25/31536/98224/655d8985Fe5238218/1255883733664426.jpg"
+      ],
+      "description": "强力磁吸，360度旋转，稳固防抖",
+      "type": "physical",
+      "stock": 339,
+      "sales": 8444,
+      "rating": 4.9,
+      "reviewCount": 1429,
+      "specifications": [
+        {
+          "id": "spec",
+          "name": "规格",
+          "options": [
+            {
+              "value": "standard",
+              "label": "标准款",
+              "priceMod": 0
+            },
+            {
+              "value": "upgrade",
+              "label": "升级款",
+              "priceMod": 30
+            },
+            {
+              "value": "premium",
+              "label": "豪华款",
+              "priceMod": 60
+            }
+          ]
+        }
+      ],
+      "features": [
+        "京东配送",
+        "品质保障",
+        "无忧售后"
+      ],
+      "details": [
+        "商品名称: 车载手机支架 磁吸",
+        "适用车型: 通用/专用",
+        "商品编号: JD1014"
+      ]
+    },
+    {
+      "id": "prod_1015",
+      "categoryId": "electronics",
+      "title": "HUD抬头显示器",
+      "price": 199.0,
+      "originalPrice": 251.35,
+      "image": "https://img14.360buyimg.com/n0/jfs/t1/197304/18/34538/85421/655d8a0cFeec76495/2330779888554228.jpg",
+      "gallery": [
+        "https://img14.360buyimg.com/n0/jfs/t1/197304/18/34538/85421/655d8a0cFeec76495/2330779888554228.jpg",
+        "https://img14.360buyimg.com/n0/jfs/t1/197304/18/34538/85421/655d8a0cFeec76495/2330779888554228.jpg",
+        "https://img14.360buyimg.com/n0/jfs/t1/197304/18/34538/85421/655d8a0cFeec76495/2330779888554228.jpg"
+      ],
+      "description": "GPS测速，超速报警，免贴膜高清",
+      "type": "physical",
+      "stock": 94,
+      "sales": 6685,
+      "rating": 4.7,
+      "reviewCount": 678,
+      "specifications": [
+        {
+          "id": "spec",
+          "name": "规格",
+          "options": [
+            {
+              "value": "standard",
+              "label": "标准款",
+              "priceMod": 0
+            },
+            {
+              "value": "upgrade",
+              "label": "升级款",
+              "priceMod": 30
+            },
+            {
+              "value": "premium",
+              "label": "豪华款",
+              "priceMod": 60
+            }
+          ]
+        }
+      ],
+      "features": [
+        "京东配送",
+        "品质保障",
+        "无忧售后"
+      ],
+      "details": [
+        "商品名称: HUD抬头显示器",
+        "适用车型: 通用/专用",
+        "商品编号: JD1015"
+      ]
+    },
+    {
+      "id": "prod_1016",
+      "categoryId": "maintenance",
+      "title": "龟牌洗车液 水蜡",
+      "price": 39.0,
+      "originalPrice": 48.38,
+      "image": "https://img14.360buyimg.com/n0/jfs/t1/152932/34/23608/112521/655d8abaF85489814/3328557449911993.jpg",
+      "gallery": [
+        "https://img14.360buyimg.com/n0/jfs/t1/152932/34/23608/112521/655d8abaF85489814/3328557449911993.jpg",
+        "https://img14.360buyimg.com/n0/jfs/t1/152932/34/23608/112521/655d8abaF85489814/3328557449911993.jpg",
+        "https://img14.360buyimg.com/n0/jfs/t1/152932/34/23608/112521/655d8abaF85489814/3328557449911993.jpg"
+      ],
+      "description": "丰富泡沫，强力去污，上光保护",
+      "type": "physical",
+      "stock": 316,
+      "sales": 7419,
+      "rating": 4.7,
+      "reviewCount": 1276,
+      "specifications": [
+        {
+          "id": "spec",
+          "name": "规格",
+          "options": [
+            {
+              "value": "standard",
+              "label": "标准款",
+              "priceMod": 0
+            },
+            {
+              "value": "upgrade",
+              "label": "升级款",
+              "priceMod": 30
+            },
+            {
+              "value": "premium",
+              "label": "豪华款",
+              "priceMod": 60
+            }
+          ]
+        }
+      ],
+      "features": [
+        "京东配送",
+        "品质保障",
+        "无忧售后"
+      ],
+      "details": [
+        "商品名称: 龟牌洗车液 水蜡",
+        "适用车型: 通用/专用",
+        "商品编号: JD1016"
+      ]
+    },
+    {
+      "id": "prod_1017",
+      "categoryId": "maintenance",
+      "title": "3M汽车内饰清洁剂",
+      "price": 49.0,
+      "originalPrice": 59.9,
+      "image": "https://img14.360buyimg.com/n0/jfs/t1/107759/16/47548/125327/655d8b2eF41424163/1254422883669917.jpg",
+      "gallery": [
+        "https://img14.360buyimg.com/n0/jfs/t1/107759/16/47548/125327/655d8b2eF41424163/1254422883669917.jpg",
+        "https://img14.360buyimg.com/n0/jfs/t1/107759/16/47548/125327/655d8b2eF41424163/1254422883669917.jpg",
+        "https://img14.360buyimg.com/n0/jfs/t1/107759/16/47548/125327/655d8b2eF41424163/1254422883669917.jpg"
+      ],
+      "description": "温和配方，去污不伤内饰，柠檬清香",
+      "type": "physical",
+      "stock": 398,
+      "sales": 996,
+      "rating": 4.7,
+      "reviewCount": 1761,
+      "specifications": [
+        {
+          "id": "spec",
+          "name": "规格",
+          "options": [
+            {
+              "value": "standard",
+              "label": "标准款",
+              "priceMod": 0
+            },
+            {
+              "value": "upgrade",
+              "label": "升级款",
+              "priceMod": 30
+            },
+            {
+              "value": "premium",
+              "label": "豪华款",
+              "priceMod": 60
+            }
+          ]
+        }
+      ],
+      "features": [
+        "京东配送",
+        "品质保障",
+        "无忧售后"
+      ],
+      "details": [
+        "商品名称: 3M汽车内饰清洁剂",
+        "适用车型: 通用/专用",
+        "商品编号: JD1017"
+      ]
+    },
+    {
+      "id": "prod_1018",
+      "categoryId": "maintenance",
+      "title": "固特异 汽车玻璃水",
+      "price": 19.9,
+      "originalPrice": 29.62,
+      "image": "https://img14.360buyimg.com/n0/jfs/t1/169873/34/38054/122046/655d8bacF03632325/4488836336622881.jpg",
+      "gallery": [
+        "https://img14.360buyimg.com/n0/jfs/t1/169873/34/38054/122046/655d8bacF03632325/4488836336622881.jpg",
+        "https://img14.360buyimg.com/n0/jfs/t1/169873/34/38054/122046/655d8bacF03632325/4488836336622881.jpg",
+        "https://img14.360buyimg.com/n0/jfs/t1/169873/34/38054/122046/655d8bacF03632325/4488836336622881.jpg"
+      ],
+      "description": "去油膜，清晰视野，不腐蚀胶条",
+      "type": "physical",
+      "stock": 87,
+      "sales": 322,
+      "rating": 4.9,
+      "reviewCount": 546,
+      "specifications": [
+        {
+          "id": "spec",
+          "name": "规格",
+          "options": [
+            {
+              "value": "standard",
+              "label": "标准款",
+              "priceMod": 0
+            },
+            {
+              "value": "upgrade",
+              "label": "升级款",
+              "priceMod": 30
+            },
+            {
+              "value": "premium",
+              "label": "豪华款",
+              "priceMod": 60
+            }
+          ]
+        }
+      ],
+      "features": [
+        "京东配送",
+        "品质保障",
+        "无忧售后"
+      ],
+      "details": [
+        "商品名称: 固特异 汽车玻璃水",
+        "适用车型: 通用/专用",
+        "商品编号: JD1018"
+      ]
+    },
+    {
+      "id": "prod_1019",
+      "categoryId": "maintenance",
+      "title": "美孚1号 全合成机油",
+      "price": 329.0,
+      "originalPrice": 458.16,
+      "image": "https://img14.360buyimg.com/n0/jfs/t1/186060/32/33583/135327/655d8c1eF95655656/5522299881144224.jpg",
+      "gallery": [
+        "https://img14.360buyimg.com/n0/jfs/t1/186060/32/33583/135327/655d8c1eF95655656/5522299881144224.jpg",
+        "https://img14.360buyimg.com/n0/jfs/t1/186060/32/33583/135327/655d8c1eF95655656/5522299881144224.jpg",
+        "https://img14.360buyimg.com/n0/jfs/t1/186060/32/33583/135327/655d8c1eF95655656/5522299881144224.jpg"
+      ],
+      "description": "卓越抗磨损，保持发动机清洁，动力强劲",
+      "type": "physical",
+      "stock": 340,
+      "sales": 1517,
+      "rating": 4.7,
+      "reviewCount": 1859,
+      "specifications": [
+        {
+          "id": "spec",
+          "name": "规格",
+          "options": [
+            {
+              "value": "standard",
+              "label": "标准款",
+              "priceMod": 0
+            },
+            {
+              "value": "upgrade",
+              "label": "升级款",
+              "priceMod": 30
+            },
+            {
+              "value": "premium",
+              "label": "豪华款",
+              "priceMod": 60
+            }
+          ]
+        }
+      ],
+      "features": [
+        "京东配送",
+        "品质保障",
+        "无忧售后"
+      ],
+      "details": [
+        "商品名称: 美孚1号 全合成机油",
+        "适用车型: 通用/专用",
+        "商品编号: JD1019"
+      ]
+    },
+    {
+      "id": "prod_1020",
+      "categoryId": "maintenance",
+      "title": "汽车除雪铲 冬季必备",
+      "price": 15.0,
+      "originalPrice": 21.33,
+      "image": "https://img14.360buyimg.com/n0/jfs/t1/231268/6/15875/123018/655d8c8cF87258757/1155336699225588.jpg",
+      "gallery": [
+        "https://img14.360buyimg.com/n0/jfs/t1/231268/6/15875/123018/655d8c8cF87258757/1155336699225588.jpg",
+        "https://img14.360buyimg.com/n0/jfs/t1/231268/6/15875/123018/655d8c8cF87258757/1155336699225588.jpg",
+        "https://img14.360buyimg.com/n0/jfs/t1/231268/6/15875/123018/655d8c8cF87258757/1155336699225588.jpg"
+      ],
+      "description": "不伤玻璃，加长手柄，除冰扫雪",
+      "type": "physical",
+      "stock": 191,
+      "sales": 7344,
+      "rating": 4.8,
+      "reviewCount": 1760,
+      "specifications": [
+        {
+          "id": "spec",
+          "name": "规格",
+          "options": [
+            {
+              "value": "standard",
+              "label": "标准款",
+              "priceMod": 0
+            },
+            {
+              "value": "upgrade",
+              "label": "升级款",
+              "priceMod": 30
+            },
+            {
+              "value": "premium",
+              "label": "豪华款",
+              "priceMod": 60
+            }
+          ]
+        }
+      ],
+      "features": [
+        "京东配送",
+        "品质保障",
+        "无忧售后"
+      ],
+      "details": [
+        "商品名称: 汽车除雪铲 冬季必备",
+        "适用车型: 通用/专用",
+        "商品编号: JD1020"
+      ]
+    }
+  ],
+  "categories": {
+    "interior": "内饰精品",
+    "exterior": "外观改装",
+    "electronics": "电子配件",
+    "maintenance": "保养用品"
+  },
+  "total": 20,
+  "generated_at": "2026-01-05 09:49:57",
+  "version": "1.0.0"
+}

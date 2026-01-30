@@ -1,0 +1,28 @@
+# Flutter Template Defaults
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+build/
+
+# Symbolication related
+app.*.symbols
+app.*.map.json
+
+# Logs
+*.log
+
+# OS generated files
+.DS_Store
+.history
+
+# Prototype sync temp folders
+prototypes_temp/
+# Note: Usually prototypes directory itself is NOT ignored because it contains synced resources, 
+# but if they change frequently, users might choose to ignore it. 
+# By default we keep it tracked if it's the "source of truth".
+
+# Scripts config (if it contains secrets)
+# scripts/config.sh 

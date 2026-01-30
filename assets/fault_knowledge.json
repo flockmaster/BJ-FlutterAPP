@@ -1,0 +1,226 @@
+{
+    "Anti Lock Braking System": {
+        "zh_name": "ABS防抱死系统故障",
+        "description": "车辆防抱死制动系统(ABS)监测到异常。",
+        "rules": {
+            "Red": {
+                "severity": "critical",
+                "title": "ABS系统失效",
+                "advice": "严重故障！ABS系统已失效，紧急制动时车轮可能抱死导致失控。请立即在安全地点停车并联系道路救援。"
+            },
+            "Yellow": {
+                "severity": "warning",
+                "title": "ABS系统警示",
+                "advice": "ABS系统存在故障，普通刹车功能仍有效，但防抱死功能可能不可用。请保持车距，谨慎驾驶，并尽快前往4S店检修。"
+            }
+        }
+    },
+    "Brake System Issue": {
+        "zh_name": "制动系统故障",
+        "description": "制动系统液位过低或制动装置出现故障。",
+        "rules": {
+            "Red": {
+                "severity": "critical",
+                "title": "制动系统危险",
+                "advice": "危险！制动液位过低或手刹未松开。若手刹已松开仍长亮，可能导致刹车失灵。请务必立即停车检查，切勿继续行驶。"
+            },
+            "Yellow": {
+                "severity": "warning",
+                "title": "制动系统警告",
+                "advice": "电子手刹或制动辅助系统异常。请检查手刹状态，若无误警请前往维修站检查。"
+            }
+        }
+    },
+    "Charging System Issue": {
+        "zh_name": "蓄电池/充电系统故障",
+        "description": "车辆充电系统或蓄电池状态异常。",
+        "rules": {
+            "Red": {
+                "severity": "critical",
+                "title": "充电系统故障",
+                "advice": "发电机不发电或皮带断裂，电池电量将很快耗尽导致熄火。请立即关闭不必要电器，行驶至最近维修点或停车求援。"
+            },
+            "Yellow": {
+                "severity": "warning",
+                "title": "电池电量低",
+                "advice": "蓄电池电量较低或充电效率低。建议进行长距离行驶充电或检查电池健康度。"
+            }
+        }
+    },
+    "Check Engine": {
+        "zh_name": "发动机排放系统故障",
+        "description": "发动机控制系统或排放控制系统监测到异常。",
+        "rules": {
+            "Red": {
+                "severity": "critical",
+                "title": "发动机严重故障",
+                "advice": "发动机存在严重机械故障或过热风险。请立即停车检查，强行行驶可能导致发动机报废。"
+            },
+            "Yellow": {
+                "severity": "warning",
+                "title": "发动机/排放警告",
+                "advice": "排放系统或传感器故障（如氧传感器）。车辆可继续行驶，但可能油耗增加或动力下降，请尽快检修。"
+            }
+        }
+    },
+    "Door open": {
+        "zh_name": "车门开启警告",
+        "description": "监测到车门、引擎盖或后备箱未完全关闭。",
+        "rules": {
+            "Red": {
+                "severity": "warning",
+                "title": "车门未关",
+                "advice": "请在行驶前检查所有车门、引擎盖及后备箱是否已关严。行驶中开启会导致严重安全事故。"
+            },
+            "Yellow": {
+                "severity": "info",
+                "title": "车门提示",
+                "advice": "车辆静止状态下检测到车门开启。"
+            }
+        }
+    },
+    "Electronic Power Steering": {
+        "zh_name": "电子转向助力故障",
+        "description": "EPS电子助力转向系统出现问题。",
+        "rules": {
+            "Red": {
+                "severity": "critical",
+                "title": "转向助力失效",
+                "advice": "转向助力完全失效，方向盘会变得极重。建议立即停车，联系拖车救援。"
+            },
+            "Yellow": {
+                "severity": "warning",
+                "title": "转向助力受限",
+                "advice": "转向助力可能减弱或传感器校准异常。请小心驾驶并前往维修站。"
+            }
+        }
+    },
+    "Electronic Stability Problem -ESP-": {
+        "zh_name": "ESP车身稳定系统故障",
+        "description": "车身电子稳定系统(ESP/DSC)监测到异常。",
+        "rules": {
+            "Red": {
+                "severity": "warning",
+                "title": "ESP系统故障",
+                "advice": "ESP系统故障，车辆在湿滑路面可能失去防滑控制能力。请谨慎驾驶。"
+            },
+            "Yellow": {
+                "severity": "warning",
+                "title": "ESP关闭或介入",
+                "advice": "若是常亮，表示ESP系统已关闭或故障；若是闪烁，表示ESP正在介入工作（正常现象）。"
+            }
+        }
+    },
+    "High Engine Coolant Temperature": {
+        "zh_name": "发动机水温过高",
+        "description": "发动机冷却液温度超过正常范围。",
+        "rules": {
+            "Red": {
+                "severity": "critical",
+                "title": "发动机过热",
+                "advice": "极度危险！发动机已过热，继续行驶会导致“拉缸”。请立即停车熄火，待冷却后检查冷却液液位。"
+            },
+            "Yellow": {
+                "severity": "warning",
+                "title": "水温偏高",
+                "advice": "水温略高于正常值，请关注水温表变化，检查进气格栅是否有遮挡。"
+            }
+        }
+    },
+    "Low Engine Oil Warning": {
+        "zh_name": "机油压力/液位过低",
+        "description": "发动机机油压力不足或液位过低。",
+        "rules": {
+            "Red": {
+                "severity": "critical",
+                "title": "机油压力缺失",
+                "advice": "机油压力不足，发动机失去润滑。请务必立即停车熄火！检查机油尺，补充机油或联系救援。"
+            },
+            "Yellow": {
+                "severity": "warning",
+                "title": "机油液位低",
+                "advice": "机油液位接近下限，请尽快补充符合规格的机油。"
+            }
+        }
+    },
+    "Low Fuel": {
+        "zh_name": "燃油不足警告",
+        "description": "油箱内燃油储量已达到备用油位。",
+        "rules": {
+            "Red": {
+                "severity": "warning",
+                "title": "燃油极低",
+                "advice": "燃油即将耗尽，请立即寻找最近加油站，避免抛锚。"
+            },
+            "Yellow": {
+                "severity": "info",
+                "title": "燃油不足",
+                "advice": "燃油剩余量较低，请规划路线前往加油站。"
+            }
+        }
+    },
+    "Low Tire Pressure Warning": {
+        "zh_name": "胎压监测报警",
+        "description": "检测到轮胎气压异常（过低或过高）。",
+        "rules": {
+            "Red": {
+                "severity": "critical",
+                "title": "爆胎/极低胎压",
+                "advice": "检测到轮胎压力严重流失，可能有爆胎风险。请紧握方向盘，缓慢减速停车检查轮胎。"
+            },
+            "Yellow": {
+                "severity": "warning",
+                "title": "胎压异常",
+                "advice": "轮胎气压不足或过高。请尽快检查四轮胎压并充气至标准值。"
+            }
+        }
+    },
+    "Master Warning": {
+        "zh_name": "总故障指示灯",
+        "description": "车辆检测到其他非特定系统的通用故障。",
+        "rules": {
+            "Red": {
+                "severity": "warning",
+                "title": "严重通用故障",
+                "advice": "车辆存在较为主要的问题（如混合动力系统故障等）。请查看仪表盘详细文字提示并联系维修。"
+            },
+            "Yellow": {
+                "severity": "info",
+                "title": "通用警告",
+                "advice": "车辆有一般性提醒（如玻璃水不足、遥控钥匙电量低等）。请留意仪表盘信息。"
+            }
+        }
+    },
+    "SRS-Airbag": {
+        "zh_name": "安全气囊/约束系统故障",
+        "description": "安全气囊或安全带预张紧系统故障。",
+        "rules": {
+            "Red": {
+                "severity": "critical",
+                "title": "气囊系统故障",
+                "advice": "安全气囊可能无法在事故中正常弹出，或存在误爆风险。请务必尽快前往4S店检修。"
+            },
+            "Yellow": {
+                "severity": "warning",
+                "title": "副驾气囊关闭",
+                "advice": "提示副驾驶气囊已通过物理开关关闭（如安装儿童座椅时），若非人为关闭请检修。"
+            }
+        }
+    },
+    "Seat Belt": {
+        "zh_name": "安全带未系提醒",
+        "description": "监测到驾驶员或乘客未系安全带。",
+        "rules": {
+            "Red": {
+                "severity": "warning",
+                "title": "请系好安全带",
+                "advice": "行驶中必须系好安全带！安全带是生命带，未系安全带将无法提供应有保护。"
+            },
+            "Yellow": {
+                "severity": "info",
+                "title": "安全带提示",
+                "advice": "车辆静止或低速时提醒系好安全带。"
+            }
+        }
+    }
+}

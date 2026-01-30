@@ -1,0 +1,26 @@
+names:
+- Anti Lock Braking System
+- Brake System Issue
+- Charging System Issue
+- Check Engine
+- Door open
+- Electronic Power Steering
+- Electronic Stability Problem -ESP-
+- High Engine Coolant Temperature
+- Low Engine Oil Warning
+- Low Fuel
+- Low Tire Pressure Warning
+- Master Warning
+- SRS-Airbag
+- Seat Belt
+nc: 14
+path: /content/datasets/Dashboard-4
+roboflow:
+  license: Private
+  project: dashboard-wqpun
+  url: https://universe.roboflow.com/dashboarddataset/dashboard-wqpun/dataset/4
+  version: 4
+  workspace: dashboarddataset
+test: test/images
+train: train/images
+val: test/images

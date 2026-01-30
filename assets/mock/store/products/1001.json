@@ -1,0 +1,48 @@
+{
+    "id": 1001,
+    "title": "宇航员门厅自动帐篷DM-1015L",
+    "price": 699,
+    "original_price": 899,
+    "image_url": "https://youke3.picui.cn/s1/2026/01/06/695cca5f0d0b3.jpg",
+    "tags": [
+        "爆款"
+    ],
+    "points": 600,
+    "specifications": [
+        {
+            "id": "color",
+            "name": "外观颜色",
+            "options": [
+                {
+                    "label": "极夜黑",
+                    "value": "black"
+                },
+                {
+                    "label": "硬派灰",
+                    "value": "grey"
+                }
+            ]
+        },
+        {
+            "id": "spec",
+            "name": "适用规格",
+            "options": [
+                {
+                    "label": "BJ40专用",
+                    "value": "bj40",
+                    "priceMod": 0
+                },
+                {
+                    "label": "BJ60专用",
+                    "value": "bj60",
+                    "priceMod": 50
+                }
+            ]
+        }
+    ],
+    "type": "physical",
+    "detail_images": [
+        "https://youke3.picui.cn/s1/2026/01/06/695cca9a97958.jpg",
+        "https://youke3.picui.cn/s1/2026/01/06/695cca9bd3151.jpg"
+    ]
+}

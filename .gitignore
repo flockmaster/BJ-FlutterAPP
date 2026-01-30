@@ -1,0 +1,108 @@
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.build/
+.buildlog/
+.history
+.svn/
+.swiftpm/
+migrate_working_dir/
+
+# IntelliJ related
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# The .vscode folder contains launch configuration and tasks you configure in
+# VS Code which you may wish to be included in version control, so this line
+# is commented out by default.
+#.vscode/
+
+# Flutter/Dart/Pub related
+**/doc/api/
+**/ios/Flutter/.last_build_id
+.dart_tool/
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+/build/
+/coverage/
+
+# Symbolication related
+app.*.symbols
+
+# Obfuscation related
+app.*.map.json
+
+# Android Studio will place build artifacts here
+/android/app/debug
+/android/app/profile
+/android/app/release
+
+# HarmonyOS 构建产物和大文件
+ohos/.hvigor/
+ohos/entry/build/
+ohos/entry/.preview/
+ohos/.idea/
+ohos/local.properties
+ohos/entry/src/main/resources/rawfile/flutter_assets/
+ohos/entry/libs/
+ohos/har/
+ohos/oh_modules/
+
+# iOS 构建产物
+ios/Pods/
+ios/.symlinks/
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+xcuserdata/
+*.moved-aside
+DerivedData/
+*.hmap
+*.ipa
+
+# 压缩包和备份文件
+*.zip
+*.rar
+*.7z
+*.tar.gz
+备份*.zip
+Flutter项目模版*.zip
+Baic-Flutter-APP.zip
+
+# 旧项目目录(已重构)
+Baic-Flutter-APP/
+
+# 大型资源文件(使用 Git LFS 或外部存储)
+# 3D 模型文件太大,不适合直接提交到 Git
+*.glb
+*.gltf
+
+# AI/ML 模型文件
+*.tflite
+*.mlmodel
+*.onnx
+
+# 大型字体文件(超过 5MB 的)
+# 如果需要,可以使用 CDN 或字体子集化
+# pingfang-sc-bold.ttf
+
+# 分析输出
+analyze_output.txt
+*.log.txt
+
+# 临时文件和配置
+*.tmp
+*.temp
+.DS_Store
+openrouter_models.json
+*.cache
